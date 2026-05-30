@@ -6,44 +6,56 @@ body {
     text-align: center;
 }
 
+/* HEADER */
 header {
     background: #111827;
     padding: 20px;
+    position: sticky;
+    top: 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     margin: 15px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 nav a:hover {
     color: #3b82f6;
 }
 
+/* HERO SECTION */
 .hero {
-    padding: 120px 20px;
+    padding: 140px 20px;
 }
 
-h1 {
-    font-size: 55px;
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-p {
+.hero p {
     font-size: 20px;
     color: #cbd5e1;
+    margin-bottom: 30px;
 }
 
+/* BUTTON */
 .btn {
     display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
+    padding: 12px 28px;
     background: #2563eb;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-weight: bold;
 }
 
 .btn:hover {
-    opacity: 0.9;
+    background: #1d4ed8;
+    transform: translateY(-2px);
 }
