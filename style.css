@@ -15,3 +15,25 @@ p {
     font-size: 20px;
     color: #cbd5e1;
 }
+header {
+    background: #111827;
+    padding: 20px;
+}
+
+header h2 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+
+nav a:hover {
+    color: #3b82f6;
+}
