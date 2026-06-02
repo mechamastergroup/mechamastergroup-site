@@ -6,7 +6,7 @@ color:white;
 text-align:center;
 }
 
-/* Header */
+/* HEADER */
 
 header{
 background:#111827;
@@ -18,16 +18,18 @@ color:white;
 text-decoration:none;
 margin:15px;
 font-size:16px;
+transition:0.3s;
 }
 
 nav a:hover
 
-/* Hero Sections */
+/* HERO */
 
 .hero{
-padding:120px 20px;
 
 ```
+padding:120px 20px;
+
 background:
 linear-gradient(
     rgba(0,0,0,0.70),
@@ -60,7 +62,7 @@ color:#cbd5e1;
 margin-bottom:30px;
 }
 
-/* Buttons */
+/* BUTTONS */
 
 .btn{
 display:inline-block;
@@ -74,7 +76,7 @@ transition:0.3s;
 
 .btn:hover
 
-/* Cards */
+/* CARDS */
 
 .card{
 background:#111827;
@@ -97,7 +99,7 @@ text-decoration:none;
 color:white;
 }
 
-/* Services */
+/* SERVICES */
 
 .service-selector{
 display:flex;
@@ -122,21 +124,33 @@ margin-top:40px;
 margin-bottom:30px;
 }
 
-/* Cover Image */
+/* COVER IMAGE */
 
 .cover-image{
+
+```
 width:700px;
+
 max-width:90%;
+
 border-radius:15px;
+
 cursor:pointer;
+
 transition:0.3s;
+```
+
 }
 
 .cover-image:hover{
+
+```
 transform:scale(1.02);
+```
+
 }
 
-/* Image Strip */
+/* IMAGE STRIP */
 
 .image-strip{
 
@@ -152,12 +166,12 @@ width:100%;
 
 transform:translateY(-50%);
 
-background:rgba(0,0,0,0.25);
+background:rgba(0,0,0,0.45);
 
-backdrop-filter:blur(30px);
--webkit-backdrop-filter:blur(30px);
+backdrop-filter:blur(50px);
+-webkit-backdrop-filter:blur(50px);
 
-padding:35px 0;
+padding:40px 0;
 
 z-index:1000;
 
@@ -167,7 +181,7 @@ align-items:center;
 gap:25px;
 
 box-shadow:
-0 0 50px rgba(0,0,0,0.5);
+0 0 60px rgba(0,0,0,0.6);
 ```
 
 }
@@ -185,10 +199,7 @@ border-radius:12px;
 
 cursor:pointer;
 
-transition:all 0.3s ease;
-
-box-shadow:
-0 8px 20px rgba(0,0,0,0.35);
+transition:0.3s;
 ```
 
 }
@@ -201,7 +212,7 @@ transform:scale(1.08);
 
 }
 
-/* Large Image Viewer */
+/* IMAGE VIEWER */
 
 .image-viewer{
 
@@ -216,7 +227,7 @@ left:0;
 width:100%;
 height:100%;
 
-background:rgba(0,0,0,0.65);
+background:rgba(0,0,0,0.75);
 
 backdrop-filter:blur(15px);
 -webkit-backdrop-filter:blur(15px);
@@ -237,6 +248,8 @@ position:relative;
 display:flex;
 flex-direction:column;
 align-items:center;
+
+animation:zoomIn .25s ease;
 ```
 
 }
@@ -245,11 +258,10 @@ align-items:center;
 
 ```
 max-width:60vw;
+
 max-height:60vh;
 
 border-radius:15px;
-
-animation:zoomIn .25s ease;
 ```
 
 }
@@ -314,7 +326,7 @@ background:#1d4ed8;
 
 }
 
-/* Animations */
+/* ANIMATIONS */
 
 @keyframes zoomIn{
 
