@@ -26,33 +26,58 @@
 
 <h1>Centrifugal Pump</h1>
 
-<p>Click any image to view it in full size.</p>
+<p>Mechanical Assembly Project</p>
 
 <div class="service-selector">
 
-<a href="projects/centrifugal-pump/1.jpeg" target="_blank">
-<img src="projects/centrifugal-pump/1.jpeg" class="service-image">
-</a>
+<img src="projects/centrifugal-pump/1.jpeg"
+class="service-image"
+onclick="openImage(this.src)">
 
-<a href="projects/centrifugal-pump/2.jpeg" target="_blank">
-<img src="projects/centrifugal-pump/2.jpeg" class="service-image">
-</a>
+<img src="projects/centrifugal-pump/2.jpeg"
+class="service-image"
+onclick="openImage(this.src)">
 
-<a href="projects/centrifugal-pump/3.jpeg" target="_blank">
-<img src="projects/centrifugal-pump/3.jpeg" class="service-image">
-</a>
+<img src="projects/centrifugal-pump/3.jpeg"
+class="service-image"
+onclick="openImage(this.src)">
 
-<a href="projects/centrifugal-pump/4.jpeg" target="_blank">
-<img src="projects/centrifugal-pump/4.jpeg" class="service-image">
-</a>
+<img src="projects/centrifugal-pump/4.jpeg"
+class="service-image"
+onclick="openImage(this.src)">
 
-<a href="projects/centrifugal-pump/5.jpg" target="_blank">
-<img src="projects/centrifugal-pump/5.jpg" class="service-image">
-</a>
+<img src="projects/centrifugal-pump/5.jpg"
+class="service-image"
+onclick="openImage(this.src)">
 
 </div>
 
 </section>
 
+<div id="popup" class="popup" onclick="closeImage()">
+
+<img id="popup-img">
+
+</div>
+
+<script>
+
+function openImage(src){
+
+document.getElementById("popup").style.display = "flex";
+
+document.getElementById("popup-img").src = src;
+
+}
+
+function closeImage(){
+
+document.getElementById("popup").style.display = "none";
+
+}
+
+</script>
+
 </body>
+
 </html>
