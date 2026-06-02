@@ -15,6 +15,8 @@
 
 <body>
 
+<div id="pageContent">
+
 <header>
 <nav>
 
@@ -35,6 +37,8 @@ class="cover-image"
 onclick="openStrip()">
 
 </section>
+
+</div>
 
 <div id="strip" class="image-strip">
 
@@ -89,6 +93,9 @@ function openStrip(){
 
 document.getElementById("strip").style.display="flex";
 
+document.getElementById("pageContent")
+.classList.add("blur-background");
+
 }
 
 function openViewer(src){
@@ -104,6 +111,9 @@ document.getElementById("viewerImg").src=src;
 function closeViewer(){
 
 document.getElementById("viewer").style.display="none";
+
+document.getElementById("pageContent")
+.classList.remove("blur-background");
 
 }
 
