@@ -17,7 +17,7 @@ nav a{
 color:white;
 text-decoration:none;
 margin:15px;
-font-size:14px;
+font-size:16px;
 }
 
 nav a:hover
@@ -39,7 +39,7 @@ color:#cbd5e1;
 margin-bottom:30px;
 }
 
-/* BUTTON */
+/* BUTTONS */
 
 .btn{
 display:inline-block;
@@ -63,6 +63,7 @@ display:inline-block;
 border-radius:12px;
 cursor:pointer;
 vertical-align:top;
+transition:0.3s;
 }
 
 .card:hover{
@@ -104,10 +105,15 @@ margin-bottom:30px;
 /* PROJECT COVER */
 
 .cover-image{
-width:600px;
+width:700px;
 max-width:90%;
 border-radius:15px;
 cursor:pointer;
+transition:0.3s;
+}
+
+.cover-image:hover{
+transform:scale(1.02);
 }
 
 /* GALLERY OVERLAY */
@@ -119,10 +125,16 @@ top:0;
 left:0;
 width:100%;
 height:100%;
+
+```
 background:rgba(0,0,0,0.85);
+
 justify-content:center;
 align-items:center;
+
 z-index:1000;
+```
+
 }
 
 .gallery-container{
@@ -130,27 +142,40 @@ display:flex;
 gap:20px;
 flex-wrap:wrap;
 justify-content:center;
+max-width:90%;
 }
 
 .gallery-thumb{
 width:220px;
 border-radius:12px;
 cursor:pointer;
+transition:0.3s;
 }
 
-/* LARGE IMAGE */
+.gallery-thumb:hover{
+transform:scale(1.05);
+}
+
+/* LARGE IMAGE OVERLAY */
 
 .image-overlay{
 display:none;
 position:fixed;
 top:0;
 left:0;
+
+```
 width:100%;
 height:100%;
+
 background:rgba(0,0,0,0.95);
+
 justify-content:center;
 align-items:center;
+
 z-index:2000;
+```
+
 }
 
 #largeImage{
