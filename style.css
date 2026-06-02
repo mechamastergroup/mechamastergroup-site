@@ -84,3 +84,7 @@ margin-top:40px;
 .service-area h2{
 margin-bottom:30px;
 }
+.card-link{
+text-decoration:none;
+color:white;
+}
