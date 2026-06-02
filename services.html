@@ -20,24 +20,69 @@
 
 <section class="hero">
 
-<h1>Our Services</h1>
+    <h1>Our Services</h1>
 
-<div class="card">
-<h2>CAD Design</h2>
-<p>SolidWorks | Creo | 3D Modeling</p>
-</div>
+    <div class="card" onclick="showMachine()">
+        <h2>Machine Design</h2>
+        <p>Mechanical Engineering Solutions</p>
+    </div>
 
-<div class="card">
-<h2>Mechanical Design</h2>
-<p>Machine Design & Product Development</p>
-</div>
+    <div class="card" onclick="showMEP()">
+        <h2>MEP Design</h2>
+        <p>Building Engineering Systems</p>
+    </div>
 
-<div class="card">
-<h2>Simulation</h2>
-<p>Thermal Analysis & CFD</p>
-</div>
+    <div id="services-content"></div>
 
 </section>
+
+<script>
+
+function showMachine() {
+
+document.getElementById("services-content").innerHTML = `
+
+<div class="card">
+<h2>3D Modeling</h2>
+</div>
+
+<div class="card">
+<h2>Assembly Design</h2>
+</div>
+
+<div class="card">
+<h2>Technical Drawings</h2>
+</div>
+
+`;
+
+}
+
+function showMEP() {
+
+document.getElementById("services-content").innerHTML = `
+
+<div class="card">
+<h2>HVAC Design</h2>
+</div>
+
+<div class="card">
+<h2>Fire Fighting Design</h2>
+</div>
+
+<div class="card">
+<h2>Plumbing Design</h2>
+</div>
+
+<div class="card">
+<h2>Medical Gases Design</h2>
+</div>
+
+`;
+
+}
+
+</script>
 
 </body>
 </html>
