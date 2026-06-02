@@ -6,6 +6,8 @@ color:white;
 text-align:center;
 }
 
+/* HEADER */
+
 header{
 background:#111827;
 padding:20px;
@@ -19,6 +21,8 @@ font-size:14px;
 }
 
 nav a:hover
+
+/* HERO */
 
 .hero{
 padding:80px 20px;
@@ -35,6 +39,8 @@ color:#cbd5e1;
 margin-bottom:30px;
 }
 
+/* BUTTON */
+
 .btn{
 display:inline-block;
 padding:12px 28px;
@@ -45,6 +51,8 @@ border-radius:10px;
 }
 
 .btn:hover
+
+/* CARDS */
 
 .card{
 background:#111827;
@@ -61,6 +69,13 @@ vertical-align:top;
 transform:translateY(-5px);
 }
 
+.card-link{
+text-decoration:none;
+color:white;
+}
+
+/* SERVICES */
+
 .service-selector{
 display:flex;
 justify-content:center;
@@ -75,6 +90,7 @@ object-fit:cover;
 margin-top:15px;
 margin-bottom:15px;
 border-radius:12px;
+cursor:pointer;
 }
 
 .service-area{
@@ -84,51 +100,17 @@ margin-top:40px;
 .service-area h2{
 margin-bottom:30px;
 }
-.card-link{
-text-decoration:none;
-color:white;
-}
-.popup{
 
-display:none;
+/* PROJECT COVER */
 
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,0.9);
-
-justify-content:center;
-align-items:center;
-
-z-index:9999;
-
-}
-
-#popup-img{
-
-max-width:90%;
-max-height:90%;
-
-border-radius:15px;
-
-}
-
-.service-image{
-
-cursor:pointer;
-
-}
 .cover-image{
 width:600px;
 max-width:90%;
 border-radius:15px;
 cursor:pointer;
 }
+
+/* GALLERY OVERLAY */
 
 .gallery-overlay{
 display:none;
@@ -155,6 +137,8 @@ width:220px;
 border-radius:12px;
 cursor:pointer;
 }
+
+/* LARGE IMAGE */
 
 .image-overlay{
 display:none;
