@@ -1,52 +1,65 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<title>Services | MechaMaster Group</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Services | MechaMaster Group</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-<nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="#">Portfolio</a>
-<a href="contact.html">Contact</a>
-</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
 <section class="hero">
 
+```
 <h1>Our Services</h1>
 
 <div class="service-selector">
 
-<div class="card" onclick="showMachine()">
-<h2>Machine Design</h2>
-<p>Mechanical Engineering Solutions</p>
-</div>
+    <div class="card" onclick="showMachine()">
 
-<div class="card" onclick="showMEP()">
-<h2>MEP Design</h2>
-<p>Building Engineering Systems</p>
-</div>
+        <h2>Machine Design</h2>
+
+        <img src="CAD.jpg" class="service-image">
+
+        <p>Mechanical Engineering Solutions</p>
+
+    </div>
+
+    <div class="card" onclick="showMEP()">
+
+        <h2>MEP Design</h2>
+
+        <img src="MEP.jpg" class="service-image">
+
+        <p>Building Engineering Systems</p>
+
+    </div>
 
 </div>
 
 <div id="service-details"></div>
+```
 
 </section>
 
 <script>
 
-function showMachine(){
+function showMachine() {
 
 document.getElementById("service-details").innerHTML = `
 
-<div class="service-area machine-bg">
+<div class="service-area">
 
 <h2>Machine Design Services</h2>
 
@@ -68,11 +81,11 @@ document.getElementById("service-details").innerHTML = `
 
 }
 
-function showMEP(){
+function showMEP() {
 
 document.getElementById("service-details").innerHTML = `
 
-<div class="service-area mep-bg">
+<div class="service-area">
 
 <h2>MEP Design Services</h2>
 
@@ -101,5 +114,4 @@ document.getElementById("service-details").innerHTML = `
 </script>
 
 </body>
-
 </html>
