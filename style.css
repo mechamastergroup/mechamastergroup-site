@@ -79,15 +79,21 @@ z-index:1;
 
 }
 
+/* LOGO */
+
 .hero-logo{
 
-width:200px;
+width:220px;
 
 max-width:80%;
 
-margin-bottom:40px;
+margin-bottom:30px;
+
+object-fit:contain;
 
 }
+
+/* TITLE */
 
 .hero h1{
 
@@ -101,6 +107,8 @@ font-weight:700;
 
 }
 
+/* SUBTITLE */
+
 .hero-subtitle{
 
 font-size:24px;
@@ -112,6 +120,8 @@ margin-bottom:35px;
 color:#cbd5e1;
 
 }
+
+/* SERVICES LIST */
 
 .hero-services{
 
@@ -131,7 +141,7 @@ color:#94a3b8;
 
 }
 
-/* BUTTON */
+/* BUTTONS */
 
 .btn{
 
@@ -187,13 +197,297 @@ color:#cbd5e1;
 
 }
 
+/* CARDS */
+
+.card{
+
+background:#111827;
+
+width:280px;
+
+padding:20px;
+
+margin:15px;
+
+border-radius:12px;
+
+display:inline-block;
+
+vertical-align:top;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.card-link{
+
+text-decoration:none;
+
+color:white;
+
+}
+
+/* SERVICES PAGE */
+
+.service-selector{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+}
+
+.service-image{
+
+width:220px;
+
+height:140px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+margin-top:15px;
+
+}
+
+.service-area{
+
+margin-top:40px;
+
+padding:20px;
+
+}
+
+.service-area h2{
+
+margin-bottom:30px;
+
+}
+
+/* PROJECT COVER */
+
+.cover-image{
+
+width:700px;
+
+max-width:90%;
+
+border-radius:15px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.cover-image:hover{
+
+transform:scale(1.02);
+
+}
+
+/* GALLERY STRIP */
+
+.image-strip{
+
+display:none;
+
+position:fixed;
+
+top:50%;
+
+left:0;
+
+width:100%;
+
+transform:translateY(-50%);
+
+background:rgba(0,0,0,.75);
+
+padding:40px 0;
+
+z-index:1000;
+
+justify-content:center;
+align-items:center;
+
+gap:25px;
+
+}
+
+.image-strip img{
+
+width:180px;
+
+height:120px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.image-strip img:hover{
+
+transform:scale(1.08);
+
+}
+
+/* BLUR */
+
+.blur-background{
+
+filter:blur(25px);
+
+transition:.35s ease;
+
+}
+
+/* IMAGE VIEWER */
+
+.image-viewer{
+
+display:none;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.75);
+
+justify-content:center;
+align-items:center;
+
+z-index:2000;
+
+}
+
+.viewer-box{
+
+position:relative;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+animation:zoomIn .25s ease;
+
+}
+
+.viewer-box img{
+
+max-width:60vw;
+
+max-height:60vh;
+
+border-radius:15px;
+
+}
+
+.close-btn{
+
+position:absolute;
+
+top:-15px;
+right:-15px;
+
+width:35px;
+height:35px;
+
+background:white;
+
+color:black;
+
+border-radius:50%;
+
+font-size:24px;
+
+line-height:35px;
+
+text-align:center;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+.back-btn{
+
+margin-top:20px;
+
+padding:12px 24px;
+
+background:#2563eb;
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+
+.back-btn:hover{
+
+background:#1d4ed8;
+
+}
+
+/* ANIMATION */
+
+@keyframes zoomIn{
+
+from{
+
+opacity:0;
+
+transform:scale(.85);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
 
 .hero-logo{
 
-width:180px;
+width:150px;
 
 }
 
@@ -228,6 +522,28 @@ font-size:30px;
 .about-home p{
 
 font-size:18px;
+
+}
+
+.cover-image{
+
+width:95%;
+
+}
+
+.image-strip{
+
+gap:10px;
+
+padding:20px 0;
+
+}
+
+.image-strip img{
+
+width:120px;
+
+height:80px;
 
 }
 
