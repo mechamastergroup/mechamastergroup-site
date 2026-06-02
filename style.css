@@ -63,3 +63,34 @@ background:#1d4ed8;
 .card:hover{
     background:#1f2937;
 }
+.service-selector{
+margin-bottom:40px;
+}
+
+.service-area{
+margin-top:40px;
+padding:80px 20px;
+border-radius:15px;
+background-size:cover;
+background-position:center;
+}
+
+.machine-bg{
+background-image:url('CAD.jpg');
+}
+
+.mep-bg{
+background-image:url('MEP.jpg');
+}
+
+.service-area h2{
+margin-bottom:30px;
+background:rgba(0,0,0,0.6);
+display:inline-block;
+padding:10px 20px;
+border-radius:10px;
+}
+
+.service-area .card{
+background:rgba(0,0,0,0.75);
+}
