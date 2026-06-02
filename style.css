@@ -343,3 +343,10 @@ to{
 ```
 
 }
+.blur-background{
+
+filter:blur(25px);
+
+transition:0.35s ease;
+
+}
