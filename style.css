@@ -1,10 +1,12 @@
 body{
 margin:0;
-font-family:"Times New Roman",Times,serif;
+font-family:"Times New Roman", Times, serif;
 background:#0f172a;
 color:white;
 text-align:center;
 }
+
+/* HEADER */
 
 header{
 background:#111827;
@@ -18,17 +20,17 @@ margin:15px;
 font-size:14px;
 }
 
-nav a:hover{
-color:#3b82f6;
-}
+nav a:hover
+
+/* HERO */
 
 .hero{
-padding:140px 20px;
+padding:80px 20px;
 }
 
 .hero h1{
 font-size:60px;
-margin-bottom:10px;
+margin-bottom:20px;
 }
 
 .hero p{
@@ -36,6 +38,8 @@ font-size:20px;
 color:#cbd5e1;
 margin-bottom:30px;
 }
+
+/* BUTTON */
 
 .btn{
 display:inline-block;
@@ -46,51 +50,52 @@ text-decoration:none;
 border-radius:10px;
 }
 
-.btn:hover{
-background:#1d4ed8;
-}
+.btn:hover
+
+/* CARDS */
 
 .card{
-    background:#111827;
-    width:250px;
-    padding:20px;
-    margin:15px;
-    display:inline-block;
-    border-radius:10px;
-    cursor:pointer;
+background:#111827;
+width:280px;
+padding:20px;
+margin:15px;
+display:inline-block;
+border-radius:12px;
+cursor:pointer;
+vertical-align:top;
 }
 
 .card:hover{
-    background:#1f2937;
+transform:translateY(-5px);
 }
+
+/* SERVICES */
+
 .service-selector{
-margin-bottom:40px;
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.service-image{
+width:220px;
+height:140px;
+object-fit:cover;
+
+```
+margin-top:15px;
+margin-bottom:15px;
+
+border-radius:12px;
+```
+
 }
 
 .service-area{
 margin-top:40px;
-padding:80px 20px;
-border-radius:15px;
-background-size:cover;
-background-position:center;
-}
-
-.machine-bg{
-background-image:url('CAD.jpg');
-}
-
-.mep-bg{
-background-image:url('MEP.jpg');
 }
 
 .service-area h2{
 margin-bottom:30px;
-background:rgba(0,0,0,0.6);
-display:inline-block;
-padding:10px 20px;
-border-radius:10px;
-}
-
-.service-area .card{
-background:rgba(0,0,0,0.75);
 }
