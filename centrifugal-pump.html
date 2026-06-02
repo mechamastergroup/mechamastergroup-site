@@ -10,6 +10,157 @@
 <link rel="icon" href="2.png">
 <link rel="stylesheet" href="style.css">
 
+<style>
+
+/* شريط الصور */
+
+.image-strip{
+
+display:none;
+
+position:fixed;
+
+top:50%;
+left:0;
+
+width:100%;
+
+transform:translateY(-50%);
+
+background:rgba(0,0,0,0.65);
+
+backdrop-filter:blur(4px);
+
+padding:30px 0;
+
+z-index:1000;
+
+justify-content:center;
+
+gap:25px;
+
+}
+
+.image-strip img{
+
+width:180px;
+
+height:120px;
+
+object-fit:cover;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.image-strip img:hover{
+
+transform:scale(1.08);
+
+}
+
+/* الصورة الكبيرة */
+
+.image-viewer{
+
+display:none;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.55);
+
+backdrop-filter:blur(3px);
+
+justify-content:center;
+align-items:center;
+
+z-index:2000;
+
+animation:fadeIn .25s ease;
+
+}
+
+.viewer-box{
+
+position:relative;
+
+animation:zoomIn .25s ease;
+
+}
+
+.viewer-box img{
+
+max-width:60vw;
+
+max-height:60vh;
+
+border-radius:15px;
+
+}
+
+.close-btn{
+
+position:absolute;
+
+top:-15px;
+right:-15px;
+
+width:35px;
+height:35px;
+
+background:white;
+
+color:black;
+
+border-radius:50%;
+
+font-size:24px;
+
+line-height:35px;
+
+text-align:center;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+/* Animations */
+
+@keyframes fadeIn{
+
+from{opacity:0;}
+to{opacity:1;}
+
+}
+
+@keyframes zoomIn{
+
+from{
+opacity:0;
+transform:scale(.85);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
@@ -26,49 +177,50 @@
 
 <h1>Centrifugal Pump</h1>
 
-<p>Mechanical Assembly Project</p>
+<p>Mechanical Pump Assembly</p>
 
 <img src="projects/centrifugal-pump/5.jpg"
 class="cover-image"
-onclick="openGallery()">
+onclick="openStrip()">
 
 </section>
 
-<div id="galleryOverlay" class="gallery-overlay">
+<!-- شريط الصور -->
 
-<div class="gallery-container"
-onclick="event.stopPropagation()">
+<div id="strip"
+class="image-strip">
 
 <img src="projects/centrifugal-pump/1.jpeg"
-class="gallery-thumb"
-onclick="openImage(this.src)">
+onclick="openViewer(this.src)">
 
 <img src="projects/centrifugal-pump/2.jpeg"
-class="gallery-thumb"
-onclick="openImage(this.src)">
+onclick="openViewer(this.src)">
 
 <img src="projects/centrifugal-pump/3.jpeg"
-class="gallery-thumb"
-onclick="openImage(this.src)">
+onclick="openViewer(this.src)">
 
 <img src="projects/centrifugal-pump/4.jpeg"
-class="gallery-thumb"
-onclick="openImage(this.src)">
+onclick="openViewer(this.src)">
 
 </div>
 
-</div>
+<!-- الصورة الكبيرة -->
 
-<div id="imageOverlay" class="image-overlay"
-onclick="closeImage()">
+<div id="viewer"
+class="image-viewer"
+onclick="closeViewer()">
 
-<div class="image-box"
+<div class="viewer-box"
 onclick="event.stopPropagation()">
 
-<span class="close-btn"
-onclick="closeImage()">×</span>
+<div class="close-btn"
+onclick="closeViewer()">
 
-<img id="largeImage">
+×
+
+</div>
+
+<img id="viewerImg">
 
 </div>
 
@@ -76,29 +228,27 @@ onclick="closeImage()">×</span>
 
 <script>
 
-function openGallery(){
+function openStrip(){
 
-document.getElementById("galleryOverlay").style.display="flex";
-
-}
-
-document.getElementById("galleryOverlay").onclick=function(){
-
-this.style.display="none";
+document.getElementById("strip").style.display="flex";
 
 }
 
-function openImage(src){
+function openViewer(src){
 
-document.getElementById("imageOverlay").style.display="flex";
+document.getElementById("strip").style.display="none";
 
-document.getElementById("largeImage").src=src;
+document.getElementById("viewer").style.display="flex";
+
+document.getElementById("viewerImg").src=src;
 
 }
 
-function closeImage(){
+function closeViewer(){
 
-document.getElementById("imageOverlay").style.display="none";
+document.getElementById("viewer").style.display="none";
+
+document.getElementById("strip").style.display="flex";
 
 }
 
