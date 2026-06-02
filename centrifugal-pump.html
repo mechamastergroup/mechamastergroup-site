@@ -28,51 +28,68 @@
 
 <p>Mechanical Assembly Project</p>
 
-<div class="service-selector">
-
-<img src="projects/centrifugal-pump/1.jpeg"
-class="service-image"
-onclick="openImage(this.src)">
-
-<img src="projects/centrifugal-pump/2.jpeg"
-class="service-image"
-onclick="openImage(this.src)">
-
-<img src="projects/centrifugal-pump/3.jpeg"
-class="service-image"
-onclick="openImage(this.src)">
-
-<img src="projects/centrifugal-pump/4.jpeg"
-class="service-image"
-onclick="openImage(this.src)">
-
 <img src="projects/centrifugal-pump/5.jpg"
-class="service-image"
-onclick="openImage(this.src)">
-
-</div>
+class="cover-image"
+onclick="openGallery()">
 
 </section>
 
-<div id="popup" class="popup" onclick="closeImage()">
+<div id="galleryOverlay" class="gallery-overlay">
 
-<img id="popup-img">
+<div class="gallery-container">
+
+<img src="projects/centrifugal-pump/1.jpeg"
+class="gallery-thumb"
+onclick="event.stopPropagation(); showLarge(this.src)">
+
+<img src="projects/centrifugal-pump/2.jpeg"
+class="gallery-thumb"
+onclick="event.stopPropagation(); showLarge(this.src)">
+
+<img src="projects/centrifugal-pump/3.jpeg"
+class="gallery-thumb"
+onclick="event.stopPropagation(); showLarge(this.src)">
+
+<img src="projects/centrifugal-pump/4.jpeg"
+class="gallery-thumb"
+onclick="event.stopPropagation(); showLarge(this.src)">
+
+</div>
+
+</div>
+
+<div id="imageOverlay" class="image-overlay"
+onclick="closeLarge()">
+
+<img id="largeImage">
 
 </div>
 
 <script>
 
-function openImage(src){
+function openGallery(){
 
-document.getElementById("popup").style.display = "flex";
-
-document.getElementById("popup-img").src = src;
+document.getElementById("galleryOverlay").style.display="flex";
 
 }
 
-function closeImage(){
+document.getElementById("galleryOverlay").onclick=function(){
 
-document.getElementById("popup").style.display = "none";
+this.style.display="none";
+
+}
+
+function showLarge(src){
+
+document.getElementById("imageOverlay").style.display="flex";
+
+document.getElementById("largeImage").src=src;
+
+}
+
+function closeLarge(){
+
+document.getElementById("imageOverlay").style.display="none";
 
 }
 
