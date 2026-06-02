@@ -33,19 +33,14 @@ rgba(10,15,30,0.78)
 url('90.png');
 
 background-size:cover;
-
 background-position:center;
-
 background-repeat:no-repeat;
 
 min-height:85vh;
 
 display:flex;
-
 flex-direction:column;
-
 justify-content:center;
-
 align-items:center;
 
 text-align:center;
@@ -66,26 +61,10 @@ margin-bottom:20px;
 
 font-size:24px;
 
-max-width:800px;
-
-line-height:1.6;
-
 color:#dbe4f0;
 
 margin-bottom:30px;
 
-}
-
-
-.hero h1{
-font-size:60px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:20px;
-color:#cbd5e1;
-margin-bottom:30px;
 }
 
 .btn{
@@ -137,7 +116,12 @@ margin-top:15px;
 }
 
 .service-area{
-margin-top:40px;
+padding:60px 20px;
+}
+
+.service-area h2{
+margin-bottom:30px;
+font-size:36px;
 }
 
 .cover-image{
