@@ -25,25 +25,29 @@ nav a:hover
 /* HERO */
 
 .hero{
-    padding:120px 20px;
 
-    background:
-    linear-gradient(
-    rgba(0,0,0,0.65),
-    rgba(0,0,0,0.65)
-    ),
-    url('90.jpg');
+```
+padding:120px 20px;
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+background:
+linear-gradient(
+rgba(0,0,0,0.70),
+rgba(0,0,0,0.70)
+),
+url('90.jpg');
 
-    min-height:80vh;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+min-height:80vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+```
+
 }
 
 .hero h1{
@@ -57,7 +61,7 @@ color:#cbd5e1;
 margin-bottom:30px;
 }
 
-/* BUTTONS */
+/* BUTTON */
 
 .btn{
 display:inline-block;
@@ -141,10 +145,11 @@ display:none;
 position:fixed;
 top:0;
 left:0;
+
+```
 width:100%;
 height:100%;
 
-```
 background:rgba(0,0,0,0.85);
 
 justify-content:center;
@@ -174,7 +179,7 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* LARGE IMAGE OVERLAY */
+/* LARGE IMAGE */
 
 .image-overlay{
 display:none;
