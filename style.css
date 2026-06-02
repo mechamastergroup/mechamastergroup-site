@@ -6,8 +6,6 @@ color:white;
 text-align:center;
 }
 
-/* HEADER */
-
 header{
 background:#111827;
 padding:20px;
@@ -21,8 +19,6 @@ font-size:14px;
 }
 
 nav a:hover
-
-/* HERO */
 
 .hero{
 padding:80px 20px;
@@ -39,8 +35,6 @@ color:#cbd5e1;
 margin-bottom:30px;
 }
 
-/* BUTTON */
-
 .btn{
 display:inline-block;
 padding:12px 28px;
@@ -51,8 +45,6 @@ border-radius:10px;
 }
 
 .btn:hover
-
-/* CARDS */
 
 .card{
 background:#111827;
@@ -69,8 +61,6 @@ vertical-align:top;
 transform:translateY(-5px);
 }
 
-/* SERVICES */
-
 .service-selector{
 display:flex;
 justify-content:center;
@@ -82,14 +72,9 @@ flex-wrap:wrap;
 width:220px;
 height:140px;
 object-fit:cover;
-
-```
 margin-top:15px;
 margin-bottom:15px;
-
 border-radius:12px;
-```
-
 }
 
 .service-area{
