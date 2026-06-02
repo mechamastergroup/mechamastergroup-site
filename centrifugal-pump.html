@@ -12,8 +12,6 @@
 
 <style>
 
-/* شريط الصور */
-
 .image-strip{
 
 display:none;
@@ -27,9 +25,10 @@ width:100%;
 
 transform:translateY(-50%);
 
-background:rgba(0,0,0,0.65);
+background:rgba(0,0,0,0.45);
 
-backdrop-filter:blur(4px);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
 
 padding:30px 0;
 
@@ -63,8 +62,6 @@ transform:scale(1.08);
 
 }
 
-/* الصورة الكبيرة */
-
 .image-viewer{
 
 display:none;
@@ -79,7 +76,8 @@ height:100%;
 
 background:rgba(0,0,0,0.55);
 
-backdrop-filter:blur(3px);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
 
 justify-content:center;
 align-items:center;
@@ -93,6 +91,10 @@ animation:fadeIn .25s ease;
 .viewer-box{
 
 position:relative;
+
+display:flex;
+flex-direction:column;
+align-items:center;
 
 animation:zoomIn .25s ease;
 
@@ -136,7 +138,31 @@ font-weight:bold;
 
 }
 
-/* Animations */
+.back-btn{
+
+margin-top:20px;
+
+padding:12px 24px;
+
+background:#2563eb;
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+
+.back-btn:hover{
+
+background:#1d4ed8;
+
+}
 
 @keyframes fadeIn{
 
@@ -185,8 +211,6 @@ onclick="openStrip()">
 
 </section>
 
-<!-- شريط الصور -->
-
 <div id="strip"
 class="image-strip">
 
@@ -204,8 +228,6 @@ onclick="openViewer(this.src)">
 
 </div>
 
-<!-- الصورة الكبيرة -->
-
 <div id="viewer"
 class="image-viewer"
 onclick="closeViewer()">
@@ -221,6 +243,13 @@ onclick="closeViewer()">
 </div>
 
 <img id="viewerImg">
+
+<button class="back-btn"
+onclick="backToGallery()">
+
+Back to Gallery
+
+</button>
 
 </div>
 
@@ -245,6 +274,12 @@ document.getElementById("viewerImg").src=src;
 }
 
 function closeViewer(){
+
+document.getElementById("viewer").style.display="none";
+
+}
+
+function backToGallery(){
 
 document.getElementById("viewer").style.display="none";
 
