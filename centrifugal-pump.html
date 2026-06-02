@@ -36,31 +36,39 @@ onclick="openGallery()">
 
 <div id="galleryOverlay" class="gallery-overlay">
 
-<div class="gallery-wrapper"
+<div class="gallery-container"
 onclick="event.stopPropagation()">
-
-<img id="featuredImage"
-src="projects/centrifugal-pump/1.jpeg">
-
-<div class="gallery-container">
 
 <img src="projects/centrifugal-pump/1.jpeg"
 class="gallery-thumb"
-onclick="changeImage(this.src)">
+onclick="openImage(this.src)">
 
 <img src="projects/centrifugal-pump/2.jpeg"
 class="gallery-thumb"
-onclick="changeImage(this.src)">
+onclick="openImage(this.src)">
 
 <img src="projects/centrifugal-pump/3.jpeg"
 class="gallery-thumb"
-onclick="changeImage(this.src)">
+onclick="openImage(this.src)">
 
 <img src="projects/centrifugal-pump/4.jpeg"
 class="gallery-thumb"
-onclick="changeImage(this.src)">
+onclick="openImage(this.src)">
 
 </div>
+
+</div>
+
+<div id="imageOverlay" class="image-overlay"
+onclick="closeImage()">
+
+<div class="image-box"
+onclick="event.stopPropagation()">
+
+<span class="close-btn"
+onclick="closeImage()">×</span>
+
+<img id="largeImage">
 
 </div>
 
@@ -80,9 +88,17 @@ this.style.display="none";
 
 }
 
-function changeImage(src){
+function openImage(src){
 
-document.getElementById("featuredImage").src = src;
+document.getElementById("imageOverlay").style.display="flex";
+
+document.getElementById("largeImage").src=src;
+
+}
+
+function closeImage(){
+
+document.getElementById("imageOverlay").style.display="none";
 
 }
 
