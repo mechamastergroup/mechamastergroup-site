@@ -63,8 +63,9 @@ background:url("90.png");
 
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
 
-opacity:0.12;
+opacity:.12;
 
 z-index:0;
 
@@ -80,31 +81,33 @@ z-index:1;
 
 .hero-logo{
 
-width:180px;
+width:320px;
 
-margin-bottom:25px;
+max-width:80%;
 
-filter:drop-shadow(
-0 0 20px rgba(255,255,255,.15)
-);
+margin-bottom:40px;
 
 }
 
 .hero h1{
 
-font-size:72px;
+font-size:64px;
 
 margin:0;
 
-letter-spacing:2px;
+letter-spacing:4px;
+
+font-weight:700;
 
 }
 
 .hero-subtitle{
 
-font-size:28px;
+font-size:24px;
 
 margin-top:20px;
+
+margin-bottom:35px;
 
 color:#cbd5e1;
 
@@ -120,9 +123,9 @@ gap:50px;
 
 flex-wrap:wrap;
 
-margin:35px 0;
+margin-bottom:40px;
 
-font-size:22px;
+font-size:20px;
 
 color:#94a3b8;
 
@@ -188,6 +191,12 @@ color:#cbd5e1;
 
 @media(max-width:768px){
 
+.hero-logo{
+
+width:180px;
+
+}
+
 .hero h1{
 
 font-size:42px;
@@ -196,7 +205,7 @@ font-size:42px;
 
 .hero-subtitle{
 
-font-size:20px;
+font-size:18px;
 
 }
 
@@ -206,11 +215,19 @@ flex-direction:column;
 
 gap:15px;
 
+font-size:18px;
+
 }
 
-.hero-logo{
+.about-home h2{
 
-width:120px;
+font-size:30px;
+
+}
+
+.about-home p{
+
+font-size:18px;
 
 }
 
