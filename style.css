@@ -9,23 +9,81 @@ text-align:center;
 /* HEADER */
 
 header{
-background:#111827;
-padding:20px;
+
+background:#0b1324;
+
+padding:22px 0;
+
 position:sticky;
+
 top:0;
+
 z-index:1000;
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+
+}
+
+nav{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:45px;
+
 }
 
 nav a{
+
 color:white;
+
 text-decoration:none;
-margin:0 15px;
-font-size:16px;
-transition:.3s;
+
+font-size:20px;
+
+font-weight:600;
+
+letter-spacing:0.5px;
+
+transition:all .3s ease;
+
+position:relative;
+
 }
 
 nav a:hover{
+
 color:#3b82f6;
+
+}
+
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-6px;
+
+width:0;
+
+height:2px;
+
+background:#3b82f6;
+
+transition:.3s;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
 }
 
 /* HERO */
@@ -65,7 +123,7 @@ background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 
-opacity:.12;
+opacity:0.12;
 
 z-index:0;
 
@@ -97,13 +155,15 @@ object-fit:contain;
 
 .hero h1{
 
-font-size:64px;
+font-size:72px;
 
 margin:0;
 
-letter-spacing:4px;
+letter-spacing:3px;
 
 font-weight:700;
+
+text-transform:uppercase;
 
 }
 
@@ -121,7 +181,7 @@ color:#cbd5e1;
 
 }
 
-/* SERVICES LIST */
+/* SERVICES */
 
 .hero-services{
 
@@ -129,25 +189,25 @@ display:flex;
 
 justify-content:center;
 
-gap:50px;
+gap:60px;
 
 flex-wrap:wrap;
 
-margin-bottom:40px;
+margin-bottom:45px;
 
-font-size:20px;
+font-size:22px;
 
-color:#94a3b8;
+color:#b8c2d1;
 
 }
 
-/* BUTTONS */
+/* BUTTON */
 
 .btn{
 
 display:inline-block;
 
-padding:14px 30px;
+padding:14px 32px;
 
 background:#2563eb;
 
@@ -157,6 +217,10 @@ text-decoration:none;
 
 border-radius:10px;
 
+font-size:18px;
+
+font-weight:600;
+
 transition:.3s;
 
 }
@@ -164,6 +228,8 @@ transition:.3s;
 .btn:hover{
 
 background:#1d4ed8;
+
+transform:translateY(-2px);
 
 }
 
@@ -197,293 +263,21 @@ color:#cbd5e1;
 
 }
 
-/* CARDS */
+/* MOBILE */
 
-.card{
+@media(max-width:768px){
 
-background:#111827;
+nav{
 
-width:280px;
-
-padding:20px;
-
-margin:15px;
-
-border-radius:12px;
-
-display:inline-block;
-
-vertical-align:top;
-
-cursor:pointer;
-
-transition:.3s;
+gap:20px;
 
 }
 
-.card:hover{
-
-transform:translateY(-5px);
-
-}
-
-.card-link{
-
-text-decoration:none;
-
-color:white;
-
-}
-
-/* SERVICES PAGE */
-
-.service-selector{
-
-display:flex;
-
-justify-content:center;
-
-gap:40px;
-
-flex-wrap:wrap;
-
-}
-
-.service-image{
-
-width:220px;
-
-height:140px;
-
-object-fit:cover;
-
-border-radius:12px;
-
-margin-top:15px;
-
-}
-
-.service-area{
-
-margin-top:40px;
-
-padding:20px;
-
-}
-
-.service-area h2{
-
-margin-bottom:30px;
-
-}
-
-/* PROJECT COVER */
-
-.cover-image{
-
-width:700px;
-
-max-width:90%;
-
-border-radius:15px;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-.cover-image:hover{
-
-transform:scale(1.02);
-
-}
-
-/* GALLERY STRIP */
-
-.image-strip{
-
-display:none;
-
-position:fixed;
-
-top:50%;
-
-left:0;
-
-width:100%;
-
-transform:translateY(-50%);
-
-background:rgba(0,0,0,.75);
-
-padding:40px 0;
-
-z-index:1000;
-
-justify-content:center;
-align-items:center;
-
-gap:25px;
-
-}
-
-.image-strip img{
-
-width:180px;
-
-height:120px;
-
-object-fit:cover;
-
-border-radius:12px;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-.image-strip img:hover{
-
-transform:scale(1.08);
-
-}
-
-/* BLUR */
-
-.blur-background{
-
-filter:blur(25px);
-
-transition:.35s ease;
-
-}
-
-/* IMAGE VIEWER */
-
-.image-viewer{
-
-display:none;
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,.75);
-
-justify-content:center;
-align-items:center;
-
-z-index:2000;
-
-}
-
-.viewer-box{
-
-position:relative;
-
-display:flex;
-flex-direction:column;
-align-items:center;
-
-animation:zoomIn .25s ease;
-
-}
-
-.viewer-box img{
-
-max-width:60vw;
-
-max-height:60vh;
-
-border-radius:15px;
-
-}
-
-.close-btn{
-
-position:absolute;
-
-top:-15px;
-right:-15px;
-
-width:35px;
-height:35px;
-
-background:white;
-
-color:black;
-
-border-radius:50%;
-
-font-size:24px;
-
-line-height:35px;
-
-text-align:center;
-
-cursor:pointer;
-
-font-weight:bold;
-
-}
-
-.back-btn{
-
-margin-top:20px;
-
-padding:12px 24px;
-
-background:#2563eb;
-
-color:white;
-
-border:none;
-
-border-radius:8px;
-
-cursor:pointer;
+nav a{
 
 font-size:16px;
 
 }
-
-.back-btn:hover{
-
-background:#1d4ed8;
-
-}
-
-/* ANIMATION */
-
-@keyframes zoomIn{
-
-from{
-
-opacity:0;
-
-transform:scale(.85);
-
-}
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
 
 .hero-logo{
 
@@ -522,28 +316,6 @@ font-size:30px;
 .about-home p{
 
 font-size:18px;
-
-}
-
-.cover-image{
-
-width:95%;
-
-}
-
-.image-strip{
-
-gap:10px;
-
-padding:20px 0;
-
-}
-
-.image-strip img{
-
-width:120px;
-
-height:80px;
 
 }
 
