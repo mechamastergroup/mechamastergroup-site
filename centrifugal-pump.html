@@ -1,194 +1,3 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-<meta charset="UTF-8">
-
-<title>Centrifugal Pump | MechaMaster Group</title>
-
-<link rel="icon" href="2.png">
-<link rel="stylesheet" href="style.css">
-
-<style>
-
-.image-strip{
-
-display:none;
-
-position:fixed;
-
-top:50%;
-left:0;
-
-width:100%;
-
-transform:translateY(-50%);
-
-background:rgba(0,0,0,0.45);
-
-backdrop-filter:blur(12px);
--webkit-backdrop-filter:blur(12px);
-
-padding:30px 0;
-
-z-index:1000;
-
-justify-content:center;
-
-gap:25px;
-
-}
-
-.image-strip img{
-
-width:180px;
-
-height:120px;
-
-object-fit:cover;
-
-border-radius:10px;
-
-cursor:pointer;
-
-transition:0.3s;
-
-}
-
-.image-strip img:hover{
-
-transform:scale(1.08);
-
-}
-
-.image-viewer{
-
-display:none;
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,0.55);
-
-backdrop-filter:blur(12px);
--webkit-backdrop-filter:blur(12px);
-
-justify-content:center;
-align-items:center;
-
-z-index:2000;
-
-animation:fadeIn .25s ease;
-
-}
-
-.viewer-box{
-
-position:relative;
-
-display:flex;
-flex-direction:column;
-align-items:center;
-
-animation:zoomIn .25s ease;
-
-}
-
-.viewer-box img{
-
-max-width:60vw;
-
-max-height:60vh;
-
-border-radius:15px;
-
-}
-
-.close-btn{
-
-position:absolute;
-
-top:-15px;
-right:-15px;
-
-width:35px;
-height:35px;
-
-background:white;
-
-color:black;
-
-border-radius:50%;
-
-font-size:24px;
-
-line-height:35px;
-
-text-align:center;
-
-cursor:pointer;
-
-font-weight:bold;
-
-}
-
-.back-btn{
-
-margin-top:20px;
-
-padding:12px 24px;
-
-background:#2563eb;
-
-color:white;
-
-border:none;
-
-border-radius:8px;
-
-cursor:pointer;
-
-font-size:16px;
-
-}
-
-.back-btn:hover{
-
-background:#1d4ed8;
-
-}
-
-@keyframes fadeIn{
-
-from{opacity:0;}
-to{opacity:1;}
-
-}
-
-@keyframes zoomIn{
-
-from{
-opacity:0;
-transform:scale(.85);
-}
-
-to{
-opacity:1;
-transform:scale(1);
-}
-
-}
-
-</style>
-
-</head>
-
 <body>
 
 <div id="pageContent">
@@ -207,7 +16,8 @@ transform:scale(1);
 
 <p>Mechanical Pump Assembly</p>
 
-<img src="projects/centrifugal-pump/5.jpg"
+<img
+src="projects/centrifugal-pump/5.jpg"
 class="cover-image"
 onclick="openStrip()">
 
@@ -215,20 +25,7 @@ onclick="openStrip()">
 
 </div>
 
-<section class="hero">
-
-<h1>Centrifugal Pump</h1>
-
-<p>Mechanical Pump Assembly</p>
-
-<img src="projects/centrifugal-pump/5.jpg"
-class="cover-image"
-onclick="openStrip()">
-
-</section>
-
-<div id="strip"
-class="image-strip">
+<div id="strip" class="image-strip">
 
 <img src="projects/centrifugal-pump/1.jpeg"
 onclick="openViewer(this.src)">
@@ -244,14 +41,17 @@ onclick="openViewer(this.src)">
 
 </div>
 
-<div id="viewer"
+<div
+id="viewer"
 class="image-viewer"
 onclick="closeViewer()">
 
-<div class="viewer-box"
+<div
+class="viewer-box"
 onclick="event.stopPropagation()">
 
-<div class="close-btn"
+<div
+class="close-btn"
 onclick="closeViewer()">
 
 ×
@@ -260,7 +60,8 @@ onclick="closeViewer()">
 
 <img id="viewerImg">
 
-<button class="back-btn"
+<button
+class="back-btn"
 onclick="backToGallery()">
 
 Back to Gallery
@@ -316,5 +117,3 @@ document.getElementById("strip").style.display="flex";
 </script>
 
 </body>
-
-</html>
