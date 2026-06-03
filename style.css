@@ -187,21 +187,31 @@ color:#cbd5e1;
 
 /* SERVICES */
 
-.hero-services{
+.card{
 
-display:flex;
+background:#111827;
 
-justify-content:center;
+width:320px;
 
-gap:80px;
+padding:20px;
 
-flex-wrap:wrap;
+border-radius:15px;
 
-margin-bottom:50px;
+transition:.3s;
 
-font-size:22px;
+}
 
-color:#b8c2d1;
+.service-image{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+display:block;
 
 }
 
