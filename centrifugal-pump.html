@@ -191,6 +191,8 @@ transform:scale(1);
 
 <body>
 
+<div id="pageContent">
+
 <header>
 <nav>
 <a href="index.html">Home</a>
@@ -198,6 +200,20 @@ transform:scale(1);
 <a href="contact.html">Contact</a>
 </nav>
 </header>
+
+<section class="hero">
+
+<h1>Centrifugal Pump</h1>
+
+<p>Mechanical Pump Assembly</p>
+
+<img src="projects/centrifugal-pump/5.jpg"
+class="cover-image"
+onclick="openStrip()">
+
+</section>
+
+</div>
 
 <section class="hero">
 
@@ -263,8 +279,7 @@ document.getElementById("strip").style.display="flex";
 
 document.body.style.overflow="hidden";
 
-document.querySelector(".hero").style.filter="blur(12px)";
-
+document.getElementById("pageContent").style.filter="blur(12px)";
 
 }
 
@@ -286,7 +301,7 @@ document.getElementById("strip").style.display="none";
 
 document.body.style.overflow="auto";
 
-document.querySelector(".hero").style.filter="none";
+document.getElementById("pageContent").style.filter="none";
 
 }
 
