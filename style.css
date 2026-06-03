@@ -325,62 +325,28 @@ line-height:1.8;
 color:#cbd5e1;
 
 }
+/* PROJECT PAGES */
 
-/* MOBILE */
+.cover-image{
 
-@media(max-width:768px){
+width:700px;
 
-nav{
+max-width:90%;
 
-gap:20px;
+border-radius:15px;
 
-}
+cursor:pointer;
 
-nav a{
-
-font-size:16px;
-
-}
-
-.hero-logo{
-
-width:150px;
+transition:.3s;
 
 }
 
-.hero h1{
+.cover-image:hover{
 
-font-size:42px;
-
-}
-
-.hero-subtitle{
-
-font-size:18px;
+transform:scale(1.02);
 
 }
 
-.hero-services{
-
-flex-direction:column;
-
-gap:15px;
-
-font-size:18px;
-
-}
-
-.about-home h2{
-
-font-size:30px;
-
-}
-
-.about-home p{
-
-font-size:18px;
-
-}
 .blur-background{
 
 filter:blur(30px);
@@ -538,5 +504,49 @@ cursor:pointer;
 font-size:16px;
 
 }
+
+.back-btn:hover{
+
+background:#1d4ed8;
+
+}
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+gap:20px;
+}
+
+nav a{
+font-size:16px;
+}
+
+.hero-logo{
+width:150px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero-subtitle{
+font-size:18px;
+}
+
+.hero-services{
+flex-direction:column;
+gap:15px;
+font-size:18px;
+}
+
+.about-home h2{
+font-size:30px;
+}
+
+.about-home p{
+font-size:18px;
+}
+
 
 }
