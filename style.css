@@ -201,6 +201,35 @@ transition:.3s;
 
 }
 
+.service-image{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+display:block;
+
+}
+.service-image{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+display:block;
+
+}
+
+/* الصق هنا */
+
 .service-selector{
 
 display:flex;
@@ -214,6 +243,54 @@ gap:70px;
 flex-wrap:wrap;
 
 margin-top:40px;
+
+}
+
+.card{
+
+background:#07132d;
+
+width:320px;
+
+padding:25px;
+
+border-radius:18px;
+
+transition:.3s;
+
+cursor:pointer;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 15px 35px rgba(0,0,0,0.3);
+
+}
+
+.card-link{
+
+text-decoration:none;
+
+color:white;
+
+}
+
+.card h2{
+
+margin-bottom:20px;
+
+font-size:24px;
+
+}
+
+.card p{
+
+margin-top:20px;
+
+color:#cbd5e1;
 
 }
 
