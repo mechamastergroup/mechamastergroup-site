@@ -548,5 +548,7 @@ font-size:30px;
 font-size:18px;
 }
 
-
+#pageContent{
+transition:0.35s ease;
+}
 }
