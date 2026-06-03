@@ -103,6 +103,10 @@ padding:40px 20px;
 
 overflow:hidden;
 
+max-width:1400px;
+
+margin:auto;
+
 }
 
 .hero::before{
@@ -141,11 +145,11 @@ z-index:1;
 
 .hero-logo{
 
-width:220px;
+width:240px;
 
 max-width:80%;
 
-margin-bottom:30px;
+margin-bottom:35px;
 
 object-fit:contain;
 
@@ -155,11 +159,11 @@ object-fit:contain;
 
 .hero h1{
 
-font-size:72px;
+font-size:76px;
 
 margin:0;
 
-letter-spacing:3px;
+letter-spacing:4px;
 
 font-weight:700;
 
@@ -189,11 +193,11 @@ display:flex;
 
 justify-content:center;
 
-gap:60px;
+gap:80px;
 
 flex-wrap:wrap;
 
-margin-bottom:45px;
+margin-bottom:50px;
 
 font-size:22px;
 
@@ -207,7 +211,7 @@ color:#b8c2d1;
 
 display:inline-block;
 
-padding:14px 32px;
+padding:16px 36px;
 
 background:#2563eb;
 
@@ -217,7 +221,7 @@ text-decoration:none;
 
 border-radius:10px;
 
-font-size:18px;
+font-size:19px;
 
 font-weight:600;
 
