@@ -261,6 +261,11 @@ function openStrip(){
 
 document.getElementById("strip").style.display="flex";
 
+document.body.style.overflow="hidden";
+
+document.querySelector(".hero").style.filter="blur(12px)";
+
+
 }
 
 function openViewer(src){
@@ -276,6 +281,12 @@ document.getElementById("viewerImg").src=src;
 function closeViewer(){
 
 document.getElementById("viewer").style.display="none";
+
+document.getElementById("strip").style.display="none";
+
+document.body.style.overflow="auto";
+
+document.querySelector(".hero").style.filter="none";
 
 }
 
