@@ -1,13 +1,18 @@
+```html
 <body>
 
 <div id="pageContent">
 
 <header>
+
 <nav>
+
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="contact.html">Contact</a>
+
 </nav>
+
 </header>
 
 <section class="hero">
@@ -16,10 +21,11 @@
 
 <p>Mechanical Pump Assembly</p>
 
-<img src="projects/centrifugal-pump/5.jpg"
+<img
+src="projects/centrifugal-pump/5.jpg"
 class="cover-image"
-onclick="openStrip(); return false;">
-  
+onclick="openStrip()">
+
 </section>
 
 </div>
@@ -77,9 +83,8 @@ function openStrip(){
 
 document.getElementById("strip").style.display="flex";
 
-document.body.style.overflow="hidden";
-
-document.getElementById("pageContent").style.filter="blur(12px)";
+document.getElementById("pageContent")
+.classList.add("blur-background");
 
 }
 
@@ -99,9 +104,8 @@ document.getElementById("viewer").style.display="none";
 
 document.getElementById("strip").style.display="none";
 
-document.body.style.overflow="auto";
-
-document.getElementById("pageContent").style.filter="none";
+document.getElementById("pageContent")
+.classList.remove("blur-background");
 
 }
 
@@ -116,3 +120,4 @@ document.getElementById("strip").style.display="flex";
 </script>
 
 </body>
+```
