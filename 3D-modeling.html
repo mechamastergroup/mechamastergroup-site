@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,7 +95,12 @@ Back to Gallery
 
 function openModel(src){
 
-alert("working");
+document.getElementById("modelViewer").style.display="flex";
+
+document.getElementById("modelImage").src=src;
+
+document.querySelector(".model-gallery")
+.classList.add("blur-gallery");
 
 }
 
@@ -113,4 +118,4 @@ document.querySelector(".model-gallery")
 </body>
 
 </html>
-```
+
