@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Bahrain Trading Center | MechaMaster Group</title>
+
+<link rel="icon" href="2.png">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="pageContent">
+
+<header>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Bahrain Trading Center</h1>
+
+<p>Commercial Building Engineering Project</p>
+
+<img
+src="projects/bahrain-trading-center/5aa.jpg"
+class="cover-image"
+onclick="openStrip()">
+
+</section>
+
+</div>
+
+<div id="strip" class="image-strip">
+
+<img src="projects/bahrain-trading-center/1aa.jpeg"
+onclick="openViewer(this.src)">
+
+<img src="projects/bahrain-trading-center/2aa.jpeg"
+onclick="openViewer(this.src)">
+
+<img src="projects/bahrain-trading-center/3aa.jpeg"
+onclick="openViewer(this.src)">
+
+<img src="projects/bahrain-trading-center/4aa.jpeg"
+onclick="openViewer(this.src)">
+
+</div>
+
+<div
+id="viewer"
+class="image-viewer"
+onclick="closeViewer()">
+
+<div
+class="viewer-box"
+onclick="event.stopPropagation()">
+
+<div
+class="close-btn"
+onclick="closeViewer()">
+
+×
+
+</div>
+
+<img id="viewerImg">
+
+<button
+class="back-btn"
+onclick="backToGallery()">
+
+Back to Gallery
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function openStrip(){
+
+document.getElementById("strip").style.display="flex";
+
+document.getElementById("pageContent")
+.classList.add("blur-background");
+
+}
+
+function openViewer(src){
+
+document.getElementById("strip").style.display="none";
+
+document.getElementById("viewer").style.display="flex";
+
+document.getElementById("viewerImg").src=src;
+
+}
+
+function closeViewer(){
+
+document.getElementById("viewer").style.display="none";
+
+document.getElementById("strip").style.display="none";
+
+document.getElementById("pageContent")
+.classList.remove("blur-background");
+
+}
+
+function backToGallery(){
+
+document.getElementById("viewer").style.display="none";
+
+document.getElementById("strip").style.display="flex";
+
+}
+
+</script>
+
+</body>
+
+</html>
