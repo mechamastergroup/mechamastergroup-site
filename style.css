@@ -636,4 +636,48 @@ font-size:17px;
 }
 
 }
+.model-gallery{
 
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:30px;
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+.gallery-img{
+
+width:220px;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+cursor:pointer;
+
+transition:0.35s ease;
+
+position:relative;
+
+z-index:1;
+
+}
+
+.gallery-img:hover{
+
+transform:scale(1.6);
+
+z-index:999;
+
+box-shadow:0 15px 40px rgba(0,0,0,.45);
+
+}
