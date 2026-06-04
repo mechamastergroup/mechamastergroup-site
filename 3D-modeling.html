@@ -77,7 +77,7 @@ onclick="openModel(this.src)">
 
 <div class="model-box">
 
-<img id="modelImage">
+<img id="modelImage" alt="3D Model Preview">
 
 <button
 class="gallery-back-btn"
@@ -95,9 +95,9 @@ Back to Gallery
 
 function openModel(src){
 
-document.getElementById("modelViewer").style.display="flex";
+document.getElementById("modelViewer").style.display = "flex";
 
-document.getElementById("modelImage").src=src;
+document.getElementById("modelImage").src = src;
 
 document.querySelector(".model-gallery")
 .classList.add("blur-gallery");
@@ -106,7 +106,7 @@ document.querySelector(".model-gallery")
 
 function closeModel(){
 
-document.getElementById("modelViewer").style.display="none";
+document.getElementById("modelViewer").style.display = "none";
 
 document.querySelector(".model-gallery")
 .classList.remove("blur-gallery");
