@@ -509,10 +509,10 @@ font-size:16px;
 
 background:#1d4ed8;
 
+  @media(max-width:768px){
 }
 /* MOBILE */
 
-@media(max-width:768px){
 
 nav{
 gap:20px;
@@ -590,6 +590,7 @@ line-height:1.9;
 
 color:#cbd5e1;
 
+margin-bottom:35px;
 
 }
 
