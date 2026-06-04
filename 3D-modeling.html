@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,20 +33,89 @@
 
 <div class="model-gallery">
 
-<img src="3D-modeling-gallery/1ab.jpg" class="gallery-img">
-<img src="3D-modeling-gallery/2ab.jpg" class="gallery-img">
-<img src="3D-modeling-gallery/3ab.jpg" class="gallery-img">
-<img src="3D-modeling-gallery/4ab.jpg" class="gallery-img">
-<img src="3D-modeling-gallery/5ab.jpg" class="gallery-img">
-<img src="3D-modeling-gallery/6ab.jpg" class="gallery-img">
-<img src="3D-modeling-gallery/7ab.jpg" class="gallery-img">
-<img src="3D-modeling-gallery/8ab.jpg" class="gallery-img">
-<img src="3D-modeling-gallery/9ab.jpg" class="gallery-img">
+<img src="3D-modeling-gallery/1ab.jpg"
+class="gallery-img"
+onclick="openModel(this.src)">
+
+<img src="3D-modeling-gallery/2ab.jpg"
+class="gallery-img"
+onclick="openModel(this.src)">
+
+<img src="3D-modeling-gallery/3ab.jpg"
+class="gallery-img"
+onclick="openModel(this.src)">
+
+<img src="3D-modeling-gallery/4ab.jpg"
+class="gallery-img"
+onclick="openModel(this.src)">
+
+<img src="3D-modeling-gallery/5ab.jpg"
+class="gallery-img"
+onclick="openModel(this.src)">
+
+<img src="3D-modeling-gallery/6ab.jpg"
+class="gallery-img"
+onclick="openModel(this.src)">
+
+<img src="3D-modeling-gallery/7ab.jpg"
+class="gallery-img"
+onclick="openModel(this.src)">
+
+<img src="3D-modeling-gallery/8ab.jpg"
+class="gallery-img"
+onclick="openModel(this.src)">
+
+<img src="3D-modeling-gallery/9ab.jpg"
+class="gallery-img"
+onclick="openModel(this.src)">
 
 </div>
 
 </section>
 
+<div id="modelViewer" class="model-viewer">
+
+<div class="model-box">
+
+<img id="modelImage">
+
+<button
+class="gallery-back-btn"
+onclick="closeModel()">
+
+Back to Gallery
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function openModel(src){
+
+document.getElementById("modelViewer").style.display="flex";
+
+document.getElementById("modelImage").src=src;
+
+document.querySelector(".model-gallery")
+.classList.add("blur-gallery");
+
+}
+
+function closeModel(){
+
+document.getElementById("modelViewer").style.display="none";
+
+document.querySelector(".model-gallery")
+.classList.remove("blur-gallery");
+
+}
+
+</script>
+
 </body>
 
 </html>
+```
