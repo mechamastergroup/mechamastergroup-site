@@ -509,7 +509,6 @@ font-size:16px;
 
 background:#1d4ed8;
 
-  @media(max-width:768px){
 }
 /* MOBILE */
 
@@ -682,8 +681,9 @@ box-shadow:0 15px 40px rgba(0,0,0,.45);
 
 }
 
-```css
+/* ========================= */
 /* 3D MODELING GALLERY */
+/* ========================= */
 
 .model-gallery{
 
@@ -695,7 +695,7 @@ justify-content:center;
 
 gap:30px;
 
-max-width:1400px;
+max-width:1200px;
 
 margin:auto;
 
@@ -713,7 +713,7 @@ border-radius:12px;
 
 cursor:pointer;
 
-transition:.35s ease;
+transition:0.35s ease;
 
 position:relative;
 
@@ -735,7 +735,7 @@ box-shadow:0 15px 40px rgba(0,0,0,.45);
 
 filter:blur(18px);
 
-transition:.35s ease;
+transition:0.35s ease;
 
 }
 
@@ -753,11 +753,17 @@ width:100%;
 
 height:100%;
 
+background:rgba(0,0,0,0.35);
+
+backdrop-filter:blur(12px);
+
+-webkit-backdrop-filter:blur(12px);
+
 justify-content:center;
 
 align-items:center;
 
-z-index:3000;
+z-index:9999;
 
 }
 
@@ -773,7 +779,7 @@ align-items:center;
 
 .model-box img{
 
-max-width:55vw;
+max-width:60vw;
 
 max-height:70vh;
 
@@ -801,6 +807,8 @@ cursor:pointer;
 
 font-size:16px;
 
+transition:.3s;
+
 }
 
 .gallery-back-btn:hover{
@@ -808,4 +816,44 @@ font-size:16px;
 background:#1d4ed8;
 
 }
-```
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+gap:20px;
+}
+
+nav a{
+font-size:16px;
+}
+
+.hero-logo{
+width:150px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero-subtitle{
+font-size:18px;
+}
+
+.hero-services{
+flex-direction:column;
+gap:15px;
+font-size:18px;
+}
+
+.about-home h2{
+font-size:30px;
+}
+
+.about-home p{
+font-size:18px;
+}
+
+#pageContent{
+transition:0.35s ease;
+}
