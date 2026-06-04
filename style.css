@@ -552,3 +552,87 @@ font-size:18px;
 transition:0.35s ease;
 }
 }
+```css
+/* PROJECT OVERVIEW */
+
+.project-overview{
+
+max-width:900px;
+
+margin:60px auto 20px;
+
+padding:35px;
+
+background:#07132d;
+
+border-radius:18px;
+
+text-align:left;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.project-overview h2{
+
+text-align:center;
+
+font-size:38px;
+
+margin-bottom:25px;
+
+}
+
+.project-overview p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#cbd5e1;
+
+}
+
+.project-overview ul{
+
+margin:20px 0;
+
+padding-left:25px;
+
+}
+
+.project-overview li{
+
+margin-bottom:12px;
+
+font-size:18px;
+
+color:#cbd5e1;
+
+}
+
+@media(max-width:768px){
+
+.project-overview{
+
+margin:40px 15px;
+
+padding:25px;
+
+}
+
+.project-overview h2{
+
+font-size:28px;
+
+}
+
+.project-overview p,
+.project-overview li{
+
+font-size:16px;
+
+}
+
+}
+
