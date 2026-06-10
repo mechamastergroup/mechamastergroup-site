@@ -841,7 +841,6 @@ max-width:90vw;
 
 max-height:65vh;
 
-}
 
 }
 .social-strip img{
@@ -879,9 +878,9 @@ bottom:25px;
 
 right:25px;
 
-width:75px;
+width:70px;
 
-height:75px;
+height:70px;
 
 background:#25D366;
 
@@ -893,9 +892,9 @@ justify-content:center;
 
 align-items:center;
 
-box-shadow:0 10px 30px rgba(0,0,0,.35);
-
 z-index:99999;
+
+box-shadow:0 10px 25px rgba(0,0,0,.35);
 
 transition:.3s;
 
@@ -903,9 +902,9 @@ transition:.3s;
 
 .whatsapp-float img{
 
-width:42px;
+width:40px;
 
-height:42px;
+height:40px;
 
 object-fit:contain;
 
@@ -913,7 +912,6 @@ object-fit:contain;
 
 .whatsapp-float:hover{
 
-transform:scale(1.12);
+transform:scale(1.1);
 
 }
-
