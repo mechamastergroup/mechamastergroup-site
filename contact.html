@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 
 <html lang="en">
@@ -61,12 +60,38 @@ info@mechamastergroup.com
 
 <p>Social Media</p>
 
-<img
-src="social-media/social-media.jpg"
-class="cover-image"
-onclick="openSocial()">
+<h2
+style="cursor:pointer;"
+onclick="openBanner()">
+
+Social Media
+
+</h2>
 
 </section>
+
+</div>
+
+<div id="socialBanner"
+style="
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+z-index:2500;
+">
+
+<img
+src="social-media/social-media.jpg"
+style="
+width:900px;
+max-width:90vw;
+border-radius:18px;
+cursor:pointer;
+box-shadow:0 20px 60px rgba(0,0,0,.5);
+"
+onclick="openSocial()">
 
 </div>
 
@@ -96,26 +121,40 @@ target="_blank">
 
 <script>
 
-function openSocial(){
+function openBanner(){
 
-document.getElementById("socialStrip").style.display="flex";
+document.getElementById("socialBanner").style.display="block";
 
 document.getElementById("pageContent")
 .classList.add("blur-background");
 
 }
 
+function openSocial(){
+
+document.getElementById("socialBanner").style.display="none";
+
+document.getElementById("socialStrip").style.display="flex";
+
+}
+
 document.addEventListener("click", function(event){
 
-const strip = document.getElementById("socialStrip");
+const banner =
+document.getElementById("socialBanner");
+
+const strip =
+document.getElementById("socialStrip");
 
 if(
-strip.style.display === "flex" &&
-!strip.contains(event.target) &&
-!event.target.closest(".cover-image")
+!event.target.closest("#socialBanner") &&
+!event.target.closest("#socialStrip") &&
+!event.target.closest("h2")
 ){
 
-strip.style.display = "none";
+banner.style.display="none";
+
+strip.style.display="none";
 
 document.getElementById("pageContent")
 .classList.remove("blur-background");
@@ -129,4 +168,3 @@ document.getElementById("pageContent")
 </body>
 
 </html>
-```
