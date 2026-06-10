@@ -871,5 +871,49 @@ box-shadow:0 8px 20px rgba(0,0,0,.25);
 transform:translateY(-5px);
 
 }
+.whatsapp-float{
 
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+width:75px;
+
+height:75px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+z-index:99999;
+
+transition:.3s;
+
+}
+
+.whatsapp-float img{
+
+width:42px;
+
+height:42px;
+
+object-fit:contain;
+
+}
+
+.whatsapp-float:hover{
+
+transform:scale(1.12);
+
+}
 
