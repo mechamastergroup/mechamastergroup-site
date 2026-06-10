@@ -938,3 +938,40 @@ transform:scale(1);
 animation:whatsappPulse 2s infinite;
 
 }
+.project-overview{
+
+max-width:1000px;
+
+margin:60px auto;
+
+padding:50px;
+
+background:#07132d;
+
+border-radius:20px;
+
+text-align:left;
+
+box-shadow:0 15px 40px rgba(0,0,0,.3);
+
+}
+
+.project-overview h2{
+
+text-align:center;
+
+margin-top:40px;
+
+margin-bottom:20px;
+
+}
+
+.project-overview p{
+
+text-align:left;
+
+font-size:20px;
+
+line-height:1.9;
+
+}
