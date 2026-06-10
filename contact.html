@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 
 <html lang="en">
@@ -15,6 +16,8 @@
 </head>
 
 <body>
+
+<div id="pageContent">
 
 <header>
 
@@ -54,8 +57,72 @@ info@mechamastergroup.com
 
 <h2>+962 7 8745 4012</h2>
 
+<br>
+
+<p>Social Media</p>
+
+<img
+src="social-media/social-cover.png"
+class="cover-image"
+onclick="openSocial()">
+
 </section>
+
+</div>
+
+<div id="socialStrip" class="image-strip">
+
+<a href="YOUR_INSTAGRAM_LINK" target="_blank">
+<img src="social-media/instagram.png">
+</a>
+
+<a href="YOUR_FACEBOOK_LINK" target="_blank">
+<img src="social-media/facebook.png">
+</a>
+
+<a href="YOUR_LINKEDIN_LINK" target="_blank">
+<img src="social-media/linkedin.png">
+</a>
+
+<a href="https://wa.me/962787454012" target="_blank">
+<img src="social-media/whatsapp.png">
+</a>
+
+</div>
+
+<script>
+
+function openSocial(){
+
+document.getElementById("socialStrip").style.display="flex";
+
+document.getElementById("pageContent")
+.classList.add("blur-background");
+
+}
+
+document.addEventListener("click", function(event){
+
+const strip = document.getElementById("socialStrip");
+
+if(
+strip.style.display === "flex" &&
+!strip.contains(event.target) &&
+!event.target.closest(".cover-image")
+){
+
+strip.style.display = "none";
+
+document.getElementById("pageContent")
+.classList.remove("blur-background");
+
+}
+
+});
+
+</script>
 
 </body>
 
 </html>
+```
