@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 
 <html lang="en">
@@ -9,12 +10,13 @@
 <title>Heat Exchanger | MechaMaster Group</title>
 
 <link rel="icon" href="2.png">
-
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+
+<div id="pageContent">
 
 <header>
 
@@ -28,50 +30,40 @@
 
 </header>
 
-<div id="pageContent">
-
 <section class="hero">
 
 <h1>Heat Exchanger</h1>
+
+<p>Shell and Tube Assembly</p>
 
 <img
 src="projects/heat-exchanger/heat-exchanger.jpg"
 class="cover-image"
 onclick="openStrip()">
 
-</section>
-
-<section class="project-overview">
+<div class="project-overview">
 
 <h2>Project Overview</h2>
 
 <p>
-
-This project presents a detailed CAD assembly of a Shell-and-Tube Heat Exchanger developed using Creo Parametric.
-The assembly includes the shell, tube bundle, tube sheets, supports, and connection nozzles.
-The objective was to create a realistic industrial design while maintaining proper assembly relationships and manufacturable geometry.
-
+This project showcases the engineering design and development of a shell-and-tube heat exchanger assembly, modeled using Creo Parametric. The assembly includes the shell, tube bundle, tube sheets, supports, and fluid connection ports.
 </p>
 
-<ul>
+<p>
+The design demonstrates professional assembly techniques, component integration, and industrial equipment modeling practices commonly used in thermal and process engineering applications.
+</p>
 
-<li>Complete Shell-and-Tube Heat Exchanger Assembly</li>
+<p>
+The assembly reflects MechaMaster Group's expertise in mechanical equipment design, industrial CAD modeling, and the development of engineering solutions aligned with real-world manufacturing and operational requirements.
+</p>
 
-<li>Detailed Internal Tube Bundle Design</li>
-
-<li>Industrial CAD Modeling and Assembly Structure</li>
-
-<li>Manufacturing-Oriented Component Design</li>
-
-<li>Professional Engineering Documentation Ready</li>
-
-</ul>
+</div>
 
 </section>
 
 </div>
 
-<div id="imageStrip" class="image-strip">
+<div id="strip" class="image-strip">
 
 <img src="projects/heat-exchanger/1.png"
 onclick="openViewer(this.src)">
@@ -87,9 +79,14 @@ onclick="openViewer(this.src)">
 
 </div>
 
-<div id="imageViewer" class="image-viewer">
+<div
+id="viewer"
+class="image-viewer"
+onclick="closeViewer()">
 
-<div class="viewer-box">
+<div
+class="viewer-box"
+onclick="event.stopPropagation()">
 
 <div
 class="close-btn"
@@ -117,7 +114,7 @@ Back to Gallery
 
 function openStrip(){
 
-document.getElementById("imageStrip").style.display="flex";
+document.getElementById("strip").style.display="flex";
 
 document.getElementById("pageContent")
 .classList.add("blur-background");
@@ -126,30 +123,30 @@ document.getElementById("pageContent")
 
 function openViewer(src){
 
-document.getElementById("imageViewer").style.display="flex";
+document.getElementById("strip").style.display="none";
+
+document.getElementById("viewer").style.display="flex";
 
 document.getElementById("viewerImg").src=src;
-
-document.getElementById("imageStrip").style.display="none";
 
 }
 
 function closeViewer(){
 
-document.getElementById("imageViewer").style.display="none";
+document.getElementById("viewer").style.display="none";
 
-document.getElementById("imageStrip").style.display="flex";
+document.getElementById("strip").style.display="none";
+
+document.getElementById("pageContent")
+.classList.remove("blur-background");
 
 }
 
 function backToGallery(){
 
-document.getElementById("imageViewer").style.display="none";
+document.getElementById("viewer").style.display="none";
 
-document.getElementById("imageStrip").style.display="none";
-
-document.getElementById("pageContent")
-.classList.remove("blur-background");
+document.getElementById("strip").style.display="flex";
 
 }
 
@@ -158,3 +155,4 @@ document.getElementById("pageContent")
 </body>
 
 </html>
+```
