@@ -819,6 +819,32 @@ transition:0.35s ease;
 }
 .whatsapp-float{
 
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+width:70px;
+
+height:70px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+transition:.3s;
+
 animation:whatsappPulse 1.5s infinite;
 
 }
