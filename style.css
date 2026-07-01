@@ -528,7 +528,7 @@ margin-bottom:25px;
 /* العداد للموبايل فقط */
 .hero-counter{
 
-position: centre;
+position: static;
 
 left:auto;
 top:auto;
