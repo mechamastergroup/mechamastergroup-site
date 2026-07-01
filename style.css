@@ -33,35 +33,30 @@ body {
 }
 
 /* =========================================
-   2. HEADER & NAVIGATION
+   2. HEADER & NAVIGATION (محدّث لضمان الثبات)
 ========================================= */
 header {
     background: var(--bg-header);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 20px 0;
+    padding: 15px 0; /* قياس ثابت للـ Padding */
     position: sticky;
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    transition: var(--transition-smooth);
 }
 
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 45px;
+    gap: 40px; /* المسافة بين الروابط */
 }
 
 nav a {
     color: var(--text-light);
     text-decoration: none;
-    font-size: 30px; /* تم تصغيره قليلاً ليكون أطراً */
+    font-size: 24px; /* حجم خط موحد لكل الصفحات */
     font-weight: 600;
-    letter-spacing: 0.5px;
-    position: relative;
-    padding-bottom: 5px;
     transition: var(--transition-smooth);
 }
 
