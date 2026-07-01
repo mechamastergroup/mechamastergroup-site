@@ -40,22 +40,21 @@ content="MechaMaster Group">
 <div class="hero-counter">
 
 <div>
-<h2>75+</h2>
+<h2 class="counter" data-target="75">0</h2>
 <p>3D Models</p>
 </div>
 
 <div>
-<h2>10+</h2>
+<h2 class="counter" data-target="10">0</h2>
 <p>Projects</p>
 </div>
 
 <div>
-<h2>1000+</h2>
+<h2 class="counter" data-target="1000">0</h2>
 <p>Design Hours</p>
 </div>
 
 </div>
-
 <img src="looogo.png" class="hero-logo">
 
 <h1>MechaMaster Group</h1>
@@ -108,41 +107,53 @@ target="_blank">
 
 <script>
 
-function animateCounter(id, target, duration = 2000){
+const counters = document.querySelectorAll(".counter");
 
-const element = document.getElementById(id);
+const observer = new IntersectionObserver((entries) => {
 
-let start = 0;
+entries.forEach(entry => {
 
-const increment = target / (duration / 16);
+if(entry.isIntersecting){
 
-const timer = setInterval(() => {
+const counter = entry.target;
+const target = +counter.dataset.target;
 
-start += increment;
+let current = 0;
 
-if(start >= target){
+const duration = 2500;
+const stepTime = 16;
+const increment = target / (duration / stepTime);
 
-element.textContent = target + "+";
+const updateCounter = () => {
 
-clearInterval(timer);
+current += increment;
+
+if(current < target){
+
+counter.textContent = Math.floor(current) + "+";
+requestAnimationFrame(updateCounter);
 
 }else{
 
-element.textContent = Math.floor(start) + "+";
+counter.textContent = target + "+";
 
 }
 
-},16);
+};
+
+updateCounter();
+
+observer.unobserve(counter);
 
 }
 
-window.addEventListener("load", () => {
+});
 
-animateCounter("models",75);
+}, { threshold: 0.5 });
 
-animateCounter("projects",10);
+counters.forEach(counter => {
 
-animateCounter("hours",1000);
+observer.observe(counter);
 
 });
 
