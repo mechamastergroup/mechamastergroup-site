@@ -24,14 +24,13 @@ html {
 }
 
 body {
-    body{
-
     margin: 0;
     font-family: "Libre Baskerville", serif;
     background: var(--bg-main);
     color: var(--text-light);
     text-align: center;
-    overflow-x: hidden; /* لمنع أي تمرير أفقي غير مقصود */}
+    overflow-x: hidden; /* لمنع أي تمرير أفقي غير مقصود */
+}
 
 /* =========================================
    2. HEADER & NAVIGATION
@@ -483,180 +482,75 @@ nav a:hover::after {
 /* =========================================
    10. MEDIA QUERIES (MOBILE)
 ========================================= */
-@media (max-width:768px){
-
-
-nav{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:12px;
-flex-wrap:wrap;
-}
-
-nav a{
-font-size:18px;
-}
-
-.hero{
-padding:60px 20px;
-}
-
-.hero-logo{
-width:120px;
-margin-bottom:20px;
-}
-
-.hero h1{
-font-size:50px;
-line-height:1.1;
-margin-bottom:15px;
-}
-
-.hero-subtitle{
-font-size:22px;
-margin-bottom:25px;
-}
-
-.hero-services{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:12px;
-font-size:18px;
-margin-bottom:25px;
-}
-
-/* العداد للموبايل فقط */
-.hero-counter{
-
-position: static;
-
-left:auto;
-top:auto;
-
-transform:none;
-
-display:flex;
-
-flex-direction:row;
-
-justify-content:center;
-
-align-items:flex-start;
-
-gap:35px;
-
-width:100%;
-
-margin:25px 0;
-
-order:4;
-
-}
-
-.hero-counter h2{
-font-size:32px;
-margin:0;
-}
-
-.hero-counter p{
-font-size:13px;
-margin-top:4px;
-}
-
-.btn{
-font-size:18px;
-padding:14px 28px;
-}
-
-.about-home{
-padding:60px 20px;
-}
-
-.about-home h2{
-font-size:34px;
-}
-
-.about-home p{
-font-size:18px;
-line-height:1.8;
-}
-
-.gallery-img{
-width:140px;
-height:140px;
-}
-
-.card{
-width:100%;
-max-width:340px;
-margin:auto;
-}
-
-.whatsapp-float{
-width:60px;
-height:60px;
-bottom:20px;
-right:20px;
-}
-
-.whatsapp-float img{
-width:34px;
-height:34px;
-}
-
-.hero{
-display:flex;
-flex-direction:column;
-}
-
-.hero-logo{
-order:1;
-}
-
-.hero h1{
-order:2;
-}
-
-.hero-subtitle{
-order:3;
-}
-
-.hero-services{
-order:4;
-}
-
-.hero-counter{
-
-order:5;
-
-position:static;
-
-left:auto;
-
-top:auto;
-
-transform:none;
-
-display:flex;
-
-flex-direction:row;
-
-justify-content:center;
-
-align-items:flex-start;
-
-gap:25px;
-
-width:100%;
-
-margin:25px 0;
-
-}
-
-.btn{
-order:6;
-}
-
+/* =========================================
+   10. MEDIA QUERIES (MOBILE)
+========================================= */
+@media (max-width: 768px) {
+    /* تفعيل الـ Flexbox للتحكم بترتيب العناصر من الأعلى للأسفل */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* ترتيب العناصر بالأرقام لضمان التسلسل الصحيح */
+    .hero-logo { order: 1; width: 140px; }
+    .hero h1 { order: 2; font-size: 42px; line-height: 1.2; margin-top: 15px; }
+    .hero-subtitle { order: 3; font-size: 20px; }
+    
+    .hero-services {
+        order: 4;
+        flex-direction: column;
+        gap: 15px;
+        font-size: 18px;
+    }
+    
+    /* إعدادات العداد: فوق الزر، بجانب بعض، وفي سطر واحد */
+    .hero-counter {
+        position: static;
+        transform: none;
+        order: 5; /* الترتيب رقم 5 يضعه مباشرة قبل الزر */
+        display: flex;
+        flex-direction: row; /* عرض العناصر بشكل أفقي (جنب بعض) */
+        flex-wrap: nowrap; /* إجبار العدادات على البقاء في سطر واحد وعدم النزول */
+        justify-content: space-evenly; /* توزيع المسافات بينهم بالتساوي */
+        align-items: center;
+        gap: 10px; /* مسافة صغيرة لتجنب التزاحم */
+        margin: 35px 0 25px 0; /* مسافة من الأعلى والأسفل */
+        width: 100%;
+    }
+    
+    .hero-counter div { 
+        text-align: center; 
+        flex: 1; /* لجعل كل عداد يأخذ مساحة متساوية */
+    } 
+    
+    /* تصغير الخطوط قليلاً جداً لضمان اتساعها جميعاً في شاشة الموبايل */
+    .hero-counter h2 { font-size: 32px; }
+    .hero-counter p { font-size: 12px; margin-top: 5px; }
+    
+    /* زر الخدمات */
+    .btn {
+        order: 6; /* الترتيب رقم 6 يضعه تحت العداد */
+        margin-top: 10px;
+    }
+    
+    /* --- باقي التنسيقات --- */
+    nav { gap: 15px; flex-wrap: wrap; }
+    nav a { font-size: 20px; }
+    
+    .about-home { padding: 60px 20px; }
+    .about-home h2 { font-size: 32px; }
+    .about-home p { font-size: 18px; }
+    
+    .project-overview { padding: 25px; margin-top: 40px; }
+    
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
+    .whatsapp-float img { width: 30px; height: 30px; }
 }
