@@ -504,34 +504,35 @@ nav a:hover::after {
     }
 
     /* إصلاح العداد ليظهر جنب بعض وفوق الزر مباشرة */
+    /* إجبار العداد ليظهر جنب بعض وفوق الزر مباشرة */
     .hero-counter {
-        position: relative; /* إلغاء التموضع المطلق الخاص بالكمبيوتر */
-        left: auto;
-        top: auto;
-        transform: none;
-        display: flex;
-        flex-direction: row; /* إجبار العدادات لتكون بجانب بعضها */
-        justify-content: center;
-        align-items: center;
-        gap: 15px; /* المسافة بين كل عداد والثاني */
-        width: 100%;
-        margin: 25px 0; /* مسافة من الأعلى (عن الخدمات) ومن الأسفل (عن الزر) */
+        position: static !important; /* إلغاء التموضع بقوة */
+        transform: none !important;
+        display: flex !important;
+        flex-direction: row !important; /* إجبارهم يكونوا جنب بعض أفنياً */
+        flex-wrap: nowrap !important; /* منع أي عداد ينزل لسطر جديد */
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 10px !important; /* تقليل المسافة عشان يوسعوا الشاشة */
+        width: 100% !important;
+        margin: 30px 0 !important; /* مسافة قبل وبعد */
     }
 
     .hero-counter div {
-        flex: 1; /* توزيع المساحة بالتساوي بين العدادات الثلاثة */
+        flex: 1 1 0 !important; /* توزيع المساحة بالتساوي بالضبط */
+        text-align: center !important;
     }
 
     .hero-counter h2 { 
-        font-size: 28px; /* تصغير الرقم قليلاً ليتسع في الشاشات الصغيرة */
-        margin: 0;
+        font-size: 24px !important; /* تصغير الرقم ليتسعوا كلهم */
+        margin: 0 !important;
     }
     
     .hero-counter p { 
-        font-size: 12px; /* تصغير النص تحته ليتسع */
-        margin-top: 5px; 
+        font-size: 11px !important; /* تصغير النص */
+        margin-top: 5px !important; 
+        white-space: nowrap !important; /* منع الكلمات زي Design Hours تنزل سطرين */
     }
-
     /* الزر سيبقى في مكانه الطبيعي تحت العداد */
     .btn { margin-top: 10px; }
 
