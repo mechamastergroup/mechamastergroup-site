@@ -483,57 +483,59 @@ nav a:hover::after {
    10. MEDIA QUERIES (MOBILE)
 ========================================= */
 @media (max-width: 768px) {
-    /* تفعيل الـ Flexbox للتحكم بترتيب العناصر من الأعلى للأسفل */
+    /* ترتيب قسم الـ Hero بشكل عمودي ليظهر كل شيء تحت بعضه */
     .hero {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        text-align: center;
     }
-    
-    /* ترتيب العناصر بالأرقام لضمان التسلسل الصحيح */
-    .hero-logo { order: 1; width: 140px; }
-    .hero h1 { order: 2; font-size: 42px; line-height: 1.2; margin-top: 15px; }
-    .hero-subtitle { order: 3; font-size: 20px; }
+
+    .hero-logo { width: 140px; margin-bottom: 15px; }
+    .hero h1 { font-size: 38px; line-height: 1.2; margin: 0; }
+    .hero-subtitle { font-size: 18px; margin: 10px 0 20px; }
     
     .hero-services {
-        order: 4;
         flex-direction: column;
-        gap: 15px;
-        font-size: 18px;
+        gap: 10px;
+        font-size: 16px;
+        margin-bottom: 15px;
     }
-    
-    /* إعدادات العداد: فوق الزر، بجانب بعض، وفي سطر واحد */
+
+    /* إصلاح العداد ليظهر جنب بعض وفوق الزر مباشرة */
     .hero-counter {
-        position: static;
+        position: relative; /* إلغاء التموضع المطلق الخاص بالكمبيوتر */
+        left: auto;
+        top: auto;
         transform: none;
-        order: 5; /* الترتيب رقم 5 يضعه مباشرة قبل الزر */
         display: flex;
-        flex-direction: row; /* عرض العناصر بشكل أفقي (جنب بعض) */
-        flex-wrap: nowrap; /* إجبار العدادات على البقاء في سطر واحد وعدم النزول */
-        justify-content: space-evenly; /* توزيع المسافات بينهم بالتساوي */
+        flex-direction: row; /* إجبار العدادات لتكون بجانب بعضها */
+        justify-content: center;
         align-items: center;
-        gap: 10px; /* مسافة صغيرة لتجنب التزاحم */
-        margin: 35px 0 25px 0; /* مسافة من الأعلى والأسفل */
+        gap: 15px; /* المسافة بين كل عداد والثاني */
         width: 100%;
+        margin: 25px 0; /* مسافة من الأعلى (عن الخدمات) ومن الأسفل (عن الزر) */
+    }
+
+    .hero-counter div {
+        flex: 1; /* توزيع المساحة بالتساوي بين العدادات الثلاثة */
+    }
+
+    .hero-counter h2 { 
+        font-size: 28px; /* تصغير الرقم قليلاً ليتسع في الشاشات الصغيرة */
+        margin: 0;
     }
     
-    .hero-counter div { 
-        text-align: center; 
-        flex: 1; /* لجعل كل عداد يأخذ مساحة متساوية */
-    } 
-    
-    /* تصغير الخطوط قليلاً جداً لضمان اتساعها جميعاً في شاشة الموبايل */
-    .hero-counter h2 { font-size: 32px; }
-    .hero-counter p { font-size: 12px; margin-top: 5px; }
-    
-    /* زر الخدمات */
-    .btn {
-        order: 6; /* الترتيب رقم 6 يضعه تحت العداد */
-        margin-top: 10px;
+    .hero-counter p { 
+        font-size: 12px; /* تصغير النص تحته ليتسع */
+        margin-top: 5px; 
     }
-    
-    /* --- باقي التنسيقات --- */
+
+    /* الزر سيبقى في مكانه الطبيعي تحت العداد */
+    .btn { margin-top: 10px; }
+
+    /* --- باقي الإعدادات --- */
     nav { gap: 15px; flex-wrap: wrap; }
     nav a { font-size: 20px; }
     
@@ -550,5 +552,4 @@ nav a:hover::after {
         height: 55px;
     }
     .whatsapp-float img { width: 30px; height: 30px; }
-}.whatsapp-float img { width: 30px; height: 30px; }
 }
