@@ -482,21 +482,51 @@ nav a:hover::after {
 /* =========================================
    10. MEDIA QUERIES (MOBILE)
 ========================================= */
-@media (max-width: 768px) {
-    nav { gap: 15px; flex-wrap: wrap; }
-    nav a { font-size: 20px; }
-    
-    .hero-logo { width: 140px; }
-    .hero h1 { font-size: 42px; line-height: 1.2; }
-    .hero-subtitle { font-size: 20px; }
-    
-    .hero-services {
-        flex-direction: column;
-        gap: 15px;
-        font-size: 18px;
-    }
-    
-  .hero-counter{
+@media (max-width:768px){
+
+nav{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+flex-wrap:wrap;
+}
+
+nav a{
+font-size:18px;
+}
+
+.hero{
+padding:60px 20px;
+}
+
+.hero-logo{
+width:120px;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:50px;
+line-height:1.1;
+margin-bottom:15px;
+}
+
+.hero-subtitle{
+font-size:22px;
+margin-bottom:25px;
+}
+
+.hero-services{
+display:flex;
+flex-direction:row;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+font-size:18px;
+margin-bottom:25px;
+}
+
+.hero-counter{
 
 position:static;
 
@@ -508,31 +538,67 @@ flex-direction:row;
 
 justify-content:center;
 
-align-items:center;
+align-items:flex-start;
 
-gap:25px;
-
-margin:25px 0;
+gap:35px;
 
 width:100%;
 
+margin:25px 0;
+
 }
-    
-    .hero-counter div { text-align: center; } /* افتراض وجود ديف محيط بالرقم والنص */
-    .hero-counter h2 { font-size: 28px; }
-    .hero-counter p { font-size: 12px; }
-    
-    .about-home { padding: 60px 20px; }
-    .about-home h2 { font-size: 32px; }
-    .about-home p { font-size: 18px; }
-    
-    .project-overview { padding: 25px; margin-top: 40px; }
-    
-    .whatsapp-float {
-        bottom: 20px;
-        right: 20px;
-        width: 55px;
-        height: 55px;
-    }
+
+.hero-counter h2{
+font-size:32px;
+margin:0;
+}
+
+.hero-counter p{
+font-size:13px;
+margin-top:4px;
+}
+
+.btn{
+font-size:18px;
+padding:14px 28px;
+}
+
+.about-home{
+padding:60px 20px;
+}
+
+.about-home h2{
+font-size:34px;
+}
+
+.about-home p{
+font-size:18px;
+line-height:1.8;
+}
+
+.gallery-img{
+width:140px;
+height:140px;
+}
+
+.card{
+width:100%;
+max-width:340px;
+margin:auto;
+}
+
+.whatsapp-float{
+width:60px;
+height:60px;
+bottom:20px;
+right:20px;
+}
+
+.whatsapp-float img{
+width:34px;
+height:34px;
+}
+
+}
     .whatsapp-float img { width: 30px; height: 30px; }
 }
