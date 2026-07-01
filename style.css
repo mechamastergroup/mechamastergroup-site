@@ -531,12 +531,12 @@ nav a:hover::after {
     /* الزر سيبقى في مكانه الطبيعي تحت العداد */
     .btn { margin-top: 10px; }
 
-    /* --- باقي الإعدادات --- */
-    nav { gap: 12px; flex-wrap: wrap; }
-    nav a { font-size: 18px; }
+ /* --- باقي الإعدادات --- */
+    nav { gap: 15px; flex-wrap: wrap; }
+    nav a { font-size: 20px; }
     
     .about-home { padding: 60px 20px; }
-    .about-home h2 { font-size: 36px; }
+    .about-home h2 { font-size: 32px; }
     .about-home p { font-size: 18px; }
     
     .project-overview { padding: 25px; margin-top: 40px; }
