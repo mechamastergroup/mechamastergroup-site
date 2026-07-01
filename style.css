@@ -485,9 +485,6 @@ nav a:hover::after {
 ========================================= */
 @media (max-width:768px){
 
-body{
-   background:red !important;
-}
 
 nav{
 display:flex;
