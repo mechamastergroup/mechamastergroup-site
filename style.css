@@ -520,7 +520,7 @@ width:100%;
     
     .hero-counter div { text-align: center; } /* افتراض وجود ديف محيط بالرقم والنص */
     .hero-counter h2 { font-size: 28px; }
-    .hero-counter p { font-size: 14px; }
+    .hero-counter p { font-size: 12px; }
     
     .about-home { padding: 60px 20px; }
     .about-home h2 { font-size: 32px; }
