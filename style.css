@@ -518,7 +518,6 @@ margin-bottom:25px;
 
 .hero-services{
 display:flex;
-flex-direction:row;
 justify-content:center;
 flex-wrap:wrap;
 gap:12px;
@@ -526,9 +525,13 @@ font-size:18px;
 margin-bottom:25px;
 }
 
+/* العداد للموبايل فقط */
 .hero-counter{
 
 position:static;
+
+left:auto;
+top:auto;
 
 transform:none;
 
@@ -545,6 +548,8 @@ gap:35px;
 width:100%;
 
 margin:25px 0;
+
+order:4;
 
 }
 
@@ -600,4 +605,3 @@ height:34px;
 }
 
 }
-
