@@ -817,6 +817,23 @@ transition:0.35s ease;
 }
 
 }
+
+@keyframes whatsappPulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.08);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
 .whatsapp-float{
 
 position:fixed;
@@ -846,6 +863,24 @@ box-shadow:0 10px 25px rgba(0,0,0,.35);
 transition:.3s;
 
 animation:whatsappPulse 1.5s infinite;
+
+}
+
+.whatsapp-float img{
+
+width:40px;
+
+height:40px;
+
+object-fit:contain;
+
+display:block;
+
+}
+
+.whatsapp-float:hover{
+
+transform:scale(1.1);
 
 }
 
