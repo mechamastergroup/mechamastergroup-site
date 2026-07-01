@@ -106,6 +106,48 @@ target="_blank">
 
 </a>
 
+<script>
+
+function animateCounter(id, target, duration = 2000){
+
+const element = document.getElementById(id);
+
+let start = 0;
+
+const increment = target / (duration / 16);
+
+const timer = setInterval(() => {
+
+start += increment;
+
+if(start >= target){
+
+element.textContent = target + "+";
+
+clearInterval(timer);
+
+}else{
+
+element.textContent = Math.floor(start) + "+";
+
+}
+
+},16);
+
+}
+
+window.addEventListener("load", () => {
+
+animateCounter("models",75);
+
+animateCounter("projects",10);
+
+animateCounter("hours",1000);
+
+});
+
+</script>
+
 </body>
 
 </html>
