@@ -482,9 +482,6 @@ nav a:hover::after {
 /* =========================================
    10. MEDIA QUERIES (MOBILE)
 ========================================= */
-/* =========================================
-   10. MEDIA QUERIES (MOBILE)
-========================================= */
 @media (max-width: 768px) {
     /* تفعيل الـ Flexbox للتحكم بترتيب العناصر من الأعلى للأسفل */
     .hero {
@@ -553,4 +550,5 @@ nav a:hover::after {
         height: 55px;
     }
     .whatsapp-float img { width: 30px; height: 30px; }
+}.whatsapp-float img { width: 30px; height: 30px; }
 }
