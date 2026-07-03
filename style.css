@@ -658,3 +658,25 @@ transform:rotate(-25deg);
 pointer-events:none;
 
 }
+
+@keyframes lensPulse{
+
+0%{
+transform:translate(-50%,-50%) scale(1);
+}
+
+50%{
+transform:translate(-50%,-50%) scale(1.08);
+}
+
+100%{
+transform:translate(-50%,-50%) scale(1);
+}
+
+}
+
+#lens.focus{
+
+animation:lensPulse .8s ease;
+
+}
