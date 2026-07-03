@@ -576,6 +576,8 @@ max-height:80vh;
 
 border-radius:15px;
 
+animation:imageOpen .25s ease;
+
 }
 
 #lens{
