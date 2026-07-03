@@ -1,5 +1,5 @@
 
-//Fot 3D modeling tab.
+//For 3D modeling tab.
 
 <script>
 
