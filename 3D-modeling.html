@@ -359,23 +359,90 @@ Back to Gallery
 
 <script>
 
+const viewer = document.getElementById("modelViewer");
+const image = document.getElementById("modelImage");
+const lens = document.getElementById("lens");
+
+let idleTimer;
+
 function openModel(src){
 
-document.getElementById("modelViewer").style.display = "flex";
+viewer.style.display = "flex";
 
-document.getElementById("modelImage").src = src;
+image.src = src;
 
 document.querySelector(".model-gallery")
 .classList.add("blur-gallery");
+
+image.onload = () => {
+
+lens.style.backgroundImage = `url(${src})`;
+
+};
 
 }
 
 function closeModel(){
 
-document.getElementById("modelViewer").style.display = "none";
+viewer.style.display = "none";
 
 document.querySelector(".model-gallery")
 .classList.remove("blur-gallery");
+
+lens.classList.remove("focus");
+
+}
+
+const zoom = 3;
+
+image.addEventListener("mousemove", moveLens);
+image.addEventListener("mouseenter", () => {
+
+lens.style.opacity = "1";
+
+});
+
+image.addEventListener("mouseleave", () => {
+
+lens.style.opacity = "0";
+
+lens.classList.remove("focus");
+
+clearTimeout(idleTimer);
+
+});
+
+function moveLens(e){
+
+const rect = image.getBoundingClientRect();
+
+const x = e.clientX - rect.left;
+
+const y = e.clientY - rect.top;
+
+lens.style.left = x + "px";
+
+lens.style.top = y + "px";
+
+const bgX = -(x * zoom - lens.offsetWidth/2);
+
+const bgY = -(y * zoom - lens.offsetHeight/2);
+
+lens.style.backgroundSize =
+`${image.width*zoom}px ${image.height*zoom}px`;
+
+lens.style.backgroundPosition =
+`${bgX}px ${bgY}px`;
+
+clearTimeout(idleTimer);
+
+lens.classList.remove("focus");
+
+idleTimer = setTimeout(()=>{
+
+lens.classList.add("focus");
+
+},1000);
 
 }
 
