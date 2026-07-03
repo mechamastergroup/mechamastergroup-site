@@ -4,10 +4,11 @@
 :root {
     --bg-main: #0f172a;
     --bg-secondary: #07132d;
-    --bg-header: rgba(11, 19, 36, 0.85);
+    --bg-header: rgba(11, 19, 36, 0.75);
     
     --accent-primary: #3b82f6;
     --accent-hover: #1d4ed8;
+    --accent-glow: rgba(59, 130, 246, 0.4);
     --whatsapp-color: #25D366;
     
     --text-light: #ffffff;
@@ -23,56 +24,79 @@ html {
     scroll-behavior: smooth;
 }
 
+/* تخصيص شريط التمرير (Scrollbar) ليناسب الثيم */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent-primary);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-hover);
+}
+
 body {
     margin: 0;
     font-family: "Libre Baskerville", serif;
     background: var(--bg-main);
     color: var(--text-light);
     text-align: center;
-    overflow-x: hidden; /* لمنع أي تمرير أفقي غير مقصود */
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased; /* تحسين وضوح الخطوط */
 }
 
 /* =========================================
-   2. HEADER & NAVIGATION (محدّث لضمان الثبات)
+   2. HEADER & NAVIGATION
 ========================================= */
 header {
     background: var(--bg-header);
-    backdrop-filter: blur(12px);
-    padding: 15px 0; /* قياس ثابت للـ Padding */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px; /* المسافة بين الروابط */
+    gap: 40px;
 }
 
 nav a {
     color: var(--text-light);
     text-decoration: none;
-    font-size: 24px; /* حجم خط موحد لكل الصفحات */
+    font-size: 24px;
     font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
     transition: var(--transition-smooth);
 }
 
 nav a:hover {
     color: var(--accent-primary);
+    text-shadow: 0 0 10px var(--accent-glow);
 }
 
 nav a::after {
     content: "";
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: 0;
     width: 0;
     height: 2px;
     background: var(--accent-primary);
     transition: var(--transition-smooth);
+    transform: translateX(-50%);
+    box-shadow: 0 0 8px var(--accent-primary);
 }
 
 nav a:hover::after {
@@ -97,8 +121,9 @@ nav a:hover::after {
     position: absolute;
     inset: 0;
     background: url("90.png") center/cover no-repeat;
-    opacity: 0.12;
+    opacity: 0.15; /* زيادة الشفافية قليلاً لبروز الخلفية */
     z-index: 0;
+    mix-blend-mode: screen; /* دمج الصورة بشكل أجمل مع الخلفية الداكنة */
 }
 
 .hero > * {
@@ -111,6 +136,7 @@ nav a:hover::after {
     max-width: 80%;
     margin-bottom: 30px;
     object-fit: contain;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
 }
 
 .hero h1 {
@@ -119,7 +145,7 @@ nav a:hover::after {
     letter-spacing: 2px;
     font-weight: 700;
     text-transform: uppercase;
-    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
 .hero-subtitle {
@@ -155,12 +181,14 @@ nav a:hover::after {
     color: var(--accent-primary);
     margin: 0;
     line-height: 1;
+    text-shadow: 0 0 15px var(--accent-glow);
 }
 
 .hero-counter p {
     color: var(--text-light);
     font-size: 18px;
     margin-top: 6px;
+    letter-spacing: 1px;
 }
 
 /* =========================================
@@ -176,20 +204,21 @@ nav a:hover::after {
 }
 
 .card {
-    background: var(--bg-secondary);
+    background: linear-gradient(145deg, var(--bg-secondary), #0a193a);
     width: 340px;
     padding: 20px;
     border-radius: 18px;
     transition: var(--transition-smooth);
     cursor: pointer;
     box-shadow: var(--shadow-soft);
-    border: 1px solid rgba(255, 255, 255, 0.05); /* إطار خفيف جداً يبرز الكارت */
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    will-change: transform, box-shadow; /* تحسين أداء الحركة */
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
-    border-color: rgba(59, 130, 246, 0.3); /* توهج أزرق خفيف عند اللمس */
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px var(--accent-glow);
+    border-color: rgba(59, 130, 246, 0.4);
 }
 
 .card-link {
@@ -203,6 +232,11 @@ nav a:hover::after {
     object-fit: cover;
     border-radius: 12px;
     display: block;
+    transition: var(--transition-smooth);
+}
+
+.card:hover .service-image {
+    transform: scale(1.03); /* حركة خفيفة للصورة داخل الكرت */
 }
 
 /* =========================================
@@ -211,7 +245,7 @@ nav a:hover::after {
 .btn {
     display: inline-block;
     padding: 16px 36px;
-    background: var(--accent-primary);
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-hover));
     color: var(--text-light);
     text-decoration: none;
     border-radius: 10px;
@@ -220,12 +254,13 @@ nav a:hover::after {
     transition: var(--transition-smooth);
     border: none;
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
 }
 
 .btn:hover {
-    background: var(--accent-hover);
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4);
+    letter-spacing: 1px;
 }
 
 /* =========================================
@@ -240,6 +275,9 @@ nav a:hover::after {
 .about-home h2 {
     font-size: 42px;
     margin-bottom: 20px;
+    background: linear-gradient(to right, #fff, var(--text-muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .about-home p {
@@ -252,433 +290,12 @@ nav a:hover::after {
     max-width: 1000px;
     margin: 60px auto 20px;
     padding: 45px;
-    background: var(--bg-secondary);
+    background: linear-gradient(145deg, var(--bg-secondary), rgba(7, 19, 45, 0.7));
+    backdrop-filter: blur(10px);
     border-radius: 18px;
-    text-align: left; /* أو right حسب اللغة */
+    text-align: left;
     box-shadow: var(--shadow-soft);
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.project-overview h2 {
-    text-align: center;
-    font-size: 38px;
-    margin-bottom: 25px;
-    color: var(--text-light);
-}
-
-.project-overview p, 
-.project-overview li {
-    font-size: 20px;
-    line-height: 1.9;
-    color: var(--text-muted);
-}
-
-.project-overview ul {
-    margin: 20px 0;
-    padding-left: 25px;
-}
-
-.project-overview li {
-    margin-bottom: 12px;
-    font-size: 18px;
-}
-
-/* =========================================
-   7. GALLERIES & IMAGES
-========================================= */
-.cover-image {
-    width: 700px;
-    max-width: 90%;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: var(--transition-smooth);
-    box-shadow: var(--shadow-soft);
-}
-
-.cover-image:hover {
-    transform: scale(1.02);
-}
-
-.model-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1400px;
-    margin: auto;
-}
-
-.gallery-title {
-    margin-bottom: 60px;
-}
-
-.gallery-img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: var(--transition-smooth);
-    position: relative;
-    z-index: 1;
-}
-
-.gallery-img:hover {
-    transform: scale(1.15); /* تم تقليل التكبير ليكون أكثر واقعية */
-    z-index: 999;
-    box-shadow: var(--shadow-hover);
-    border: 2px solid var(--accent-primary);
-}
-
-/* =========================================
-   8. MODALS & VIEWERS
-========================================= */
-.blur-background, .blur-gallery {
-    filter: blur(18px);
-    transition: var(--transition-smooth);
-}
-
-.image-strip {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    padding: 35px 0;
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-}
-
-.image-strip img {
-    width: 220px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: var(--transition-smooth);
-}
-
-.image-strip img:hover {
-    transform: scale(1.08);
-}
-
-.image-viewer, .model-viewer {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-}
-
-.viewer-box, .model-box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.viewer-box img, .model-box img {
-    max-width: 85vw;
-    max-height: 80vh;
-    border-radius: 15px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-}
-
-.close-btn {
-    position: absolute;
-    top: -25px;
-    right: -25px;
-    width: 50px;
-    height: 50px;
-    background: var(--text-light);
-    color: #000;
-    border-radius: 50%;
-    font-size: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: var(--shadow-soft);
-    transition: var(--transition-smooth);
-}
-
-.close-btn:hover {
-    background: var(--accent-primary);
-    color: var(--text-light);
-    transform: rotate(90deg);
-}
-
-.back-btn, .gallery-back-btn {
-    margin-top: 25px;
-    padding: 14px 28px;
-    background: var(--accent-primary);
-    color: var(--text-light);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-    transition: var(--transition-smooth);
-}
-
-.back-btn:hover, .gallery-back-btn:hover {
-    background: var(--accent-hover);
-    transform: translateY(-2px);
-}
-
-/* =========================================
-   9. WHATSAPP WIDGET
-========================================= */
-@keyframes whatsappPulse {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 65px;
-    height: 65px;
-    background: var(--whatsapp-color);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-    transition: var(--transition-smooth);
-    animation: whatsappPulse 2s infinite;
-}
-
-.whatsapp-float img {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.15) translateY(-5px);
-    animation-play-state: paused;
-}
-
-/* =========================================
-   10. MEDIA QUERIES (MOBILE)
-========================================= */
-@media (max-width: 768px) {
-    /* ترتيب قسم الـ Hero بشكل عمودي ليظهر كل شيء تحت بعضه */
-    .hero {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero-logo { width: 140px; margin-bottom: 15px; }
-    .hero h1 { font-size: 38px; line-height: 1.2; margin: 0; }
-    .hero-subtitle { font-size: 18px; margin: 10px 0 20px; }
-    
-    .hero-services {
-        flex-direction: column;
-        gap: 10px;
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-
-    /* إصلاح العداد ليظهر جنب بعض وفوق الزر مباشرة */
-    /* إجبار العداد ليظهر جنب بعض وفوق الزر مباشرة */
-    .hero-counter {
-        position: static !important; /* إلغاء التموضع بقوة */
-        transform: none !important;
-        display: flex !important;
-        flex-direction: row !important; /* إجبارهم يكونوا جنب بعض أفنياً */
-        flex-wrap: nowrap !important; /* منع أي عداد ينزل لسطر جديد */
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 10px !important; /* تقليل المسافة عشان يوسعوا الشاشة */
-        width: 100% !important;
-        margin: 30px 0 !important; /* مسافة قبل وبعد */
-    }
-
-    .hero-counter div {
-        flex: 1 1 0 !important; /* توزيع المساحة بالتساوي بالضبط */
-        text-align: center !important;
-    }
-
-    .hero-counter h2 { 
-        font-size: 24px !important; /* تصغير الرقم ليتسعوا كلهم */
-        margin: 0 !important;
-    }
-    
-    .hero-counter p { 
-        font-size: 11px !important; /* تصغير النص */
-        margin-top: 5px !important; 
-        white-space: nowrap !important; /* منع الكلمات زي Design Hours تنزل سطرين */
-    }
-    /* الزر سيبقى في مكانه الطبيعي تحت العداد */
-    .btn { margin-top: 10px; }
-
- /* --- باقي الإعدادات --- */
-    nav { gap: 15px; flex-wrap: wrap; }
-    nav a { font-size: 20px; }
-    
-    .about-home { padding: 60px 20px; }
-    .about-home h2 { font-size: 32px; }
-    .about-home p { font-size: 18px; }
-    
-    .project-overview { padding: 25px; margin-top: 40px; }
-    
-    .whatsapp-float {
-        bottom: 20px;
-        right: 20px;
-        width: 55px;
-        height: 55px;
-    }
-    .whatsapp-float img { width: 30px; height: 30px; }
-}
-/* ========================= */
-/* PREMIUM ZOOM LENS */
-/* ========================= */
-
-.zoom-container{
-
-position:relative;
-
-display:inline-block;
-
-overflow:hidden;
-
-cursor:default;
-
-
-}
-
-#modelImage{
-
-display:block;
-
-max-width:85vw;
-
-max-height:80vh;
-
-border-radius:15px;
-
-animation:imageOpen .25s ease;
-
-}
-
-#lens{
-
-position:absolute;
-
-width:150px;
-
-height:150px;
-
-border-radius:50%;
-
-border:2px solid rgba(255,255,255,.95);
-
-outline:1px solid rgba(255,255,255,.25);
-
-box-shadow:
-0 0 40px rgba(0,0,0,.40),
-0 0 18px rgba(59,130,246,.30);
-
-background-repeat:no-repeat;
-
-pointer-events:none;
-
-opacity:0;
-
-transform:translate(-50%,-50%) scale(.9);
-
-transition:
-   
-opacity .25s ease,
-   
-transform .25s cubic-bezier(.22,1,.36,1),
-   
-width .25s ease,
-   
-height .25s ease;
-
-z-index:999;
-
-}
-
-.zoom-container:hover #lens{
-
-opacity:1;
-
-transform:translate(-50%,-50%) scale(1);
-
-}
-
-#lens.focus{
-
-width:200px;
-
-height:200px;
-
-}
-#lens::before{
-
-content:"";
-
-position:absolute;
-
-top:18px;
-
-left:25px;
-
-width:60px;
-
-height:28px;
-
-background:rgba(255,255,255,.35);
-
-border-radius:50%;
-
-filter:blur(4px);
-
-transform:rotate(-25deg);
-
-pointer-events:none;
-
-}
-
-@keyframes lensPulse{
-
-0%{
-transform:translate(-50%,-50%) scale(1);
-}
-
-50%{
-transform:translate(-50%,-50%) scale(1.08);
-}
-
-100%{
-transform:translate(-50%,-50%) scale(1);
-}
-
-}
-
-#lens.focus{
-
-animation:lensPulse .8s ease;
-
-}
+.project-overview
