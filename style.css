@@ -590,7 +590,9 @@ border-radius:50%;
 
 border:3px solid white;
 
-box-shadow:0 0 35px rgba(0,0,0,.45);
+box-shadow:
+0 0 40px rgba(0,0,0,.40),
+0 0 18px rgba(59,130,246,.30);
 
 background-repeat:no-repeat;
 
