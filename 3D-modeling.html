@@ -376,6 +376,35 @@ document.querySelector(".model-gallery")
 
 image.onload = () => {
 
+lens.style.backgroundImage = `url(${image.src})`;
+
+const pixels = image.naturalWidth * image.naturalHeight;
+
+if(pixels < 2000000){
+
+zoom = 2;
+
+}
+else if(pixels < 6000000){
+
+zoom = 3;
+
+}
+else if(pixels < 12000000){
+
+zoom = 4;
+
+}
+else{
+
+zoom = 5;
+
+}
+
+showZoomLabel();
+
+};
+
 lens.style.backgroundImage = `url(${src})`;
 
 };
@@ -393,7 +422,7 @@ lens.classList.remove("focus");
 
 }
 
-const zoom = 3;
+let zoom = 3;
 
 image.addEventListener("mousemove", moveLens);
 image.addEventListener("mouseenter", () => {
@@ -411,6 +440,48 @@ lens.classList.remove("focus");
 clearTimeout(idleTimer);
 
 });
+
+function showZoomLabel(){
+
+let label = document.getElementById("zoomLabel");
+
+if(!label){
+
+label = document.createElement("div");
+
+label.id = "zoomLabel";
+
+label.style.position="absolute";
+label.style.top="15px";
+label.style.left="50%";
+label.style.transform="translateX(-50%)";
+label.style.background="rgba(0,0,0,.65)";
+label.style.color="white";
+label.style.padding="6px 14px";
+label.style.borderRadius="25px";
+label.style.fontSize="15px";
+label.style.fontWeight="600";
+label.style.pointerEvents="none";
+label.style.transition=".35s";
+label.style.opacity="0";
+
+document.querySelector(".zoom-container").appendChild(label);
+
+}
+
+label.innerHTML=`🔍 Smart Zoom ×${zoom}`;
+
+label.style.opacity="1";
+
+clearTimeout(label.timer);
+
+label.timer=setTimeout(()=>{
+
+label.style.opacity="0";
+
+},1500);
+
+}
 
 function moveLens(e){
 
