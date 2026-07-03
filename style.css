@@ -549,3 +549,82 @@ nav a:hover::after {
     }
     .whatsapp-float img { width: 30px; height: 30px; }
 }
+/* ========================= */
+/* PREMIUM ZOOM LENS */
+/* ========================= */
+
+.zoom-container{
+
+position:relative;
+
+display:inline-block;
+
+overflow:hidden;
+
+cursor:none;
+
+}
+
+#modelImage{
+
+display:block;
+
+max-width:85vw;
+
+max-height:80vh;
+
+border-radius:15px;
+
+}
+
+#lens{
+
+position:absolute;
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+border:3px solid white;
+
+box-shadow:0 0 35px rgba(0,0,0,.45);
+
+background-repeat:no-repeat;
+
+pointer-events:none;
+
+opacity:0;
+
+transform:translate(-50%,-50%) scale(.9);
+
+transition:
+
+opacity .20s ease,
+
+transform .20s ease,
+
+width .25s ease,
+
+height .25s ease;
+
+z-index:999;
+
+}
+
+.zoom-container:hover #lens{
+
+opacity:1;
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+#lens.focus{
+
+width:200px;
+
+height:200px;
+
+}
