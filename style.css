@@ -588,7 +588,9 @@ height:150px;
 
 border-radius:50%;
 
-border:3px solid white;
+border:2px solid rgba(255,255,255,.95);
+
+outline:1px solid rgba(255,255,255,.25);
 
 box-shadow:
 0 0 40px rgba(0,0,0,.40),
@@ -603,13 +605,13 @@ opacity:0;
 transform:translate(-50%,-50%) scale(.9);
 
 transition:
-
-opacity .20s ease,
-
-transform .20s ease,
-
+   
+opacity .25s ease,
+   
+transform .25s cubic-bezier(.22,1,.36,1),
+   
 width .25s ease,
-
+   
 height .25s ease;
 
 z-index:999;
