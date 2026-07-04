@@ -6,6 +6,10 @@ const viewer = document.getElementById("modelViewer");
 const image = document.getElementById("modelImage");
 const lens = document.getElementById("lens");
 
+console.log(viewer);
+console.log(image);
+console.log(lens);
+
 let zoom = 3;
 let idleTimer;
 let isMoving = false;
