@@ -22,6 +22,7 @@ let currentY = 0;
 
 const smoothness = 0.16;
 
+
 // ==========================================
 // OPEN MODEL
 // ==========================================
@@ -29,6 +30,12 @@ const smoothness = 0.16;
 function openModel(src){
 
     viewer.style.display = "flex";
+
+    currentX = 0;
+currentY = 0;
+
+targetX = 0;
+targetY = 0;
 
     image.src = src;
 
@@ -108,8 +115,6 @@ targetY = y;
     lens.style.backgroundSize =
     `${rect.width*zoom}px ${rect.height*zoom}px`;
 
-    lens.style.backgroundPosition =
-    `${-(x*zoom-lens.offsetWidth/2)}px ${-(y*zoom-lens.offsetHeight/2)}px`;
 
     clearTimeout(idleTimer);
 
