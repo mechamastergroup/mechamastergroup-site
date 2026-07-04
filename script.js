@@ -14,6 +14,14 @@ let zoom = 3;
 let idleTimer;
 let isMoving = false;
 
+let targetX = 0;
+let targetY = 0;
+
+let currentX = 0;
+let currentY = 0;
+
+const smoothness = 0.12;
+
 // ==========================================
 // OPEN MODEL
 // ==========================================
@@ -94,8 +102,8 @@ function updateLensPosition(clientX,clientY){
     if(x > rect.width) x = rect.width;
     if(y > rect.height) y = rect.height;
 
-    lens.style.left = x + "px";
-    lens.style.top = y + "px";
+targetX = x;
+targetY = y;
 
     lens.style.backgroundSize =
     `${rect.width*zoom}px ${rect.height*zoom}px`;
@@ -186,3 +194,26 @@ image.addEventListener("touchend",()=>{
     clearTimeout(idleTimer);
 
 });
+
+function animateLens(){
+
+    currentX += (targetX - currentX) * smoothness;
+
+    currentY += (targetY - currentY) * smoothness;
+
+    lens.style.left = currentX + "px";
+
+    lens.style.top = currentY + "px";
+
+    const bgX = -(currentX * zoom - lens.offsetWidth / 2);
+
+    const bgY = -(currentY * zoom - lens.offsetHeight / 2);
+
+    lens.style.backgroundPosition =
+    `${bgX}px ${bgY}px`;
+
+    requestAnimationFrame(animateLens);
+
+}
+
+animateLens();
