@@ -19,8 +19,8 @@ let targetY = 0;
 let velocityX = 0;
 let velocityY = 0;
 
-const stiffness = 0.18;
-const damping = 0.78;
+const stiffness = 0.08;
+const damping = 0.90;
 
 
 // ==========================================
