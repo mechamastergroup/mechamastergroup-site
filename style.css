@@ -629,9 +629,7 @@ transform:translate(-50%,-50%) scale(1);
 
 }
 
-#lens::before{
-
-content:"";
+#lensHighlight{
 
 position:absolute;
 
@@ -654,7 +652,7 @@ translate(0px,0px)
 rotate(-25deg);
 
 transition:
-transform .12s linear;
+transform .08s linear;
 
 pointer-events:none;
 
