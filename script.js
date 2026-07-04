@@ -199,9 +199,9 @@ function animateLens(){
 
     const speed = targetX - currentX;
 
-    rotation += ((speed * 0.25) - rotation) * 0.15;
+    rotation += ((speed * 0.8) - rotation) * 0.25;
 
-    rotation = Math.max(-4, Math.min(4, rotation));
+    rotation = Math.max(-15, Math.min(15, rotation));
     
    lens.style.left = currentX + "px";
 
