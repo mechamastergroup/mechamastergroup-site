@@ -20,7 +20,7 @@ let targetY = 0;
 let currentX = 0;
 let currentY = 0;
 
-const smoothness = 0.12;
+const smoothness = 0.16;
 
 // ==========================================
 // OPEN MODEL
