@@ -16,12 +16,7 @@ let currentY = 0;
 let targetX = 0;
 let targetY = 0;
 
-let velocityX = 0;
-let velocityY = 0;
-
-const stiffness = 0.08;
-const damping = 0.90;
-
+const smoothness = 0.18;
 
 // ==========================================
 // OPEN MODEL
@@ -49,8 +44,6 @@ function openModel(src){
         targetX = currentX;
         targetY = currentY;
 
-        velocityX = 0;
-        velocityY = 0;
 
         lens.style.backgroundImage = `url(${image.src})`;
 
@@ -94,9 +87,6 @@ function closeModel(){
 
     lens.style.opacity = "0";
     lens.classList.remove("focus");
-
-    velocityX = 0;
-    velocityY = 0;
 
 }
 
@@ -199,17 +189,8 @@ image.addEventListener("touchend",()=>{
 
 function animateLens(){
 
-    const forceX = (targetX - currentX) * stiffness;
-    const forceY = (targetY - currentY) * stiffness;
-
-    velocityX += forceX;
-    velocityY += forceY;
-
-    velocityX *= damping;
-    velocityY *= damping;
-
-    currentX += velocityX;
-    currentY += velocityY;
+    currentX += (targetX - currentX) * smoothness;
+    currentY += (targetY - currentY) * smoothness;
 
     lens.style.left = currentX + "px";
     lens.style.top = currentY + "px";
