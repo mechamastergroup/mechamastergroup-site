@@ -649,7 +649,12 @@ border-radius:50%;
 
 filter:blur(4px);
 
-transform:rotate(-25deg);
+transform:
+translate(0px,0px)
+rotate(-25deg);
+
+transition:
+transform .12s linear;
 
 pointer-events:none;
 
