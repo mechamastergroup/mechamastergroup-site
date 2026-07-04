@@ -9,10 +9,12 @@ const lens = document.getElementById("lens");
 
 let zoom = 3;
 let idleTimer;
-let isMoving = false;
 
 let currentX = 0;
 let currentY = 0;
+
+let targetX = 0;
+let targetY = 0;
 
 let velocityX = 0;
 let velocityY = 0;
@@ -29,15 +31,6 @@ function openModel(src){
 
     viewer.style.display = "flex";
 
-currentX = image.width / 2;
-currentY = image.height / 2;
-
-velocityX = 0;
-velocityY = 0;
-
-targetX = currentX;
-targetY = currentY;
-
     image.src = src;
 
     const gallery = document.querySelector(".model-gallery");
@@ -47,6 +40,15 @@ targetY = currentY;
     }
 
     image.onload = () => {
+
+        currentX = image.clientWidth / 2;
+        currentY = image.clientHeight / 2;
+
+        targetX = currentX;
+        targetY = currentY;
+
+        velocityX = 0;
+        velocityY = 0;
 
         lens.style.backgroundImage = `url(${image.src})`;
 
@@ -97,7 +99,7 @@ function closeModel(){
 // UPDATE LENS
 // ==========================================
 
-function updateLensPosition(clientX,clientY){
+function updateLensPosition(clientX, clientY){
 
     const rect = image.getBoundingClientRect();
 
@@ -110,24 +112,21 @@ function updateLensPosition(clientX,clientY){
     if(x > rect.width) x = rect.width;
     if(y > rect.height) y = rect.height;
 
-targetX = x;
-targetY = y;
+    targetX = x;
+    targetY = y;
 
     lens.style.backgroundSize =
-    `${rect.width*zoom}px ${rect.height*zoom}px`;
-
+    `${rect.width * zoom}px ${rect.height * zoom}px`;
 
     clearTimeout(idleTimer);
 
     lens.classList.remove("focus");
 
-    idleTimer = setTimeout(()=>{
+    idleTimer = setTimeout(() => {
 
         lens.classList.add("focus");
 
-    },800);
-
-    isMoving = false;
+    }, 800);
 
 }
 
@@ -139,25 +138,17 @@ function handleMove(e){
 
     e.preventDefault();
 
-    if(isMoving) return;
+    const clientX =
+    e.clientX || e.touches?.[0]?.clientX;
 
-    isMoving = true;
+    const clientY =
+    e.clientY || e.touches?.[0]?.clientY;
 
-    requestAnimationFrame(()=>{
+    if(clientX !== undefined && clientY !== undefined){
 
-        const clientX =
-        e.clientX || e.touches?.[0]?.clientX;
+        updateLensPosition(clientX, clientY);
 
-        const clientY =
-        e.clientY || e.touches?.[0]?.clientY;
-
-        if(clientX!==undefined){
-
-            updateLensPosition(clientX,clientY);
-
-        }
-
-    });
+    }
 
 }
 
