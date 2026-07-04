@@ -31,6 +31,8 @@ function openModel(src){
 
     viewer.style.display = "flex";
 
+    lens.style.opacity = "0";
+
     image.src = src;
 
     const gallery = document.querySelector(".model-gallery");
@@ -92,6 +94,9 @@ function closeModel(){
 
     lens.style.opacity = "0";
     lens.classList.remove("focus");
+
+    velocityX = 0;
+    velocityY = 0;
 
 }
 
