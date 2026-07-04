@@ -18,6 +18,9 @@ let targetY = 0;
 
 const smoothness = 0.12;
 
+let lastX = 0;
+let rotation = 0;
+
 // ==========================================
 // OPEN MODEL
 // ==========================================
@@ -192,8 +195,18 @@ function animateLens(){
     currentX += (targetX - currentX) * smoothness;
     currentY += (targetY - currentY) * smoothness;
 
-    lens.style.left = currentX + "px";
-    lens.style.top = currentY + "px";
+    const speed = currentX - lastX;
+
+    rotation += ((speed * 0.8) - rotation) * 0.12;
+
+    lastX = currentX;
+    
+   lens.style.left = currentX + "px";
+
+   lens.style.top = currentY + "px";
+
+   lens.style.transform =
+    `translate(-50%,-50%) rotate(${rotation}deg)`;
 
     const bgX =
     -(currentX * zoom - lens.offsetWidth / 2);
