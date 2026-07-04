@@ -197,7 +197,9 @@ function animateLens(){
 
     const speed = currentX - lastX;
 
-    rotation += ((speed * 0.8) - rotation) * 0.12;
+    rotation += ((speed * 0.25) - rotation) * 0.15;
+
+    rotation = Math.max(-4, Math.min(4, rotation));
 
     lastX = currentX;
     
