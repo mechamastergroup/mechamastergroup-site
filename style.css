@@ -549,3 +549,108 @@ nav a:hover::after {
     }
     .whatsapp-float img { width: 30px; height: 30px; }
 }
+/* =========================================
+   PREMIUM ZOOM LENS
+========================================= */
+
+.zoom-container{
+
+position:relative;
+
+display:inline-block;
+
+overflow:hidden;
+
+}
+
+#lens{
+
+position:absolute;
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+border:2px solid rgba(255,255,255,.95);
+
+outline:1px solid rgba(255,255,255,.25);
+
+box-shadow:
+0 0 40px rgba(0,0,0,.40),
+0 0 18px rgba(59,130,246,.30);
+
+background-repeat:no-repeat;
+
+pointer-events:none;
+
+opacity:0;
+
+transform:translate(-50%,-50%) scale(.9);
+
+transition:
+opacity .25s ease,
+transform .25s cubic-bezier(.22,1,.36,1),
+width .25s ease,
+height .25s ease;
+
+z-index:9999;
+
+}
+
+.zoom-container:hover #lens{
+
+opacity:1;
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+#lens.focus{
+
+animation:lensPulse .8s ease;
+
+}
+
+@keyframes lensPulse{
+
+0%{
+transform:translate(-50%,-50%) scale(1);
+}
+
+50%{
+transform:translate(-50%,-50%) scale(1.08);
+}
+
+100%{
+transform:translate(-50%,-50%) scale(1);
+}
+
+}
+
+#lens::before{
+
+content:"";
+
+position:absolute;
+
+top:18px;
+
+left:25px;
+
+width:60px;
+
+height:28px;
+
+background:rgba(255,255,255,.35);
+
+border-radius:50%;
+
+filter:blur(4px);
+
+transform:rotate(-25deg);
+
+pointer-events:none;
+
+}
