@@ -6,9 +6,6 @@ const viewer = document.getElementById("modelViewer");
 const image = document.getElementById("modelImage");
 const lens = document.getElementById("lens");
 
-console.log(viewer);
-console.log(image);
-console.log(lens);
 
 let zoom = 3;
 let idleTimer;
@@ -31,11 +28,11 @@ function openModel(src){
 
     viewer.style.display = "flex";
 
-    currentX = 0;
-currentY = 0;
+currentX = image.width / 2;
+currentY = image.height / 2;
 
-targetX = 0;
-targetY = 0;
+targetX = currentX;
+targetY = currentY;
 
     image.src = src;
 
