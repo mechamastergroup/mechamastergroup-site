@@ -11,13 +11,14 @@ let zoom = 3;
 let idleTimer;
 let isMoving = false;
 
-let targetX = 0;
-let targetY = 0;
-
 let currentX = 0;
 let currentY = 0;
 
-const smoothness = 0.16;
+let velocityX = 0;
+let velocityY = 0;
+
+const stiffness = 0.18;
+const damping = 0.78;
 
 
 // ==========================================
@@ -30,6 +31,9 @@ function openModel(src){
 
 currentX = image.width / 2;
 currentY = image.height / 2;
+
+velocityX = 0;
+velocityY = 0;
 
 targetX = currentX;
 targetY = currentY;
@@ -199,17 +203,26 @@ image.addEventListener("touchend",()=>{
 
 function animateLens(){
 
-    currentX += (targetX - currentX) * smoothness;
+    const forceX = (targetX - currentX) * stiffness;
+    const forceY = (targetY - currentY) * stiffness;
 
-    currentY += (targetY - currentY) * smoothness;
+    velocityX += forceX;
+    velocityY += forceY;
+
+    velocityX *= damping;
+    velocityY *= damping;
+
+    currentX += velocityX;
+    currentY += velocityY;
 
     lens.style.left = currentX + "px";
-
     lens.style.top = currentY + "px";
 
-    const bgX = -(currentX * zoom - lens.offsetWidth / 2);
+    const bgX =
+    -(currentX * zoom - lens.offsetWidth / 2);
 
-    const bgY = -(currentY * zoom - lens.offsetHeight / 2);
+    const bgY =
+    -(currentY * zoom - lens.offsetHeight / 2);
 
     lens.style.backgroundPosition =
     `${bgX}px ${bgY}px`;
