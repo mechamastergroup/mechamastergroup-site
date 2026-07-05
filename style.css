@@ -587,11 +587,10 @@ pointer-events:none;
 
 opacity:0;
 
-transform:translate(-50%,-50%) scale(.9);
-
+transform:translate(-50%,-50%);
+   
 transition:
 opacity .25s ease,
-transform .25s cubic-bezier(.22,1,.36,1),
 width .25s ease,
 height .25s ease;
 
@@ -602,8 +601,6 @@ z-index:9999;
 .zoom-container:hover #lens{
 
 opacity:1;
-
-transform:translate(-50%,-50%) scale(1);
 
 }
 
@@ -616,15 +613,15 @@ animation:lensPulse .8s ease;
 @keyframes lensPulse{
 
 0%{
-transform:translate(-50%,-50%) scale(1);
+opacity:1;
 }
 
 50%{
-transform:translate(-50%,-50%) scale(1.08);
+opacity:.9;
 }
 
 100%{
-transform:translate(-50%,-50%) scale(1);
+opacity:1;
 }
 
 }
