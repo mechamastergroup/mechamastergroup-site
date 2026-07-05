@@ -630,13 +630,14 @@ opacity:1;
 
 position:absolute;
 
-top:18px;
-
-left:25px;
+top:50%;
+left:50%;
 
 width:60px;
-
 height:28px;
+
+margin-left:-30px;
+margin-top:-14px;
 
 background:rgba(255,255,255,.35);
 
@@ -644,13 +645,12 @@ border-radius:50%;
 
 filter:blur(4px);
 
+pointer-events:none;
+
 transform:
-translate(0px,0px)
+translate(58px,0px)
 rotate(-25deg);
 
-transition:
-transform .08s linear;
-
-pointer-events:none;
+transition:none;
 
 }
