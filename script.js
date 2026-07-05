@@ -191,9 +191,14 @@ function animateLens(){
     currentX += (targetX - currentX) * smoothness;
     currentY += (targetY - currentY) * smoothness;
 
-    lens.style.transform =
-    `translate(-50%,-50%)`;
+    // تحريك العدسة
+    lens.style.left = currentX + "px";
+    lens.style.top = currentY + "px";
 
+    // إبقاء العدسة في المنتصف
+    lens.style.transform = "translate(-50%,-50%)";
+
+    // تحريك الصورة داخل العدسة
     const bgX =
     -(currentX * zoom - lens.offsetWidth / 2);
 
