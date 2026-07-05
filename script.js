@@ -17,8 +17,8 @@ let currentY = 0;
 let targetX = 0;
 let targetY = 0;
 
-let highlightAngle = -35;
-let targetHighlightAngle = -35;
+let highlightAngle = 0;
+let targetHighlightAngle = 0;
 
 const smoothness = 0.12;
 
@@ -202,7 +202,16 @@ function animateLens(){
     currentY += (targetY - currentY) * smoothness;
 
   highlightAngle +=
-(targetHighlightAngle-highlightAngle)*0.18;
+(targetHighlightAngle - highlightAngle) * 0.18;
+
+const radius = 68;
+
+const hx = Math.cos(highlightAngle) * radius;
+const hy = Math.sin(highlightAngle) * radius;
+
+highlight.style.transform =
+`translate(${hx}px,${hy}px)
+rotate(-25deg)`;
 
     // تحريك العدسة
     lens.style.left = currentX + "px";
@@ -220,17 +229,6 @@ function animateLens(){
 
     lens.style.backgroundPosition =
     `${bgX}px ${bgY}px`;
-
-   const radius = 58;
-
-const hx = Math.cos(highlightAngle) * radius;
-
-const hy = Math.sin(highlightAngle) * radius;
-
-highlight.style.transform =
-
-`translate(${hx}px,${hy}px)
-rotate(-25deg)`;
     
 
     requestAnimationFrame(animateLens);
