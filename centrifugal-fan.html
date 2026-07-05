@@ -48,47 +48,15 @@ onclick="openStrip()">
 <div id="strip" class="image-strip">
 
 <img src="projects/centrifugal-fan/1a.jpeg"
-onclick="openViewer(this.src)">
-
+onclick="openModel(this.src)"
 <img src="projects/centrifugal-fan/2b.jpeg"
-onclick="openViewer(this.src)">
-
+onclick="openModel(this.src)"
 <img src="projects/centrifugal-fan/3c.jpeg"
-onclick="openViewer(this.src)">
-
+onclick="openModel(this.src)"
 <img src="projects/centrifugal-fan/4d.jpeg"
-onclick="openViewer(this.src)">
-
+onclick="openModel(this.src)"
 </div>
 
-<div
-id="viewer"
-class="image-viewer"
-onclick="closeViewer()">
-
-<div
-class="viewer-box"
-onclick="event.stopPropagation()">
-
-<div
-class="close-btn"
-onclick="closeViewer()">
-
-×
-
-</div>
-
-<img id="viewerImg">
-
-<button
-class="back-btn"
-onclick="backToGallery()">
-
-Back to Gallery
-
-</button>
-
-</div>
 
 </div>
 
@@ -103,36 +71,28 @@ document.getElementById("pageContent")
 
 }
 
-function openViewer(src){
-
-document.getElementById("strip").style.display="none";
-
-document.getElementById("viewer").style.display="flex";
-
-document.getElementById("viewerImg").src=src;
-
-}
-
-function closeViewer(){
-
-document.getElementById("viewer").style.display="none";
-
-document.getElementById("strip").style.display="none";
-
-document.getElementById("pageContent")
-.classList.remove("blur-background");
-
-}
-
-function backToGallery(){
-
-document.getElementById("viewer").style.display="none";
-
-document.getElementById("strip").style.display="flex";
-
-}
-
 </script>
+
+  <div id="modelViewer" class="model-viewer">
+    <div class="model-box">
+        <div class="zoom-container">
+
+            <img id="modelImage" alt="3D Model Preview">
+
+            <div id="lens">
+                <div id="lensHighlight"></div>
+            </div>
+
+        </div>
+
+        <button class="gallery-back-btn" onclick="closeModel()">
+            Back to Gallery
+        </button>
+
+    </div>
+</div>
+
+  <script src="assets/viewer.js"></script>
 </body>
 
 </html>
