@@ -5,6 +5,7 @@
 const viewer = document.getElementById("modelViewer");
 const image = document.getElementById("modelImage");
 const lens = document.getElementById("lens");
+const highlight = document.getElementById("lensHighlight");
 
 
 let zoom = 3;
@@ -15,6 +16,12 @@ let currentY = 0;
 
 let targetX = 0;
 let targetY = 0;
+
+let highlightX = 0;
+let highlightY = 0;
+
+let highlightTargetX = 0;
+let highlightTargetY = 0;
 
 const smoothness = 0.12;
 
@@ -109,6 +116,18 @@ function updateLensPosition(clientX, clientY){
     targetX = x;
     targetY = y;
 
+    const dx = targetX - currentX;
+const dy = targetY - currentY;
+
+// نصف قطر الحركة داخل العدسة
+const radius = 48;
+
+// تطبيع الاتجاه
+const length = Math.sqrt(dx*dx + dy*dy) || 1;
+
+highlightTargetX = (dx / length) * radius;
+highlightTargetY = (dy / length) * radius;
+
     lens.style.backgroundSize =
     `${rect.width * zoom}px ${rect.height * zoom}px`;
 
@@ -191,6 +210,9 @@ function animateLens(){
     currentX += (targetX - currentX) * smoothness;
     currentY += (targetY - currentY) * smoothness;
 
+    highlightX += (highlightTargetX - highlightX) * 0.18;
+    highlightY += (highlightTargetY - highlightY) * 0.18;
+
     // تحريك العدسة
     lens.style.left = currentX + "px";
     lens.style.top = currentY + "px";
@@ -207,6 +229,10 @@ function animateLens(){
 
     lens.style.backgroundPosition =
     `${bgX}px ${bgY}px`;
+
+    highlight.style.transform =
+`translate(${highlightX}px, ${highlightY}px)
+ rotate(-25deg)`;
 
     requestAnimationFrame(animateLens);
 
