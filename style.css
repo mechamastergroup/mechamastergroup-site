@@ -1,6 +1,7 @@
 /* =========================================
    1. VARIABLES & BASE SETTINGS
 ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 :root {
     --bg-main: #0f172a;
     --bg-secondary: #07132d;
