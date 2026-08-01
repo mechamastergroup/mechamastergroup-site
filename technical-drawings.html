@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Technical Drawings Gallery | MechaMaster Group
+    </title>
+
+    <link rel="icon" href="2.png">
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="hero technical-drawings-page">
+
+        <h1 class="gallery-title">
+            Technical Drawings Gallery
+        </h1>
+
+
+        <div class="model-gallery technical-gallery">
+
+            <img
+                src="technical-drawings-gallery/1td.jpg"
+                class="gallery-img drawing-img"
+                alt="Technical Drawing 1"
+                loading="lazy"
+                onclick="openModel(this.src)"
+            >
+
+            <img
+                src="technical-drawings-gallery/2td.jpg"
+                class="gallery-img drawing-img"
+                alt="Technical Drawing 2"
+                loading="lazy"
+                onclick="openModel(this.src)"
+            >
+
+            <img
+                src="technical-drawings-gallery/3td.jpg"
+                class="gallery-img drawing-img"
+                alt="Technical Drawing 3"
+                loading="lazy"
+                onclick="openModel(this.src)"
+            >
+
+
+        </div>
+
+    </main>
+
+
+    <!-- Technical Drawing Viewer -->
+
+    <div
+        id="modelViewer"
+        class="model-viewer"
+    >
+
+        <div class="model-box">
+
+            <div class="zoom-container">
+
+                <img
+                    id="modelImage"
+                    alt="Technical Drawing Preview"
+                >
+
+                <div id="lens">
+
+                    <div id="lensHighlight"></div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="gallery-back-btn"
+                onclick="closeModel()"
+            >
+
+                Back to Gallery
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="assets/viewer.js"></script>
+
+</body>
+
+</html>
