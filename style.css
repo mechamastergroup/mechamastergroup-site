@@ -764,3 +764,74 @@ rotate(-25deg);
 transition:none;
 
 }
+/* =========================================
+   TECHNICAL DRAWINGS GALLERY
+========================================= */
+
+.technical-drawings-page {
+    min-height: 100vh;
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.technical-gallery {
+    max-width: 1500px;
+    gap: 30px;
+    padding: 0 25px;
+}
+
+.drawing-img {
+    width: 320px;
+    height: 220px;
+    aspect-ratio: 16 / 11;
+    object-fit: cover;
+    object-position: center;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.drawing-img:hover {
+    transform: scale(1.08);
+    z-index: 999;
+    border: 2px solid var(--accent-primary);
+    box-shadow: var(--shadow-hover);
+}
+
+
+/* =========================================
+   TECHNICAL DRAWINGS — MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .technical-drawings-page {
+        padding: 55px 12px 50px;
+    }
+
+    .technical-drawings-page .gallery-title {
+        font-size: 27px;
+        line-height: 1.25;
+        margin-bottom: 35px;
+    }
+
+    .technical-gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .drawing-img {
+        width: min(100%, 390px);
+        height: auto;
+        aspect-ratio: 16 / 11;
+        margin: auto;
+    }
+
+    .drawing-img:hover {
+        transform: none;
+    }
+
+}
