@@ -527,16 +527,20 @@ nav a:hover::after {
         margin-bottom: 20px;
     }
 
-    .hero h1 {
-        order: 2;
-        font-size: 30px;
-        line-height: 1.15;
-        letter-spacing: 1px;
-        margin: 0;
-        max-width: 100%;
-        overflow-wrap: break-word;
-        text-align: center;
-    }
+   .hero h1 {
+    order: 1;
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: 1px;
+    margin: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.service-selector {
+    order: 2;
+}
 
     .hero-subtitle {
         order: 3;
