@@ -1,73 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-<loc>https://mechamastergroup.com/</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/about.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/services.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/contact.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/machine-design.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/mep-design.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/assembly-design.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/3D-modeling.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/hydraulic-jack.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/heat-exchanger.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/centrifugal-pump.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/single-gear-box.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/radial-engine.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/stapler.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/centrifugal-fan.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/bahrain-trading-center.html</loc>
-</url>
-
-<url>
-<loc>https://mechamastergroup.com/incline-conveyor-system.html</loc>
-</url>
-
+  <url><loc>https://mechamastergroup.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://mechamastergroup.com/about.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mechamastergroup.com/services.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mechamastergroup.com/contact.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mechamastergroup.com/3D-modeling.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mechamastergroup.com/technical-drawings.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mechamastergroup.com/machine-design.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mechamastergroup.com/assembly-design.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mechamastergroup.com/bahrain-trading-center.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mechamastergroup.com/centrifugal-pump.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mechamastergroup.com/heat-exchanger.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mechamastergroup.com/radial-engine.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mechamastergroup.com/incline-conveyor-system.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mechamastergroup.com/single-gear-box.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mechamastergroup.com/hydraulic-jack.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mechamastergroup.com/centrifugal-fan.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mechamastergroup.com/stapler.html</loc><priority>0.7</priority></url>
 </urlset>

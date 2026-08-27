@@ -1,166 +1,670 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MechaMaster Group | Mechanical Design, MEP & 3D CAD Engineering</title>
+  
+  <meta name="description" content="MechaMaster Group is a premier engineering consultancy specializing in Mechanical Design, MEP Building Systems, 3D CAD Modeling, and FEA/CFD Simulation for industrial and commercial projects worldwide.">
+  <meta name="keywords" content="Mechanical Design, MEP Engineering, 3D CAD Modeling, SolidWorks, FEA Simulation, CFD Analysis, Bahrain World Trade Center, Technical Drawings, Machine Design">
+  <meta name="author" content="MechaMaster Group">
+  <link rel="icon" href="looogo.png">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Open Graph -->
+  <meta property="og:title" content="MechaMaster Group | Engineering & Mechanical Design Solutions">
+  <meta property="og:description" content="Turnkey Engineering Excellence in Mechanical Design, MEP & 3D CAD Systems.">
+  <meta property="og:image" content="looogo.png">
+  <meta property="og:type" content="website">
 
-<title>MechaMaster Group</title>
-
-<meta name="description"
-content="MechaMaster Group provides professional Mechanical Design, CAD Modeling, Assembly Design, 3D Product Development, and MEP Engineering Solutions for industrial and building projects worldwide.">
-
-<meta name="keywords"
-content="Mechanical Design, CAD Modeling, SolidWorks, Assembly Design, MEP Engineering, 3D Modeling">
-
-<meta name="author"
-content="MechaMaster Group">
-
-<link rel="icon" href="looogo.png">
-<link rel="stylesheet" href="style.css">
-
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+  <!-- Background Glowing Orbs -->
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="bg-glow glow-3"></div>
 
-<nav>
+  <!-- Header & Navigation Bar -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <img src="looogo.png" alt="MechaMaster Logo">
+        <div class="brand-logo-text">
+          <span class="brand-name">MechaMaster</span>
+          <span class="brand-tag">Engineering Group</span>
+        </div>
+      </a>
 
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Engineering Showcase</a>
+        <a href="3D-modeling.html" class="nav-link">3D CAD Gallery</a>
+        <a href="technical-drawings.html" class="nav-link">Technical Drawings</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
 
-</nav>
+      <div class="header-controls">
+        <!-- Dark / Light Theme Switcher -->
+        <button class="control-btn" id="themeToggle" aria-label="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
 
-</header>
+        <a href="contact.html" class="btn btn-primary btn-sm">Get in Touch</a>
 
-<section class="hero">
+        <!-- Mobile Drawer Toggle -->
+        <button class="control-btn mobile-menu-toggle" id="mobileToggle" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-<img src="looogo.png" class="hero-logo">
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="tech-badge">Engineering Excellence • ASME / ISO / ASHRAE Standards</div>
+        <h1 class="hero-title">
+          Precision Solutions in<br>
+          <span class="gradient-text">Mechanical Design, MEP & 3D CAD Systems</span>
+        </h1>
+        <p class="hero-desc">
+          MechaMaster Group is a premier engineering consultancy delivering high-precision Mechanical Design, MEP Building Services, 3D CAD Modeling, and FEA/CFD Structural & Thermal Simulation for complex industrial and commercial engineering projects.
+        </p>
 
-<h1>MechaMaster Group</h1>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">Explore Engineering Showcase</a>
+          <a href="services.html" class="btn btn-secondary">Our Capabilities</a>
+        </div>
 
-<p class="hero-subtitle">
+        <div class="hero-metrics">
+          <div class="metric-box">
+            <div class="metric-val gradient-text">+450</div>
+            <div class="metric-lbl">Engineering Projects Delivered</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-val gradient-text">100%</div>
+            <div class="metric-lbl">Standards Compliance</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-val gradient-text">+15</div>
+            <div class="metric-lbl">Years of Engineering Innovation</div>
+          </div>
+        </div>
+      </div>
 
-Engineering Design Solutions
+      <!-- Hero Blueprint Visual Panel -->
+      <div class="hero-blueprint-wrap">
+        <div class="glass-panel hero-blueprint-panel">
+          <div class="blueprint-header">
+            <div class="cad-badge mono">SOLIDWORKS 2026 • GD&T VERIFIED</div>
+            <span style="font-size: 0.8rem; color: var(--accent-cyan);" class="mono">SYSTEM: ACTIVE [ISO-9001]</span>
+          </div>
+          
+          <div class="blueprint-body">
+            <div class="cad-spec-item">
+              <span class="cad-spec-key">FEA Stress Analysis</span>
+              <span class="cad-spec-val mono amber-text">σ_max &lt; 145 MPa (SF = 2.8)</span>
+            </div>
+            <div class="cad-spec-item">
+              <span class="cad-spec-key">CFD Fluid Dynamics</span>
+              <span class="cad-spec-val mono gradient-text">Q = 450 m³/h @ 98.4% Eff</span>
+            </div>
+            <div class="cad-spec-item">
+              <span class="cad-spec-key">MEP Building HVAC Load</span>
+              <span class="cad-spec-val mono" style="color: #10b981;">ASHRAE 90.1 Compliant</span>
+            </div>
+            <div class="cad-spec-item">
+              <span class="cad-spec-key">Kinematic Tolerance Stack</span>
+              <span class="cad-spec-val mono">ISO 2768-mK Zero Deviation</span>
+            </div>
+          </div>
+        </div>
 
-</p>
+        <!-- Floating CAD Badges -->
+        <div class="glass-panel floating-cad-badge float-top-right">
+          <div style="font-size: 1.4rem;">⚙️</div>
+          <div>
+            <div style="font-weight: 800; font-size: 0.9rem;">Precision CAD</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Parametric 3D SolidWorks</div>
+          </div>
+        </div>
 
-<div class="hero-services">
+        <div class="glass-panel floating-cad-badge float-bottom-left">
+          <div style="font-size: 1.4rem;">🏢</div>
+          <div>
+            <div style="font-weight: 800; font-size: 0.9rem;">MEP Systems</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">HVAC, Plumbing & Fire</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<span>Mechanical Design</span>
+  <!-- Standards Bar -->
+  <section class="standards-bar">
+    <div class="container">
+      <div class="standards-title">
+        Engineered to strict international standards and industrial codes
+      </div>
+      <div class="standards-flex">
+        <div class="standard-item mono">📐 ASME (Sec VIII / B31.3)</div>
+        <div class="standard-item mono">🎖️ ISO 9001:2015</div>
+        <div class="standard-item mono">❄️ ASHRAE Standards</div>
+        <div class="standard-item mono">⚙️ AGMA Gear Codes</div>
+        <div class="standard-item mono">🔥 NFPA Life Safety</div>
+        <div class="standard-item mono">🏢 BIM ISO 19650</div>
+      </div>
+    </div>
+  </section>
 
-<span>CAD Modeling</span>
+  <!-- Engineering Disciplines / Services Section -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="tech-badge">Engineering Capabilities & Disciplines</div>
+        <h2 class="section-title">Comprehensive Multi-Disciplinary Engineering Services</h2>
+        <p class="section-subtitle">
+          End-to-end engineering consultancy covering initial concept validation, precision CAD modeling, FEA/CFD simulation, and manufacturing-ready shop drawings.
+        </p>
+      </div>
 
-<span>MEP Engineering</span>
+      <div class="services-grid">
+        <!-- Service 1: Machine Design -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">⚙️</div>
+          <h3 class="service-card-title">Mechanical & Machine Design</h3>
+          <p class="service-card-desc">Custom machinery, gear trains, dynamic power transmission systems, and industrial equipment designed with strict safety factors.</p>
+          <div class="service-tags">
+            <span class="service-tag">Machine Design</span>
+            <span class="service-tag">Kinematics</span>
+            <span class="service-tag">AGMA Gears</span>
+          </div>
+          <a href="machine-design.html" class="service-link">View Discipline Details →</a>
+        </div>
 
-</div>
+        <!-- Service 2: MEP Engineering -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">🏢</div>
+          <h3 class="service-card-title">MEP & Building Services</h3>
+          <p class="service-card-desc">Complete HVAC load calculations, fire protection piping, electrical distribution, and plumbing systems for high-rise towers and complexes.</p>
+          <div class="service-tags">
+            <span class="service-tag">HVAC Design</span>
+            <span class="service-tag">Fire Fighting</span>
+            <span class="service-tag">Revit MEP</span>
+          </div>
+          <a href="services.html" class="service-link">View Discipline Details →</a>
+        </div>
 
-<div class="hero-counter">
+        <!-- Service 3: 3D CAD -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">📐</div>
+          <h3 class="service-card-title">3D CAD Modeling & SolidWorks</h3>
+          <p class="service-card-desc">High-precision parametric 3D models using SolidWorks, Autodesk Inventor, and CATIA, tailored for CNC manufacturing and additive processes.</p>
+          <div class="service-tags">
+            <span class="service-tag">SolidWorks</span>
+            <span class="service-tag">Parametric 3D</span>
+            <span class="service-tag">Assembly</span>
+          </div>
+          <a href="3D-modeling.html" class="service-link">View Discipline Details →</a>
+        </div>
 
-<div>
-<h2 class="counter" data-target="75">0</h2>
-<p>3D Models</p>
-</div>
+        <!-- Service 4: FEA & CFD -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">🌊</div>
+          <h3 class="service-card-title">FEA & CFD Engineering Simulation</h3>
+          <p class="service-card-desc">Finite Element Stress Analysis (FEA) and Computational Fluid Dynamics (CFD) to optimize structural integrity and thermal behavior.</p>
+          <div class="service-tags">
+            <span class="service-tag">ANSYS FEA</span>
+            <span class="service-tag">CFD Flow</span>
+            <span class="service-tag">Thermal Transfer</span>
+          </div>
+          <a href="heat-exchanger.html" class="service-link">View Discipline Details →</a>
+        </div>
 
-<div>
-<h2 class="counter" data-target="10">0</h2>
-<p>Projects</p>
-</div>
+        <!-- Service 5: Technical Drawings -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">📋</div>
+          <h3 class="service-card-title">Technical Drafting & Shop Drawings</h3>
+          <p class="service-card-desc">Manufacturing-ready assembly drawings, exploded views, and fabrication blueprints adhering strictly to Geometric Dimensioning & Tolerancing (GD&T).</p>
+          <div class="service-tags">
+            <span class="service-tag">GD&T Standards</span>
+            <span class="service-tag">Fabrication</span>
+            <span class="service-tag">AutoCAD</span>
+          </div>
+          <a href="technical-drawings.html" class="service-link">View Discipline Details →</a>
+        </div>
 
-<div>
-<h2 class="counter" data-target="1000">0</h2>
-<p>Design Hours</p>
-</div>
+        <!-- Service 6: Reverse Engineering & Prototyping -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">🔧</div>
+          <h3 class="service-card-title">Reverse Engineering & Assemblies</h3>
+          <p class="service-card-desc">Digitizing physical components into editable parametric CAD models with dimensional inspection, clash detection, and performance upgrades.</p>
+          <div class="service-tags">
+            <span class="service-tag">Reverse Eng</span>
+            <span class="service-tag">Prototyping</span>
+            <span class="service-tag">DFM</span>
+          </div>
+          <a href="assembly-design.html" class="service-link">View Discipline Details →</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <!-- Featured Engineering Showcase -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="tech-badge">Engineering Portfolio & Case Studies</div>
+        <h2 class="section-title">Pioneering Engineering Work & Technical Showcase</h2>
+        <p class="section-subtitle">
+          Explore a curated showcase of our engineering projects across high-rise buildings, fluid machinery, thermal systems, and complex mechanical assemblies.
+        </p>
+      </div>
 
-<a href="services.html" class="btn">
+      <!-- Filters -->
+      <div class="project-filters">
+        <button class="filter-pill active" data-filter="all">All Projects</button>
+        <button class="filter-pill" data-filter="mep">MEP & Building Systems</button>
+        <button class="filter-pill" data-filter="machines">Machinery & Power Trains</button>
+        <button class="filter-pill" data-filter="fluid">Fluid & Thermal Systems</button>
+        <button class="filter-pill" data-filter="cad">CAD Models & Assemblies</button>
+      </div>
 
-Explore Services
+      <div class="projects-grid">
+        <!-- Project 1: Bahrain Trade Center -->
+        <div class="glass-panel project-card" data-category="mep">
+          <div class="project-media-wrap">
+            <img src="MEP.jpg" alt="Bahrain Trading Center MEP" class="project-img">
+            <span class="project-badge-overlay mono">MEP & HVAC</span>
+          </div>
+          <div class="project-info-body">
+            <div class="project-discipline">High-Rise Buildings & MEP</div>
+            <h3 class="project-heading">Bahrain World Trade Center (MEP & Aerodynamics)</h3>
+            <p class="project-summary">Comprehensive MEP engineering, wind turbine airflow dynamics, and central HVAC optimization for the twin commercial towers.</p>
+            <div class="project-footer-action">
+              <span class="mono" style="font-size: 0.8rem; color: var(--text-muted);">240m Towers</span>
+              <a href="bahrain-trading-center.html" class="service-link">Read Case Study →</a>
+            </div>
+          </div>
+        </div>
 
-</a>
+        <!-- Project 2: Centrifugal Pump -->
+        <div class="glass-panel project-card" data-category="fluid">
+          <div class="project-media-wrap">
+            <img src="123.jpg" alt="Centrifugal Pump" class="project-img">
+            <span class="project-badge-overlay mono">CFD & Fluid</span>
+          </div>
+          <div class="project-info-body">
+            <div class="project-discipline">Turbomachinery & Fluid Power</div>
+            <h3 class="project-heading">Industrial Centrifugal Pump</h3>
+            <p class="project-summary">Hydraulic impeller blade geometry modeling and volute casing design with CFD flow simulation for maximum pumping efficiency.</p>
+            <div class="project-footer-action">
+              <span class="mono" style="font-size: 0.8rem; color: var(--text-muted);">CFD Optimized</span>
+              <a href="centrifugal-pump.html" class="service-link">Read Case Study →</a>
+            </div>
+          </div>
+        </div>
 
-</section>
+        <!-- Project 3: Heat Exchanger -->
+        <div class="glass-panel project-card" data-category="fluid">
+          <div class="project-media-wrap">
+            <img src="456.png" alt="Heat Exchanger" class="project-img">
+            <span class="project-badge-overlay mono">TEMA / ASME</span>
+          </div>
+          <div class="project-info-body">
+            <div class="project-discipline">Thermal & Process Equipment</div>
+            <h3 class="project-heading">Heavy-Duty Shell & Tube Heat Exchanger</h3>
+            <p class="project-summary">Thermal-hydraulic design in compliance with TEMA Class R and ASME Section VIII standards with advanced CFD heat transfer analysis.</p>
+            <div class="project-footer-action">
+              <span class="mono" style="font-size: 0.8rem; color: var(--text-muted);">TEMA Class R</span>
+              <a href="heat-exchanger.html" class="service-link">Read Case Study →</a>
+            </div>
+          </div>
+        </div>
 
-<section class="about-home">
+        <!-- Project 4: Radial Engine -->
+        <div class="glass-panel project-card" data-category="cad">
+          <div class="project-media-wrap">
+            <img src="789.jpg" alt="Radial Engine" class="project-img">
+            <span class="project-badge-overlay mono">Kinematics</span>
+          </div>
+          <div class="project-info-body">
+            <div class="project-discipline">Aviation & Engine Dynamics</div>
+            <h3 class="project-heading">Radial Aircraft Engine Assembly</h3>
+            <p class="project-summary">High-precision kinematic modeling of multi-piston motion, master rod articulation, and high-speed tolerance stack-up.</p>
+            <div class="project-footer-action">
+              <span class="mono" style="font-size: 0.8rem; color: var(--text-muted);">65+ Parts CAD</span>
+              <a href="radial-engine.html" class="service-link">Read Case Study →</a>
+            </div>
+          </div>
+        </div>
 
-<h2>About MechaMaster Group</h2>
+        <!-- Project 5: Incline Conveyor -->
+        <div class="glass-panel project-card" data-category="machines">
+          <div class="project-media-wrap">
+            <img src="90.png" alt="Incline Conveyor" class="project-img">
+            <span class="project-badge-overlay mono">Automation</span>
+          </div>
+          <div class="project-info-body">
+            <div class="project-discipline">Industrial Material Handling</div>
+            <h3 class="project-heading">Industrial Incline Conveyor System</h3>
+            <p class="project-summary">Heavy-duty automated material handling conveyor with structural steel frame calculations and drive torque analysis.</p>
+            <div class="project-footer-action">
+              <span class="mono" style="font-size: 0.8rem; color: var(--text-muted);">CEMA Standards</span>
+              <a href="incline-conveyor-system.html" class="service-link">Read Case Study →</a>
+            </div>
+          </div>
+        </div>
 
-<p>
+        <!-- Project 6: Single Gear Box -->
+        <div class="glass-panel project-card" data-category="machines">
+          <div class="project-media-wrap">
+            <img src="CAD.jpg" alt="Single Gearbox" class="project-img">
+            <span class="project-badge-overlay mono">AGMA Gears</span>
+          </div>
+          <div class="project-info-body">
+            <div class="project-discipline">Power Transmission & Gears</div>
+            <h3 class="project-heading">High-Torque Single Gear Box</h3>
+            <p class="project-summary">Helical gear geometry optimization and bearing life calculations adhering strictly to AGMA standards and ISO 6336.</p>
+            <div class="project-footer-action">
+              <span class="mono" style="font-size: 0.8rem; color: var(--text-muted);">AGMA 2001-D04</span>
+              <a href="single-gear-box.html" class="service-link">Read Case Study →</a>
+            </div>
+          </div>
+        </div>
 
-Professional engineering solutions focused on
-Mechanical Design, CAD Modeling and MEP Engineering.
+        <!-- Project 7: Hydraulic Jack -->
+        <div class="glass-panel project-card" data-category="machines">
+          <div class="project-media-wrap">
+            <img src="CAD.jpg" alt="Hydraulic Jack" class="project-img">
+            <span class="project-badge-overlay mono">High Pressure</span>
+          </div>
+          <div class="project-info-body">
+            <div class="project-discipline">Hydraulics & Pressure Vessels</div>
+            <h3 class="project-heading">Heavy-Duty Hydraulic Bottle Jack</h3>
+            <p class="project-summary">High-tonnage hydraulic cylinder design with pressure seal analysis and rigorous safety factors (SF ≥ 3.0).</p>
+            <div class="project-footer-action">
+              <span class="mono" style="font-size: 0.8rem; color: var(--text-muted);">20-Ton Capacity</span>
+              <a href="hydraulic-jack.html" class="service-link">Read Case Study →</a>
+            </div>
+          </div>
+        </div>
 
-</p>
+        <!-- Project 8: Centrifugal Fan -->
+        <div class="glass-panel project-card" data-category="fluid">
+          <div class="project-media-wrap">
+            <img src="123.jpg" alt="Centrifugal Fan" class="project-img">
+            <span class="project-badge-overlay mono">Ventilation</span>
+          </div>
+          <div class="project-info-body">
+            <div class="project-discipline">Industrial Aerodynamics</div>
+            <h3 class="project-heading">Industrial Centrifugal Blower Fan</h3>
+            <p class="project-summary">Airflow CFM aerodynamic analysis with backward-curved blade geometry to reduce static pressure losses and noise.</p>
+            <div class="project-footer-action">
+              <span class="mono" style="font-size: 0.8rem; color: var(--text-muted);">8,500 CFM</span>
+              <a href="centrifugal-fan.html" class="service-link">Read Case Study →</a>
+            </div>
+          </div>
+        </div>
 
-</section>
+        <!-- Project 9: Precision Mechanism -->
+        <div class="glass-panel project-card" data-category="cad">
+          <div class="project-media-wrap">
+            <img src="CAD.jpg" alt="Precision Mechanism" class="project-img">
+            <span class="project-badge-overlay mono">Product CAD</span>
+          </div>
+          <div class="project-info-body">
+            <div class="project-discipline">Precision Mechanism Design</div>
+            <h3 class="project-heading">Precision Mechanism & Multi-Part Assembly</h3>
+            <p class="project-summary">Multi-component mechanical assembly design with injection molding tolerances, spring kinematics, and sheet metal fabrication.</p>
+            <div class="project-footer-action">
+              <span class="mono" style="font-size: 0.8rem; color: var(--text-muted);">DFM & GD&T</span>
+              <a href="stapler.html" class="service-link">Read Case Study →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<a
-href="https://wa.me/962781198142"
-class="whatsapp-float"
-target="_blank">
+  <!-- Technical Drawings & 3D CAD Section Preview -->
+  <section class="services-section" style="background: rgba(15, 23, 42, 0.4);">
+    <div class="container">
+      <div class="section-header">
+        <div class="tech-badge">Technical Drawings & CAD Repository</div>
+        <h2 class="section-title">Precision Drafting & Engineering Blueprints</h2>
+        <p class="section-subtitle">
+          Browse fabrication blueprints, section views, and 3D parametric models created with zero-tolerance deviations.
+        </p>
+      </div>
 
-<img src="social-media/whatsapp.png">
+      <div class="technical-gallery-grid">
+        <div class="drawing-card">
+          <img src="CAD.jpg" alt="CAD Blueprint 1" class="drawing-img-thumb">
+          <div class="drawing-meta">
+            <span>Gear Transmission Drawing</span>
+            <span class="mono">ANSI / AGMA</span>
+          </div>
+        </div>
+        <div class="drawing-card">
+          <img src="123.jpg" alt="CAD Blueprint 2" class="drawing-img-thumb">
+          <div class="drawing-meta">
+            <span>Impeller Section View</span>
+            <span class="mono">ISO 128</span>
+          </div>
+        </div>
+        <div class="drawing-card">
+          <img src="456.png" alt="CAD Blueprint 3" class="drawing-img-thumb">
+          <div class="drawing-meta">
+            <span>Shell & Tube Baffle Layout</span>
+            <span class="mono">TEMA Class R</span>
+          </div>
+        </div>
+        <div class="drawing-card">
+          <img src="90.png" alt="CAD Blueprint 4" class="drawing-img-thumb">
+          <div class="drawing-meta">
+            <span>Conveyor Structural Frame</span>
+            <span class="mono">AISC 360</span>
+          </div>
+        </div>
+      </div>
 
-</a>
+      <div style="display: flex; justify-content: center; gap: 1.25rem; margin-top: 3rem; flex-wrap: wrap;">
+        <a href="technical-drawings.html" class="btn btn-outline">Explore Technical Drawings Gallery</a>
+        <a href="3D-modeling.html" class="btn btn-primary">Explore 3D CAD Gallery</a>
+      </div>
+    </div>
+  </section>
 
-<script>
+  <!-- Engineering Contact & Consultation Section -->
+  <section class="contact-section" id="contact">
+    <div class="container contact-layout">
+      <!-- Contact Details Panel -->
+      <div class="glass-panel contact-info-panel">
+        <div>
+          <div class="tech-badge">Connect with Our Engineers</div>
+          <h2 class="section-title" style="font-size: 2.1rem; margin-bottom: 1rem;">Let's Discuss Your Next Engineering Project</h2>
+          <p style="color: var(--text-secondary); line-height: 1.8;">
+            Our team of senior mechanical, MEP, and simulation engineers is ready to review your technical requirements and collaborate with your team.
+          </p>
+        </div>
 
-const counters = document.querySelectorAll(".counter");
+        <div class="contact-point">
+          <div class="contact-point-icon">📍</div>
+          <div>
+            <div class="contact-point-title">Engineering Offices & Headquarters</div>
+            <div class="contact-point-desc">Engineering Complex, Riyadh / Dubai / Manama / Amman</div>
+          </div>
+        </div>
 
-const observer = new IntersectionObserver((entries) => {
+        <div class="contact-point">
+          <div class="contact-point-icon">📞</div>
+          <div>
+            <div class="contact-point-title">Direct Line & WhatsApp</div>
+            <div class="contact-point-desc mono">+966 50 000 0000 / +973 17 000 000</div>
+          </div>
+        </div>
 
-entries.forEach(entry => {
+        <div class="contact-point">
+          <div class="contact-point-icon">✉️</div>
+          <div>
+            <div class="contact-point-title">Corporate Engineering Email</div>
+            <div class="contact-point-desc mono">contact@mechamastergroup.com</div>
+          </div>
+        </div>
 
-if(entry.isIntersecting){
+        <div class="contact-point">
+          <div class="contact-point-icon">🕒</div>
+          <div>
+            <div class="contact-point-title">Working Hours</div>
+            <div class="contact-point-desc">Sat - Thu: 8:30 AM - 5:30 PM (GMT+3)</div>
+          </div>
+        </div>
+      </div>
 
-const counter = entry.target;
-const target = +counter.dataset.target;
+      <!-- Formal Inquiry Form -->
+      <div class="glass-panel contact-form-panel">
+        <form id="engineeringContactForm">
+          <div class="form-row">
+            <div>
+              <label class="field-label">Your Name / Title</label>
+              <input type="text" class="field-input" placeholder="e.g., Eng. John Smith" required>
+            </div>
+            <div>
+              <label class="field-label">Company / Organization</label>
+              <input type="text" class="field-input" placeholder="e.g., Apex Construction Co." required>
+            </div>
+            <div>
+              <label class="field-label">Corporate Email</label>
+              <input type="email" class="field-input" placeholder="engineer@company.com" required>
+            </div>
+            <div>
+              <label class="field-label">Phone / WhatsApp</label>
+              <input type="tel" class="field-input" placeholder="+1 (555) 000-0000" required>
+            </div>
+            <div class="form-field-full">
+              <label class="field-label">Engineering Discipline of Interest</label>
+              <select class="field-input" id="contactDiscipline">
+                <option value="Mechanical Design">Mechanical & Machine Design</option>
+                <option value="MEP Systems">MEP & Building Services (HVAC, Plumbing, Fire)</option>
+                <option value="3D CAD & FEA">3D CAD Modeling & FEA/CFD Simulation</option>
+                <option value="Technical Drafting">Technical Drafting & Shop Drawings</option>
+                <option value="Reverse Engineering">Reverse Engineering & Prototyping</option>
+              </select>
+            </div>
+            <div class="form-field-full">
+              <label class="field-label">Project Scope & Technical Details</label>
+              <textarea class="field-input" id="contactMessage" placeholder="Provide an overview of your project requirements, standards, or inquiries..." required></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Send Engineering Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-let current = 0;
+  <!-- Master Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand & Description -->
+        <div>
+          <a href="index.html" class="brand-logo">
+            <img src="looogo.png" alt="MechaMaster Logo">
+            <div class="brand-logo-text">
+              <span class="brand-name">MechaMaster</span>
+              <span class="brand-tag">Engineering Group</span>
+            </div>
+          </a>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; margin-top: 1.25rem;">
+            MechaMaster Group is an international engineering consulting firm specializing in Mechanical Design, MEP Systems, 3D CAD Modeling, and FEA/CFD Simulation for mission-critical projects worldwide.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://linkedin.com" target="_blank" class="social-circle" aria-label="LinkedIn">in</a>
+            <a href="https://github.com/mechamastergroup" target="_blank" class="social-circle" aria-label="GitHub">Git</a>
+            <a href="https://wa.me" target="_blank" class="social-circle" aria-label="WhatsApp">WA</a>
+            <a href="contact.html" class="social-circle" aria-label="Email">✉</a>
+          </div>
+        </div>
 
-const duration = 2500;
-const stepTime = 16;
-const increment = target / (duration / stepTime);
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-column-title">Quick Links</h4>
+          <div class="footer-link-stack">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="3D-modeling.html">3D CAD Gallery</a>
+            <a href="technical-drawings.html">Technical Drawings</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
 
-const updateCounter = () => {
+        <!-- Engineering Disciplines -->
+        <div>
+          <h4 class="footer-column-title">Disciplines</h4>
+          <div class="footer-link-stack">
+            <a href="machine-design.html">Machine Design</a>
+            <a href="services.html">MEP & HVAC Systems</a>
+            <a href="3D-modeling.html">3D CAD SolidWorks</a>
+            <a href="heat-exchanger.html">Thermal & FEA/CFD</a>
+            <a href="technical-drawings.html">Shop Drawings GD&T</a>
+          </div>
+        </div>
 
-current += increment;
+        <!-- Newsletter & Standards -->
+        <div>
+          <h4 class="footer-column-title">Engineering Digest</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">
+            Subscribe to receive technical whitepapers, MEP case studies, and CAD design insights.
+          </p>
+          <form id="engineeringNewsletterForm" style="display: flex; gap: 0.5rem;">
+            <input type="email" class="field-input" placeholder="Enter your corporate email..." required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+          <div style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--accent-cyan);">
+            Compliant with ISO 9001:2015, ASME, and ASHRAE Engineering Standards.
+          </div>
+        </div>
+      </div>
 
-if(current < target){
+      <div class="footer-bottom-row">
+        <div>© 2026 MechaMaster Group. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="about.html">Quality Assurance</a>
+          <a href="contact.html">Consultation Policy</a>
+          <a href="sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-counter.textContent = Math.floor(current) + "+";
-requestAnimationFrame(updateCounter);
+  <!-- Scroll to Top Button -->
+  <div class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll To Top">▲</div>
 
-}else{
+  <!-- Toast Notification Alert -->
+  <div class="toast-notice" id="toastNotice"></div>
 
-counter.textContent = target + "+";
-
-}
-
-};
-
-updateCounter();
-
-observer.unobserve(counter);
-
-}
-
-});
-
-}, { threshold: 0.5 });
-
-counters.forEach(counter => {
-
-observer.observe(counter);
-
-});
-
-</script>
-
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
-
 </html>

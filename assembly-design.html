@@ -1,194 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=0.75">
-
-<title>Assembly Design | MechaMaster Group</title>
-
-<link rel="icon" href="looogo.png">
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assembly Design & Kinematic Verification | MechaMaster Group</title>
+  
+  <meta name="description" content="Assembly design, interference checking, and multi-body kinematic simulations by MechaMaster Group.">
+  <link rel="icon" href="looogo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-
-<nav>
-
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<h1>Assembly Design</h1>
-
-<div class="service-selector">
-
-<!-- Centrifugal Pump -->
-
-<a href="centrifugal-pump.html" class="card-link">
-
-<div class="card">
-
-<h2>Centrifugal Pump</h2>
-
-<img src="projects/centrifugal-pump/5.jpg" class="service-image">
-
-<p>Mechanical Pump Assembly</p>
-
-</div>
-
-</a>
-
-<!-- Hydraulic Jack -->
-
-<a href="hydraulic-jack.html" class="card-link">
-
-<div class="card">
-
-<h2>Hydraulic Jack</h2>
-
-<img src="projects/hydraulic-jack/55.jpeg" class="service-image">
-
-<p>Hydraulic Lifting System</p>
-
-</div>
-
-</a>
-
-<!-- Single Gear Box -->
-
-<a href="single-gear-box.html" class="card-link">
-
-<div class="card">
-
-<h2>Single Gear Box</h2>
-
-<img src="projects/single-gear-box/777.jpg" class="service-image">
-
-<p>Power Transmission Assembly</p>
-
-</div>
-
-</a>
-
-<!-- Radial Engine -->
-
-<a href="radial-engine.html" class="card-link">
-
-<div class="card">
-
-<h2>Radial Engine</h2>
-
-<img src="projects/radial-engine/4444.jpg" class="service-image">
-
-<p>Aircraft Engine Assembly</p>
-
-</div>
-
-</a>
-
-<!-- Centrifugal Fan -->
-
-<a href="centrifugal-fan.html" class="card-link">
-
-<div class="card">
-
-<h2>Centrifugal Fan</h2>
-
-<img src="projects/centrifugal-fan/5e.jpg" class="service-image">
-
-<p>Industrial Fan Assembly</p>
-
-</div>
-
-</a>
-
-<!-- Bahrain Trading Center -->
-
-<a href="bahrain-trading-center.html" class="card-link">
-
-<div class="card">
-
-<h2>Bahrain Trading Center</h2>
-
-<img src="projects/bahrain-trading-center/5aa.jpg" class="service-image">
-
-<p>Commercial Building Engineering Project</p>
-
-</div>
-
-</a>
-<a href="stapler.html" class="card-link">
-
-<div class="card">
-
-<h2>Industrial Stapler</h2>
-
-<img
-src="projects/stapler/stapler.jpg"
-class="service-image">
-
-<p>Mechanical Stapling Mechanism</p>
-
-</div>
-
-</a>  
-<a href="heat-exchanger.html" class="card-link">
-
-<div class="card">
-
-<h3>High‑Performance Thermal Interface</h3>
-
-<img
-src="projects/heat-exchanger/heat-exchanger.jpg"
-class="service-image">
-
-
-<h3>Shell & Tube Heat Eschanger</h3>
-
-</div>
-
-</a>
-
-<!-- Incline Conveyor System -->
-
-<a href="incline-conveyor-system.html" class="card-link">
-
-<div class="card">
-
-<h2>Incline Conveyor System</h2>
-
-<img src="projects/incline-conveyor-system/Conveyor System.jpg" class="service-image">
-
-<p>Material Handling Assembly Design</p>
-
-</div>
-
-</a>
-
-</div>
-
-</a>
-
-</div>
-
-</a>
-
-</div>
-
-</section>
-
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <img src="looogo.png" alt="MechaMaster Logo">
+        <div class="brand-logo-text">
+          <span class="brand-name">MechaMaster</span>
+          <span class="brand-tag">Engineering Group</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="index.html#projects" class="nav-link active">Engineering Showcase</a>
+        <a href="3D-modeling.html" class="nav-link">3D CAD Gallery</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="header-controls">
+        <button class="control-btn" id="themeToggle" aria-label="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section Header -->
+  <section class="hero-section" style="padding-bottom: 3.5rem;">
+    <div class="container">
+      <div class="section-header" style="text-align: start; margin-inline: 0; max-width: 900px;">
+        <div class="tech-badge">Assembly Modeling & Interference Verification</div>
+        <h1 class="section-title">
+          Mechanical Assemblies & <span class="gradient-text">Kinematic Systems</span>
+        </h1>
+        <p class="section-subtitle">
+          Parametric multi-part assembly modeling with full kinematic simulation and clearance verification to ensure flawless manufacturing and on-site assembly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="services-section" style="padding-top: 0;">
+    <div class="container">
+      <div class="projects-grid">
+        
+        <div class="glass-panel project-card">
+          <div class="project-media-wrap">
+            <img src="789.jpg" alt="Radial Engine Assembly" class="project-img">
+            <span class="project-badge-overlay mono">Complex Assembly</span>
+          </div>
+          <div class="project-info-body">
+            <h3 class="project-heading">Radial Aircraft Engine Assembly</h3>
+            <p class="project-summary">Complex 3D kinematic model featuring master connecting rod, articulated rods, pistons, and rotating crankshaft mechanism.</p>
+            <div class="project-footer-action">
+              <a href="radial-engine.html" class="service-link">View Case Study →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel project-card">
+          <div class="project-media-wrap">
+            <img src="456.png" alt="Heat Exchanger Assembly" class="project-img">
+            <span class="project-badge-overlay mono">TEMA Standard</span>
+          </div>
+          <div class="project-info-body">
+            <h3 class="project-heading">Shell & Tube Heat Exchanger</h3>
+            <p class="project-summary">Multi-tube bundle layout, segmented baffle spacing, tubesheets, and pressure vessel shell conforming to TEMA standards.</p>
+            <div class="project-footer-action">
+              <a href="heat-exchanger.html" class="service-link">View Case Study →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel project-card">
+          <div class="project-media-wrap">
+            <img src="CAD.jpg" alt="Precision Mechanism" class="project-img">
+            <span class="project-badge-overlay mono">Product Assembly</span>
+          </div>
+          <div class="project-info-body">
+            <h3 class="project-heading">Precision Mechanism & Multi-Part Assembly</h3>
+            <p class="project-summary">Multi-component mechanical assembly design with injection molding tolerances, spring kinematics, and sheet metal fabrication.</p>
+            <div class="project-footer-action">
+              <a href="stapler.html" class="service-link">View Case Study →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom-row">
+        <div>© 2026 MechaMaster Group. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-top-btn" id="scrollTopBtn">▲</div>
+  <script src="script.js"></script>
 </body>
-
 </html>

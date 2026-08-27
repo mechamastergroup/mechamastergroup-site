@@ -1,88 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Services | MechaMaster Group</title>
-
-<meta name="description"
-content="Explore Mechanical Design, CAD Modeling, Assembly Design, 3D Product Development, and MEP Engineering services offered by MechaMaster Group.">
-
-<meta name="description"
-content="Professional Mechanical Design, CAD Modeling, Assembly Design, 3D Modeling, and MEP Engineering Services by MechaMaster Group.">
-
-<meta name="keywords"
-content="Mechanical Design Services, CAD Services, SolidWorks Design, Assembly Design, 3D Modeling, MEP Design">
-
-<meta name="author"
-content="MechaMaster Group">
-
-<link rel="icon" href="looogo.png">
-
-<link rel="stylesheet" href="style.css">
-
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Services & Disciplines | MechaMaster Group</title>
   
+  <meta name="description" content="Explore MechaMaster Group's engineering disciplines: Mechanical Design, MEP Building Services, 3D CAD Parametric Modeling, FEA/CFD Simulation, and GD&T Drafting.">
+  <meta name="keywords" content="Mechanical Design Services, MEP Engineering, 3D CAD, FEA Simulation, CFD, HVAC Design, SolidWorks, Shop Drawings">
+  <link rel="icon" href="looogo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-<header>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
 
-<section class="hero">
+  <!-- Header -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <img src="looogo.png" alt="MechaMaster Logo">
+        <div class="brand-logo-text">
+          <span class="brand-name">MechaMaster</span>
+          <span class="brand-tag">Engineering Group</span>
+        </div>
+      </a>
 
-<h1>Our services</h1>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="index.html#projects" class="nav-link">Engineering Showcase</a>
+        <a href="3D-modeling.html" class="nav-link">3D CAD Gallery</a>
+        <a href="technical-drawings.html" class="nav-link">Technical Drawings</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
 
-<div class="service-selector">
+      <div class="header-controls">
+        <button class="control-btn" id="themeToggle" aria-label="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm">Get in Touch</a>
+        <button class="control-btn mobile-menu-toggle" id="mobileToggle" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-<a href="machine-design.html" class="card-link">
+  <!-- Services Hero -->
+  <section class="hero-section" style="padding-bottom: 3.5rem;">
+    <div class="container">
+      <div class="section-header" style="text-align: start; margin-inline: 0; max-width: 900px;">
+        <div class="tech-badge">Engineering Capabilities & Consultancies</div>
+        <h1 class="section-title">
+          Full-Spectrum Engineering Solutions Engineered for <span class="gradient-text">Reliability & Scale</span>
+        </h1>
+        <p class="section-subtitle">
+          We provide end-to-end engineering consultancy services encompassing concept validation, detailed mechanical calculations, parametric 3D CAD modeling, multi-physics FEA/CFD simulation, and certified shop drawings.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<div class="card">
+  <!-- Detailed Service Blocks -->
+  <section class="services-section" style="padding-top: 0;">
+    <div class="container">
+      <div style="display: flex; flex-direction: column; gap: 3rem;">
+        
+        <!-- Service 1: Mechanical & Machine Design -->
+        <div class="glass-panel" style="padding: 2.5rem; border-radius: var(--radius-xl);">
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+            <div class="service-icon-box" style="margin-bottom: 0;">⚙️</div>
+            <div style="flex: 1; min-width: 280px;">
+              <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.75rem;">1. Mechanical & Machine Design</h2>
+              <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem;">
+                Design and development of customized industrial machinery, gear transmission systems, conveyors, hydraulic lifters, and mechanical equipment, calculated with precise load dynamics and safety factors to ensure extended fatigue life.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Gear Trains & Gearboxes</span>
+                <span class="service-tag">Conveyor & Material Handling</span>
+                <span class="service-tag">Hydraulic & Pneumatic Systems</span>
+                <span class="service-tag">AGMA & ISO Standards</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<h2>Machine Design</h2>
+        <!-- Service 2: MEP Building Services -->
+        <div class="glass-panel" style="padding: 2.5rem; border-radius: var(--radius-xl);">
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+            <div class="service-icon-box" style="margin-bottom: 0;">🏢</div>
+            <div style="flex: 1; min-width: 280px;">
+              <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.75rem;">2. MEP & Building Services Engineering</h2>
+              <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem;">
+                Advanced electromechanical engineering for commercial towers, residential complexes, and industrial plants: HVAC cooling/heating load calculations (HAP & Carrier), duct network design, fire fighting systems (NFPA), and plumbing hydraulics.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Central HVAC & Chillers</span>
+                <span class="service-tag">Fire Protection Systems</span>
+                <span class="service-tag">Plumbing & Drainage</span>
+                <span class="service-tag">ASHRAE 90.1 Compliance</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<img src="CAD.jpg" class="service-image">
+        <!-- Service 3: 3D CAD & FEA/CFD Simulation -->
+        <div class="glass-panel" style="padding: 2.5rem; border-radius: var(--radius-xl);">
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+            <div class="service-icon-box" style="margin-bottom: 0;">📐</div>
+            <div style="flex: 1; min-width: 280px;">
+              <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.75rem;">3. 3D CAD Modeling & FEA/CFD Multi-Physics Simulation</h2>
+              <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem;">
+                Transforming engineering ideas into parametric 3D CAD assemblies using SolidWorks and Inventor, combined with Finite Element Stress Analysis (FEA) and Computational Fluid Dynamics (CFD) to optimize performance before prototyping.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Parametric 3D SolidWorks</span>
+                <span class="service-tag">Stress & Fatigue Analysis</span>
+                <span class="service-tag">Thermal Transfer CFD</span>
+                <span class="service-tag">Kinematic Interference Check</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<p>Mechanical Engineering Solutions</p>
+        <!-- Service 4: Shop Drawings & GD&T -->
+        <div class="glass-panel" style="padding: 2.5rem; border-radius: var(--radius-xl);">
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+            <div class="service-icon-box" style="margin-bottom: 0;">📋</div>
+            <div style="flex: 1; min-width: 280px;">
+              <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.75rem;">4. Technical Drafting & GD&T Shop Drawings</h2>
+              <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem;">
+                Preparation of comprehensive 2D manufacturing blueprints and assembly drawings ready for CNC machining and fabrication, adhering to ASME Y14.5 and ISO Geometric Dimensioning & Tolerancing (GD&T) standards.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">ASME Y14.5 GD&T</span>
+                <span class="service-tag">Bill of Materials (BOM)</span>
+                <span class="service-tag">Fabrication & Assembly Blueprints</span>
+                <span class="service-tag">Exploded Views</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-</div>
+      </div>
+    </div>
+  </section>
 
-</a>
+  <!-- CTA Bar -->
+  <section class="standards-bar" style="background: rgba(37, 99, 235, 0.08); padding: 4rem 0;">
+    <div class="container" style="text-align: center;">
+      <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 1rem;">Interested in Collaborating on an Engineering Project?</h2>
+      <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem;">
+        Connect with our senior engineering directors to discuss specifications, timelines, and technical requirements.
+      </p>
+      <a href="contact.html" class="btn btn-primary">Contact Our Engineering Team</a>
+    </div>
+  </section>
 
-<a href="mep-design.html" class="card-link">
+  <!-- Master Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom-row">
+        <div>© 2026 MechaMaster Group. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-<div class="card">
-
-<h2>MEP Design</h2>
-
-<img src="MEP.jpg" class="service-image">
-
-<p>Building Engineering Systems</p>
-
-</div>
-
-</a>
-
-</div>
-
-</section>
-
-<a
-href="https://wa.me/962781198142"
-class="whatsapp-float"
-target="_blank">
-
-<img src="social-media/whatsapp.png">
-
-</a>
-
+  <div class="scroll-top-btn" id="scrollTopBtn">▲</div>
+  <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,98 +1,129 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
-
-<meta charset="UTF-8">
-
-<title>Centrifugal Fan | MechaMaster Group</title>
-
-<link rel="icon" href="looogo.png">
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industrial Centrifugal Blower Fan | MechaMaster Group</title>
+  
+  <meta name="description" content="Aerodynamic airflow analysis, static pressure calculations, and 3D CAD modeling of a centrifugal blower fan by MechaMaster Group.">
+  <link rel="icon" href="looogo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div id="pageContent">
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
 
-<header>
+  <!-- Header -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <img src="looogo.png" alt="MechaMaster Logo">
+        <div class="brand-logo-text">
+          <span class="brand-name">MechaMaster</span>
+          <span class="brand-tag">Engineering Group</span>
+        </div>
+      </a>
 
-<nav>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="index.html#projects" class="nav-link active">Engineering Showcase</a>
+        <a href="3D-modeling.html" class="nav-link">3D CAD Gallery</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
 
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
+      <div class="header-controls">
+        <button class="control-btn" id="themeToggle" aria-label="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm">Get in Touch</a>
+      </div>
+    </div>
+  </header>
 
-</nav>
+  <!-- Project Details -->
+  <section class="hero-section" style="padding-bottom: 5rem;">
+    <div class="container">
+      <div style="margin-bottom: 2rem;">
+        <a href="index.html#projects" class="service-link" style="margin-bottom: 1rem; display: inline-flex;">← Back to Engineering Showcase</a>
+        <div class="tech-badge">Industrial Aerodynamics & Ventilation Case Study</div>
+        <h1 class="section-title">
+          Industrial Centrifugal Blower Fan
+        </h1>
+        <p class="section-subtitle">
+          Aerodynamic CFD airflow simulations, backward-curved blade geometry design, and dynamic rotor balancing adhering to AMCA 210 and ISO 5801 standards.
+        </p>
+      </div>
 
-</header>
+      <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: start;">
+        <div>
+          <div class="glass-panel" style="overflow: hidden; border-radius: var(--radius-xl); margin-bottom: 2rem; background: #fff; padding: 1rem; text-align: center;">
+            <img src="123.jpg" alt="Centrifugal Fan Assembly" style="width: 100%; height: 380px; object-fit: contain;">
+          </div>
 
-<section class="hero">
-
-<h1>Centrifugal Fan</h1>
-
-<p>Industrial Fan Assembly</p>
-
-<img
-src="projects/centrifugal-fan/5e.jpg"
-class="cover-image"
-onclick="openStrip()">
-
-</section>
-
-</div>
-
-<div id="strip" class="image-strip">
-
-<img src="projects/centrifugal-fan/1a.jpeg"
-onclick="openModel(this.src)"
-<img src="projects/centrifugal-fan/2b.jpeg"
-onclick="openModel(this.src)"
-<img src="projects/centrifugal-fan/3c.jpeg"
-onclick="openModel(this.src)"
-<img src="projects/centrifugal-fan/4d.jpeg"
-onclick="openModel(this.src)"
-</div>
-
-
-</div>
-
-<script>
-
-function openStrip(){
-
-document.getElementById("strip").style.display="flex";
-
-document.getElementById("pageContent")
-.classList.add("blur-background");
-
-}
-
-</script>
-
-  <div id="modelViewer" class="model-viewer">
-    <div class="model-box">
-        <div class="zoom-container">
-
-            <img id="modelImage" alt="3D Model Preview">
-
-            <div id="lens">
-                <div id="lensHighlight"></div>
-            </div>
-
+          <div class="glass-panel" style="padding: 2.25rem; border-radius: var(--radius-xl); line-height: 1.8;">
+            <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem;">Aerodynamic Design & Rotor Dynamics:</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">
+              Engineered to produce high static pressure differentials with minimal acoustic emissions for industrial dust collection and heavy ventilation duct systems. Backward-inclined airfoil blades were chosen for their non-overloading horsepower characteristic and peak aerodynamic efficiencies reaching 82%.
+            </p>
+            <h4 style="font-weight: 800; margin-bottom: 0.75rem;">Key Engineering Highlights:</h4>
+            <ul style="color: var(--text-secondary); padding-left: 1.5rem; list-style: disc; margin-bottom: 1.5rem;">
+              <li>Dynamic impeller balancing certified to ISO 1940 Grade G2.5 for vibration-free continuous operation.</li>
+              <li>Logarithmic spiral volute scroll design reducing air turbulence and pressure drop.</li>
+              <li>Sheet metal fabrication shop drawings with laser-cutting nested profiles and welded seam specifications.</li>
+            </ul>
+          </div>
         </div>
 
-        <button class="gallery-back-btn" onclick="closeModel()">
-            Back to Gallery
-        </button>
+        <!-- Project Specs Sidebar -->
+        <div class="glass-panel" style="padding: 2.25rem; border-radius: var(--radius-xl);">
+          <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem;">
+            Technical Specifications
+          </h3>
+          <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.925rem;">
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--text-muted);">Airflow Capacity:</span>
+              <span style="font-weight: 700;">8,500 CFM</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--text-muted);">Static Pressure:</span>
+              <span style="font-weight: 700;">1,200 Pa (4.8 in. wg)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--text-muted);">Impeller Type:</span>
+              <span style="font-weight: 700;">Backward-Curved Centrifugal</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--text-muted);">Design Standards:</span>
+              <span style="font-weight: 700;">AMCA 210 / ISO 5801</span>
+            </div>
+          </div>
 
+          <div style="margin-top: 2rem; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem;">
+            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Inquire About Industrial Fans</a>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
 
-  <script src="assets/viewer.js"></script>
+  <!-- Master Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom-row">
+        <div>© 2026 MechaMaster Group. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="index.html">Home</a>
+          <a href="3D-modeling.html">3D CAD Gallery</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-top-btn" id="scrollTopBtn">▲</div>
+  <script src="script.js"></script>
 </body>
-
 </html>

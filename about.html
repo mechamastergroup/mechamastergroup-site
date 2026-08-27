@@ -1,132 +1,156 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>About Us | MechaMaster Group</title>
-
-<meta name="description"
-content="Learn more about MechaMaster Group, an engineering design company specializing in Mechanical Design, CAD Modeling, Assembly Development, and MEP Engineering Solutions.">
-
-<meta name="description"
-content="Learn about MechaMaster Group, an engineering design company specializing in Mechanical Design, CAD Modeling, Assembly Design, and MEP Engineering solutions.">
-
-<meta name="keywords"
-content="About MechaMaster Group, Mechanical Engineering Company, CAD Design Company, Engineering Solutions, Mechanical Design">
-
-<meta name="author"
-content="MechaMaster Group">
-
-<link rel="icon" href="looogo.png">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | MechaMaster Group</title>
+  
+  <meta name="description" content="Learn about MechaMaster Group - a premier engineering consultancy specializing in Mechanical Design, MEP Building Services, 3D CAD Modeling, and FEA/CFD Simulation.">
+  <meta name="keywords" content="About MechaMaster Group, Mechanical Engineering Firm, CAD Engineering, MEP Consultancy, ISO 9001, ASME Standards">
+  <link rel="icon" href="looogo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
 
-<nav>
+  <!-- Header -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <img src="looogo.png" alt="MechaMaster Logo">
+        <div class="brand-logo-text">
+          <span class="brand-name">MechaMaster</span>
+          <span class="brand-tag">Engineering Group</span>
+        </div>
+      </a>
 
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="index.html#projects" class="nav-link">Engineering Showcase</a>
+        <a href="3D-modeling.html" class="nav-link">3D CAD Gallery</a>
+        <a href="technical-drawings.html" class="nav-link">Technical Drawings</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
 
-</nav>
+      <div class="header-controls">
+        <button class="control-btn" id="themeToggle" aria-label="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm">Get in Touch</a>
+        <button class="control-btn mobile-menu-toggle" id="mobileToggle" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-</header>
+  <!-- About Hero -->
+  <section class="hero-section" style="padding-bottom: 3.5rem;">
+    <div class="container">
+      <div class="section-header" style="text-align: start; margin-inline: 0; max-width: 900px;">
+        <div class="tech-badge">About the Group • Global Engineering Leadership</div>
+        <h1 class="section-title">
+          Pioneering Excellence in <span class="gradient-text">Mechanical Design, MEP & CAD Engineering</span>
+        </h1>
+        <p class="section-subtitle">
+          MechaMaster Group was founded to be an elite engineering design and consultancy firm, delivering high-precision calculations, robust CAD modeling, and comprehensive building MEP systems for major industrial and commercial projects worldwide.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<section class="hero">
+  <!-- Core Pillars -->
+  <section class="services-section" style="padding-top: 0;">
+    <div class="container">
+      <div class="services-grid">
+        <!-- Pillar 1 -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">🎯</div>
+          <h3 class="service-card-title">Our Vision</h3>
+          <p class="service-card-desc">
+            To be the premier engineering partner globally for high-complexity mechanical systems, building services, and advanced simulation, leading the industry with innovative, sustainable, and reliable engineering solutions.
+          </p>
+        </div>
 
-<h1>About Us</h1>
+        <!-- Pillar 2 -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">💎</div>
+          <h3 class="service-card-title">Our Mission</h3>
+          <p class="service-card-desc">
+            Delivering zero-defect, production-ready engineering designs that adhere to the strictest international codes, ensuring maximum performance, safety, and cost efficiency for our clients.
+          </p>
+        </div>
 
-<div class="project-overview">
+        <!-- Pillar 3 -->
+        <div class="glass-panel service-card">
+          <div class="service-icon-box">🛡️</div>
+          <h3 class="service-card-title">Quality & Standards</h3>
+          <p class="service-card-desc">
+            Operating under ISO 9001:2015 quality management procedures, our calculations and blueprints strictly conform to ASME, ASHRAE, AGMA, NFPA, ASTM, and DIN engineering standards.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<h2>Who We Are</h2>
+  <!-- Software Stack & Technical Capabilities -->
+  <section class="projects-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="tech-badge">Engineering Software & Industry Tools</div>
+        <h2 class="section-title">Advanced Software Stack for High-Precision Engineering</h2>
+        <p class="section-subtitle">
+          Our team leverages the industry's leading parametric 3D CAD modeling, multi-physics FEA, and fluid CFD software suites.
+        </p>
+      </div>
 
-<p>
-MechaMaster Group is an engineering design company specialized in Mechanical Design, CAD Modeling, Assembly Development, and MEP Engineering Solutions.
-</p>
+      <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+        <div class="glass-panel" style="padding: 1.75rem; text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚙️</div>
+          <h4 style="font-weight: 800; font-size: 1.1rem; margin-bottom: 0.35rem;">SolidWorks</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">3D CAD, Kinematics & Advanced Assembly Modeling</p>
+        </div>
 
-<p>
-Our mission is to transform engineering concepts into professional, manufacturable, and efficient designs through modern engineering tools and industry-standard design practices.
-</p>
+        <div class="glass-panel" style="padding: 1.75rem; text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌊</div>
+          <h4 style="font-weight: 800; font-size: 1.1rem; margin-bottom: 0.35rem;">ANSYS (FEA & CFD)</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">Finite Element Stress Analysis & Aerodynamic Fluid Flow</p>
+        </div>
 
-<p>
-We combine technical knowledge, engineering creativity, and advanced CAD technologies to deliver practical solutions for industrial, mechanical, and building engineering applications.
-</p>
+        <div class="glass-panel" style="padding: 1.75rem; text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏢</div>
+          <h4 style="font-weight: 800; font-size: 1.1rem; margin-bottom: 0.35rem;">Autodesk Revit & MEP</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">BIM Modeling, Central HVAC Calculations & Piping</p>
+        </div>
 
-<h2>Vision</h2>
+        <div class="glass-panel" style="padding: 1.75rem; text-align: center;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">📐</div>
+          <h4 style="font-weight: 800; font-size: 1.1rem; margin-bottom: 0.35rem;">AutoCAD Mechanical</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">2D/3D Precision Drafting & GD&T Shop Blueprints</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<p>
-To become a recognized engineering design company delivering innovative, reliable, and high-quality engineering solutions to clients worldwide.
-</p>
+  <!-- Master Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom-row">
+        <div>© 2026 MechaMaster Group. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-<h2>Mission</h2>
-
-<p>
-To provide professional engineering services that help individuals, businesses, and industries transform ideas into successful engineering projects through accuracy, innovation, and technical excellence.
-</p>
-
-<h2>Core Values</h2>
-
-<p>
-• Engineering Excellence<br>
-• Innovation & Creativity<br>
-• Technical Accuracy<br>
-• Professional Integrity<br>
-• Client Commitment<br>
-• Continuous Improvement
-</p>
-
-<h2>What We Do</h2>
-
-<p>
-• Mechanical Design<br>
-• 3D CAD Modeling<br>
-• Assembly Design & Development<br>
-• Technical Drawings & Documentation<br>
-• Product Design Concepts<br>
-• MEP Engineering Solutions<br>
-• Engineering Visualization & Presentation
-</p>
-
-<h2>Software Expertise</h2>
-
-<p>
-SolidWorks<br>
-Creo Parametric<br>
-AutoCAD<br>
-Siemens NX<br>
-Catia V5<br>
-COMSOL Multiphysics<br>
-Elite<br>
-Hourly Analysis Program
-</p>
-
-<h2>Why MechaMaster Group?</h2>
-
-<p>
-Every project is developed with a strong focus on engineering quality, manufacturability, performance, and professional presentation. Our goal is not only to create models but to build engineering solutions that add real value.
-</p>
-
-</div>
-
-</section>
-
-<a
-href="https://wa.me/962781198142"
-class="whatsapp-float"
-target="_blank">
-
-<img src="social-media/whatsapp.png">
-
-</a>
-
+  <div class="scroll-top-btn" id="scrollTopBtn">▲</div>
+  <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,238 +1,121 @@
-// ==========================================
-// 3D MODEL VIEWER & SMART ZOOM LOGIC
-// ==========================================
+/* ==========================================================================
+   MechaMaster Group - Core JavaScript Engine
+   Theme Switcher | Portfolio Category Filter | Interactive Showcase
+   ========================================================================== */
 
-const viewer = document.getElementById("modelViewer");
-const image = document.getElementById("modelImage");
-const lens = document.getElementById("lens");
-const highlight = document.getElementById("lensHighlight");
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Theme State Management
+  let currentTheme = localStorage.getItem('mmg_theme') || 'dark';
 
+  const htmlRoot = document.documentElement;
+  const themeToggleBtn = document.getElementById('themeToggle');
+  const mobileToggleBtn = document.getElementById('mobileToggle');
+  const navMenu = document.getElementById('navMenu');
+  const headerEl = document.querySelector('.header');
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  const toastNotice = document.getElementById('toastNotice');
 
-let zoom = 3;
-let idleTimer;
+  // Apply Theme (Dark / Light)
+  function applyTheme(theme) {
+    currentTheme = theme;
+    localStorage.setItem('mmg_theme', theme);
+    htmlRoot.setAttribute('data-theme', theme);
 
-let currentX = 0;
-let currentY = 0;
+    if (themeToggleBtn) {
+      themeToggleBtn.innerHTML = theme === 'dark' 
+        ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`
+        : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+    }
+  }
 
-let targetX = 0;
-let targetY = 0;
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+  }
+  applyTheme(currentTheme);
 
-let highlightAngle = 0;
-let targetHighlightAngle = 0;
+  // 2. Mobile Menu Drawer
+  if (mobileToggleBtn && navMenu) {
+    mobileToggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
 
-const smoothness = 0.12;
+    navMenu.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => navMenu.classList.remove('open'));
+    });
+  }
 
-// ==========================================
-// OPEN MODEL
-// ==========================================
-
-function openModel(src){
-
-    viewer.style.display = "flex";
-
-    lens.style.opacity = "0";
-
-    image.src = src;
-
-    const gallery = document.querySelector(".model-gallery");
-
-    if(gallery){
-        gallery.classList.add("blur-gallery");
+  // 3. Scroll Header & Back To Top Button
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      headerEl?.classList.add('scrolled');
+    } else {
+      headerEl?.classList.remove('scrolled');
     }
 
-    image.onload = () => {
+    if (window.scrollY > 450) {
+      scrollTopBtn?.classList.add('visible');
+    } else {
+      scrollTopBtn?.classList.remove('visible');
+    }
+  });
 
-        currentX = image.clientWidth / 2;
-        currentY = image.clientHeight / 2;
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
-        targetX = currentX;
-        targetY = currentY;
+  // 4. Portfolio Filter (All, MEP, Machines, Fluid & Thermal, CAD & Assemblies)
+  const filterPills = document.querySelectorAll('.filter-pill');
+  const projectCards = document.querySelectorAll('.project-card');
 
-        lens.style.backgroundImage = `url(${image.src})`;
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
 
-        const pixels = image.naturalWidth * image.naturalHeight;
+      const filterCat = pill.getAttribute('data-filter');
 
-        if(pixels < 2000000){
-
-            zoom = 2;
-
-        }else if(pixels < 6000000){
-
-            zoom = 3;
-
-        }else if(pixels < 12000000){
-
-            zoom = 4;
-
-        }else{
-
-            zoom = 5;
-
+      projectCards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (filterCat === 'all' || cardCat === filterCat) {
+          card.style.display = 'flex';
+          card.style.animation = 'fadeIn 0.35s ease';
+        } else {
+          card.style.display = 'none';
         }
+      });
+    });
+  });
 
-    };
+  // 5. Toast Notification System
+  function displayToast(msg) {
+    if (!toastNotice) return;
+    toastNotice.textContent = msg;
+    toastNotice.classList.add('show');
+    setTimeout(() => {
+      toastNotice.classList.remove('show');
+    }, 4500);
+  }
 
-}
+  // 6. Contact & Inquiry Form
+  const contactForm = document.getElementById('engineeringContactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      displayToast('Thank you for contacting MechaMaster Group. Your inquiry has been received and our engineering team will respond promptly.');
+      contactForm.reset();
+    });
+  }
 
-// ==========================================
-// CLOSE MODEL
-// ==========================================
-
-function closeModel(){
-
-    viewer.style.display = "none";
-
-    const gallery = document.querySelector(".model-gallery");
-
-    if(gallery){
-        gallery.classList.remove("blur-gallery");
-    }
-
-    lens.style.opacity = "0";
-    lens.classList.remove("focus");
-
-}
-
-// ==========================================
-// UPDATE LENS
-// ==========================================
-
-function updateLensPosition(clientX, clientY){
-
-    const rect = image.getBoundingClientRect();
-
-    let x = clientX - rect.left;
-    let y = clientY - rect.top;
-
-    if(x < 0) x = 0;
-    if(y < 0) y = 0;
-
-    if(x > rect.width) x = rect.width;
-    if(y > rect.height) y = rect.height;
-
-    targetX = x;
-    targetY = y;
-    
-const dx = targetX - currentX;
-const dy = targetY - currentY;
-
-targetHighlightAngle =
-Math.atan2(dy,dx);
-    
-    lens.style.backgroundSize =
-    `${rect.width * zoom}px ${rect.height * zoom}px`;
-
-    clearTimeout(idleTimer);
-
-    lens.classList.remove("focus");
-
-    idleTimer = setTimeout(() => {
-
-        lens.classList.add("focus");
-
-    }, 800);
-
-}
-
-// ==========================================
-// HANDLE MOVE
-// ==========================================
-
-function handleMove(e){
-
-    e.preventDefault();
-
-    const clientX =
-    e.clientX || e.touches?.[0]?.clientX;
-
-    const clientY =
-    e.clientY || e.touches?.[0]?.clientY;
-
-    if(clientX !== undefined && clientY !== undefined){
-
-        updateLensPosition(clientX, clientY);
-
-    }
-
-}
-
-// ==========================================
-// EVENTS
-// ==========================================
-
-image.addEventListener("mousemove",handleMove);
-
-image.addEventListener("mouseenter",()=>{
-
-    lens.style.opacity="1";
-
+  const newsForm = document.getElementById('engineeringNewsletterForm');
+  if (newsForm) {
+    newsForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      displayToast('Thank you for subscribing to MechaMaster Engineering Digest!');
+      newsForm.reset();
+    });
+  }
 });
-
-image.addEventListener("mouseleave",()=>{
-
-    lens.style.opacity="0";
-
-    lens.classList.remove("focus");
-
-    clearTimeout(idleTimer);
-
-});
-
-image.addEventListener("touchmove",handleMove,{passive:false});
-
-image.addEventListener("touchstart",()=>{
-
-    lens.style.opacity="1";
-
-},{passive:true});
-
-image.addEventListener("touchend",()=>{
-
-    lens.style.opacity="0";
-
-    lens.classList.remove("focus");
-
-    clearTimeout(idleTimer);
-
-});
-
-function animateLens(){
-
-    currentX += (targetX - currentX) * smoothness;
-    currentY += (targetY - currentY) * smoothness;
-
-  highlightAngle +=
-(targetHighlightAngle - highlightAngle) * 0.18;
-
-const radius = 68;
-
-const hx = Math.cos(highlightAngle) * radius;
-const hy = Math.sin(highlightAngle) * radius;
-
-highlight.style.transform =
-`translate(${hx}px,${hy}px)
-rotate(-25deg)`;
-
-    // تحريك العدسة
-    lens.style.left = currentX + "px";
-    lens.style.top = currentY + "px";
-
-    // إبقاء العدسة في المنتصف
-    lens.style.transform = "translate(-50%,-50%)";
-
-    // تحريك الصورة داخل العدسة
-    const bgX =
-    -(currentX * zoom - lens.offsetWidth / 2);
-
-    const bgY =
-    -(currentY * zoom - lens.offsetHeight / 2);
-
-    lens.style.backgroundPosition =
-    `${bgX}px ${bgY}px`;
-    
-
-    requestAnimationFrame(animateLens);
-
-}
-
-animateLens();

@@ -1,193 +1,155 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Contact Us | MechaMaster Group</title>
-
-<meta name="description"
-content="Contact MechaMaster Group for Mechanical Design, CAD Modeling, and MEP Engineering services. Based in Amman, Jordan.">
-
-<meta name="description"
-content="Contact MechaMaster Group for Mechanical Design, CAD Modeling, Assembly Design, 3D Modeling, and MEP Engineering services.">
-
-<meta name="keywords"
-content="Contact Mechanical Engineer, CAD Design Services, Engineering Consultation, MechaMaster Group Contact">
-
-<meta name="author"
-content="MechaMaster Group">
-
-<link rel="icon" type="image/png" sizes="32x32" href="./looogo.png">
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Inquiries | MechaMaster Group</title>
+  
+  <meta name="description" content="Connect with MechaMaster Group for engineering consultancies, project collaborations, and technical inquiries in Mechanical Design, MEP, and 3D CAD.">
+  <link rel="icon" href="looogo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div id="pageContent">
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
 
-<header>
+  <!-- Header -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <img src="looogo.png" alt="MechaMaster Logo">
+        <div class="brand-logo-text">
+          <span class="brand-name">MechaMaster</span>
+          <span class="brand-tag">Engineering Group</span>
+        </div>
+      </a>
 
-<nav>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="index.html#projects" class="nav-link">Engineering Showcase</a>
+        <a href="3D-modeling.html" class="nav-link">3D CAD Gallery</a>
+        <a href="technical-drawings.html" class="nav-link">Technical Drawings</a>
+        <a href="contact.html" class="nav-link active">Contact Us</a>
+      </nav>
 
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
+      <div class="header-controls">
+        <button class="control-btn" id="themeToggle" aria-label="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-sm">Get in Touch</a>
+        <button class="control-btn mobile-menu-toggle" id="mobileToggle" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-</nav>
+  <!-- Contact Form Section -->
+  <section class="contact-section" style="padding-top: 8.5rem;">
+    <div class="container contact-layout">
+      <!-- Contact Info Panel -->
+      <div class="glass-panel contact-info-panel">
+        <div>
+          <div class="tech-badge">Connect with Our Engineers</div>
+          <h1 class="section-title" style="font-size: 2.1rem; margin-bottom: 1rem;">Let's Discuss Your Next Engineering Challenge</h1>
+          <p style="color: var(--text-secondary); line-height: 1.8;">
+            Our senior engineering consultants and project leads are ready to review your project specifications and answer your technical questions.
+          </p>
+        </div>
 
-</header>
+        <div class="contact-point">
+          <div class="contact-point-icon">📍</div>
+          <div>
+            <div class="contact-point-title">Headquarters & Engineering Offices</div>
+            <div class="contact-point-desc">Engineering Complex, Riyadh / Dubai / Manama / Amman</div>
+          </div>
+        </div>
 
-<section class="hero">
+        <div class="contact-point">
+          <div class="contact-point-icon">📞</div>
+          <div>
+            <div class="contact-point-title">Direct Phone & WhatsApp</div>
+            <div class="contact-point-desc mono">+966 50 000 0000 / +973 17 000 000</div>
+          </div>
+        </div>
 
-<h1>Contact Us</h1>
+        <div class="contact-point">
+          <div class="contact-point-icon">✉️</div>
+          <div>
+            <div class="contact-point-title">Corporate Engineering Email</div>
+            <div class="contact-point-desc mono">contact@mechamastergroup.com</div>
+          </div>
+        </div>
 
-<p>Email</p>
+        <div class="contact-point">
+          <div class="contact-point-icon">🕒</div>
+          <div>
+            <div class="contact-point-title">Official Working Hours</div>
+            <div class="contact-point-desc">Sat - Thu: 8:30 AM - 5:30 PM (GMT+3)</div>
+          </div>
+        </div>
+      </div>
 
-<h2>
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@mechamastergroup.com"
-target="_blank"
-style="color:white;text-decoration:none;">
-info@mechamastergroup.com
-</a>
-</h2>
+      <!-- Formal Inquiry Form -->
+      <div class="glass-panel contact-form-panel">
+        <form id="engineeringContactForm">
+          <div class="form-row">
+            <div>
+              <label class="field-label">Your Name / Title</label>
+              <input type="text" class="field-input" placeholder="e.g., Eng. John Smith" required>
+            </div>
+            <div>
+              <label class="field-label">Company / Organization</label>
+              <input type="text" class="field-input" placeholder="e.g., Apex Industrial Co." required>
+            </div>
+            <div>
+              <label class="field-label">Corporate Email</label>
+              <input type="email" class="field-input" placeholder="engineer@company.com" required>
+            </div>
+            <div>
+              <label class="field-label">Phone / WhatsApp</label>
+              <input type="tel" class="field-input" placeholder="+1 (555) 000-0000" required>
+            </div>
+            <div class="form-field-full">
+              <label class="field-label">Discipline of Interest</label>
+              <select class="field-input" id="contactDiscipline">
+                <option value="Mechanical Design">Mechanical & Machine Design</option>
+                <option value="MEP Systems">MEP & Building Services (HVAC, Fire, Plumbing)</option>
+                <option value="3D CAD & FEA">3D CAD Modeling & FEA/CFD Simulation</option>
+                <option value="Technical Drafting">Technical Drafting & Shop Drawings</option>
+                <option value="Reverse Engineering">Reverse Engineering & Prototyping</option>
+              </select>
+            </div>
+            <div class="form-field-full">
+              <label class="field-label">Project Scope & Inquiries</label>
+              <textarea class="field-input" id="contactMessage" placeholder="Tell us about your project goals, technical standards, or specific questions..." required></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Engineering Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-<br>
+  <!-- Master Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom-row">
+        <div>© 2026 MechaMaster Group. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-<p>Location</p>
-
-<h2>Amman, Jordan</h2>
-
-<br>
-
-<p>Number</p>
-
-<h2>+962 7 8745 4012</h2>
-
-<br>
-
-<p>Social Media</p>
-
-<h2
-style="cursor:pointer;"
-onclick="openBanner()">
-
-Social Media
-
-</h2>
-
-</section>
-
-</div>
-
-<div id="socialBanner"
-style="
-display:none;
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-z-index:2500;
-">
-
-<img
-src="social-media/social-media.jpg"
-style="
-width:900px;
-max-width:90vw;
-border-radius:18px;
-cursor:pointer;
-box-shadow:0 20px 60px rgba(0,0,0,.5);
-"
-onclick="openSocial()">
-
-</div>
-
-<div id="socialStrip" class="image-strip social-strip">
-
-<a href="https://www.instagram.com/mechamaster1/"
-target="_blank">
-<img src="social-media/instagram.png">
-</a>
-
-<a href="https://web.facebook.com/profile.php?id=61575885240609"
-target="_blank">
-<img src="social-media/facebook.png">
-</a>
-
-<a href="https://www.linkedin.com/in/mechamaster-group-20023039b/"
-target="_blank">
-<img src="social-media/linkedin.png">
-</a>
-
-<a href="https://wa.me/962781198142"
-target="_blank">
-<img src="social-media/whatsapp.png">
-</a>
-
-</div>
-
-<script>
-
-function openBanner(){
-
-document.getElementById("socialBanner").style.display="block";
-
-document.getElementById("pageContent")
-.classList.add("blur-background");
-
-}
-
-function openSocial(){
-
-document.getElementById("socialBanner").style.display="none";
-
-document.getElementById("socialStrip").style.display="flex";
-
-}
-
-document.addEventListener("click", function(event){
-
-const banner =
-document.getElementById("socialBanner");
-
-const strip =
-document.getElementById("socialStrip");
-
-if(
-!event.target.closest("#socialBanner") &&
-!event.target.closest("#socialStrip") &&
-!event.target.closest("h2")
-){
-
-banner.style.display="none";
-
-strip.style.display="none";
-
-document.getElementById("pageContent")
-.classList.remove("blur-background");
-
-}
-
-});
-
-</script>
-
-<a
-href="https://wa.me/962787454012"
-class="whatsapp-float"
-target="_blank">
-
-<img src="social-media/whatsapp.png">
-
-</a>
-
+  <div class="scroll-top-btn" id="scrollTopBtn">▲</div>
+  <div class="toast-notice" id="toastNotice"></div>
+  <script src="script.js"></script>
 </body>
-
 </html>
