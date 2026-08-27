@@ -1,154 +1,96 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <title>Centrifugal Pump | MechaMaster Group</title>
-
 <link rel="icon" href="looogo.png">
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
-
 <div id="pageContent">
-
 <header>
-
 <nav>
-
 <a href="index.html">Home</a>
 <a href="about.html">About Us</a>
 <a href="services.html">Services</a>
 <a href="contact.html">Contact</a>
-
 </nav>
-
 </header>
-
 <section class="hero">
-
 <h1>Centrifugal Pump</h1>
-
 <p>Mechanical Pump Assembly</p>
-
 <img
 src="projects/centrifugal-pump/5.jpg"
 class="cover-image"
+alt="Centrifugal pump cover image"
 onclick="openStrip()">
-
 <div class="project-overview">
-
 <h2>Project Overview</h2>
-
 <p>
 This project showcases the engineering design and development of a centrifugal pump assembly, modeled using SolidWorks 2025. The project demonstrates advanced mechanical design principles through precise component integration, engineering visualization for design evaluation, and professional CAD modeling developed in accordance with industry-standard design practices.
 </p>
-
 <p>
 The assembly reflects MechaMaster Group's capabilities in delivering high-quality mechanical engineering solutions through modern design methodologies, technical accuracy, and advanced 3D modeling techniques.
 </p>
-
 </div>
-
 </section>
-
 </div>
 
-<div id="strip" class="image-strip">
+<!-- Strip overlay: clicking the background now closes it -->
+<div id="strip" class="image-strip" onclick="closeViewer()">
+  <div class="strip-close-btn" onclick="event.stopPropagation(); closeViewer()">×</div>
 
-<img src="projects/centrifugal-pump/1.jpeg"
-onclick="openViewer(this.src)">
-
-<img src="projects/centrifugal-pump/2.jpeg"
-onclick="openViewer(this.src)">
-
-<img src="projects/centrifugal-pump/3.jpeg"
-onclick="openViewer(this.src)">
-
-<img src="projects/centrifugal-pump/4.jpeg"
-onclick="openViewer(this.src)">
-
+  <div class="strip-inner" onclick="event.stopPropagation()">
+    <img src="projects/centrifugal-pump/1.jpeg" alt="Centrifugal pump view 1" onclick="openViewer(this.src)">
+    <img src="projects/centrifugal-pump/2.jpeg" alt="Centrifugal pump view 2" onclick="openViewer(this.src)">
+    <img src="projects/centrifugal-pump/3.jpeg" alt="Centrifugal pump view 3" onclick="openViewer(this.src)">
+    <img src="projects/centrifugal-pump/4.jpeg" alt="Centrifugal pump view 4" onclick="openViewer(this.src)">
+  </div>
 </div>
 
 <div
 id="viewer"
 class="image-viewer"
 onclick="closeViewer()">
-
 <div
 class="viewer-box"
 onclick="event.stopPropagation()">
-
 <div
 class="close-btn"
 onclick="closeViewer()">
-
 ×
-
 </div>
-
-<img id="viewerImg">
-
+<img id="viewerImg" alt="Enlarged pump image">
 <button
 class="back-btn"
 onclick="backToGallery()">
-
 Back to Gallery
-
 </button>
-
 </div>
-
 </div>
 
 <script>
-
 function openStrip(){
-
-document.getElementById("strip").style.display="flex";
-
-document.getElementById("pageContent")
-.classList.add("blur-background");
-
+  document.getElementById("strip").style.display = "flex";
+  document.getElementById("pageContent").classList.add("blur-background");
 }
 
 function openViewer(src){
-
-document.getElementById("strip").style.display="none";
-
-document.getElementById("viewer").style.display="flex";
-
-document.getElementById("viewerImg").src=src;
-
+  document.getElementById("strip").style.display = "none";
+  document.getElementById("viewer").style.display = "flex";
+  document.getElementById("viewerImg").src = src;
 }
 
 function closeViewer(){
-
-document.getElementById("viewer").style.display="none";
-
-document.getElementById("strip").style.display="none";
-
-document.getElementById("pageContent")
-.classList.remove("blur-background");
-
+  document.getElementById("viewer").style.display = "none";
+  document.getElementById("strip").style.display = "none";
+  document.getElementById("pageContent").classList.remove("blur-background");
 }
 
 function backToGallery(){
-
-document.getElementById("viewer").style.display="none";
-
-document.getElementById("strip").style.display="flex";
-
+  document.getElementById("viewer").style.display = "none";
+  document.getElementById("strip").style.display = "flex";
 }
-
 </script>
-
 </body>
-
 </html>
-```
