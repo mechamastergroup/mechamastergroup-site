@@ -118,4 +118,30 @@ document.addEventListener('DOMContentLoaded', () => {
       newsForm.reset();
     });
   }
+
+  // 7. Full Screen Section Reveal Animation
+  const screens = document.querySelectorAll(
+    '.hero-section, .standards-bar, .services-section, .projects-section, .contact-section, .footer'
+  );
+
+  screens.forEach(screen => {
+    screen.classList.add('reveal-screen');
+  });
+
+  const screenObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('screen-visible');
+      } else {
+        entry.target.classList.remove('screen-visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  screens.forEach(screen => {
+    screenObserver.observe(screen);
+  });
+
 });
