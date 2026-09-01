@@ -2031,3 +2031,7 @@ html {
     display: flex;
     align-items: center;
 }
+.footer {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
