@@ -1,1 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Engineering Showcase | MechaMaster Group</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container navbar">
+
+      <a href="index.html" class="brand-logo">
+        <img src="looogo.png" alt="MechaMaster Group Logo">
+
+        <div class="brand-logo-text">
+          <span class="brand-name">MechaMaster</span>
+          <span class="brand-tag">Group</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+
+        <a href="index.html" class="nav-link">
+          Home
+        </a>
+
+        <a href="index.html#about" class="nav-link">
+          About Us
+        </a>
+
+        <a href="index.html#services" class="nav-link">
+          Services
+        </a>
+
+        <a href="engineering-showcase.html" class="nav-link active">
+          Engineering Showcase
+        </a>
+
+        <a href="3d-cad-gallery.html" class="nav-link">
+          3D CAD Gallery
+        </a>
+
+        <a href="technical-drawings.html" class="nav-link">
+          Technical Drawings
+        </a>
+
+        <a href="index.html#contact" class="nav-link">
+          Contact Us
+        </a>
+
+      </nav>
+
+      <div class="header-controls">
+
+        <button class="control-btn" id="themeToggle" aria-label="Toggle Theme">
+        </button>
+
+        <a href="index.html#contact" class="btn btn-primary btn-sm">
+          Get in Touch
+        </a>
+
+        <button
+          class="control-btn mobile-menu-toggle"
+          id="mobileToggle"
+          aria-label="Open Menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- Engineering Showcase -->
+  <section class="projects-section" id="projects">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="tech-badge">
+          Engineering Portfolio & Case Studies
+        </div>
+
+        <h1 class="section-title">
+          Pioneering Engineering Work & Technical Showcase
+        </h1>
+
+        <p class="section-subtitle">
+          Explore a curated showcase of our engineering projects across
+          high-rise buildings, fluid machinery, thermal systems,
+          and complex mechanical assemblies.
+        </p>
+
+      </div>
+
+
+      <!-- Filters -->
+      <div class="project-filters">
+
+        <button class="filter-pill active" data-filter="all">
+          All Projects
+        </button>
+
+        <button class="filter-pill" data-filter="mep">
+          MEP & Building Systems
+        </button>
+
+        <button class="filter-pill" data-filter="machines">
+          Machinery & Power Trains
+        </button>
+
+        <button class="filter-pill" data-filter="fluid">
+          Fluid & Thermal Systems
+        </button>
+
+        <button class="filter-pill" data-filter="cad">
+          CAD Models & Assemblies
+        </button>
+
+      </div>
+
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="glass-panel project-card" data-category="mep">
+
+          <div class="project-media-wrap">
+            <img
+              src="MEP.jpg"
+              alt="Bahrain Trading Center MEP"
+              class="project-img"
+            >
+
+            <span class="project-badge-overlay mono">
+              MEP & HVAC
+            </span>
+          </div>
+
+          <div class="project-info-body">
+
+            <div class="project-discipline">
+              High-Rise Buildings & MEP
+            </div>
+
+            <h3 class="project-heading">
+              Bahrain World Trade Center (MEP & Aerodynamics)
+            </h3>
+
+            <p class="project-summary">
+              Comprehensive MEP engineering, wind turbine airflow dynamics,
+              and central HVAC optimization for the twin commercial towers.
+            </p>
+
+            <div class="project-footer-action">
+
+              <span
+                class="mono"
+                style="font-size: 0.8rem; color: var(--text-muted);"
+              >
+                240m Towers
+              </span>
+
+              <a
+                href="bahrain-trading-center.html"
+                class="service-link"
+              >
+                Read Case Study →
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Project 2 -->
+        <div class="glass-panel project-card" data-category="fluid">
+
+          <div class="project-media-wrap">
+
+            <img
+              src="123.jpg"
+              alt="Centrifugal Pump"
+              class="project-img"
+            >
+
+            <span class="project-badge-overlay mono">
+              CFD & Fluid
+            </span>
+
+          </div>
+
+          <div class="project-info-body">
+
+            <div class="project-discipline">
+              Turbomachinery & Fluid Power
+            </div>
+
+            <h3 class="project-heading">
+              Industrial Centrifugal Pump
+            </h3>
+
+            <p class="project-summary">
+              Hydraulic impeller blade geometry modeling and volute casing
+              design with CFD flow simulation for maximum pumping efficiency.
+            </p>
+
+            <div class="project-footer-action">
+
+              <span
+                class="mono"
+                style="font-size: 0.8rem; color: var(--text-muted);"
+              >
+                CFD Optimized
+              </span>
+
+              <a
+                href="centrifugal-pump.html"
+                class="service-link"
+              >
+                Read Case Study →
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Project 3 -->
+        <div class="glass-panel project-card" data-category="fluid">
+
+          <div class="project-media-wrap">
+
+            <img
+              src="456.png"
+              alt="Heat Exchanger"
+              class="project-img"
+            >
+
+            <span class="project-badge-overlay mono">
+              TEMA / ASME
+            </span>
+
+          </div>
+
+          <div class="project-info-body">
+
+            <div class="project-discipline">
+              Thermal & Process Equipment
+            </div>
+
+            <h3 class="project-heading">
+              Heavy-Duty Shell & Tube Heat Exchanger
+            </h3>
+
+            <p class="project-summary">
+              Thermal-hydraulic design in compliance with TEMA Class R
+              and ASME Section VIII standards with advanced CFD
+              heat transfer analysis.
+            </p>
+
+            <div class="project-footer-action">
+
+              <span
+                class="mono"
+                style="font-size: 0.8rem; color: var(--text-muted);"
+              >
+                TEMA Class R
+              </span>
+
+              <a
+                href="heat-exchanger.html"
+                class="service-link"
+              >
+                Read Case Study →
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Project 4 -->
+        <div class="glass-panel project-card" data-category="cad">
+
+          <div class="project-media-wrap">
+
+            <img
+              src="789.jpg"
+              alt="Radial Engine"
+              class="project-img"
+            >
+
+            <span class="project-badge-overlay mono">
+              Kinematics
+            </span>
+
+          </div>
+
+          <div class="project-info-body">
+
+            <div class="project-discipline">
+              Aviation & Engine Dynamics
+            </div>
+
+            <h3 class="project-heading">
+              Radial Aircraft Engine Assembly
+            </h3>
+
+            <p class="project-summary">
+              High-precision kinematic modeling of multi-piston motion,
+              master rod articulation, and high-speed tolerance stack-up.
+            </p>
+
+            <div class="project-footer-action">
+
+              <span
+                class="mono"
+                style="font-size: 0.8rem; color: var(--text-muted);"
+              >
+                65+ Parts CAD
+              </span>
+
+              <a
+                href="radial-engine.html"
+                class="service-link"
+              >
+                Read Case Study →
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Project 5 -->
+        <div class="glass-panel project-card" data-category="machines">
+
+          <div class="project-media-wrap">
+
+            <img
+              src="90.png"
+              alt="Incline Conveyor"
+              class="project-img"
+            >
+
+            <span class="project-badge-overlay mono">
+              Automation
+            </span>
+
+          </div>
+
+          <div class="project-info-body">
+
+            <div class="project-discipline">
+              Industrial Material Handling
+            </div>
+
+            <h3 class="project-heading">
+              Industrial Incline Conveyor System
+            </h3>
+
+            <p class="project-summary">
+              Heavy-duty automated material handling conveyor with structural
+              steel frame calculations and drive torque analysis.
+            </p>
+
+            <div class="project-footer-action">
+
+              <span
+                class="mono"
+                style="font-size: 0.8rem; color: var(--text-muted);"
+              >
+                CEMA Standards
+              </span>
+
+              <a
+                href="incline-conveyor-system.html"
+                class="service-link"
+              >
+                Read Case Study →
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Project 6 -->
+        <div class="glass-panel project-card" data-category="machines">
+
+          <div class="project-media-wrap">
+
+            <img
+              src="CAD.jpg"
+              alt="Single Gearbox"
+              class="project-img"
+            >
+
+            <span class="project-badge-overlay mono">
+              AGMA Gears
+            </span>
+
+          </div>
+
+          <div class="project-info-body">
+
+            <div class="project-discipline">
+              Power Transmission & Gears
+            </div>
+
+            <h3 class="project-heading">
+              High-Torque Single Gear Box
+            </h3>
+
+            <p class="project-summary">
+              Helical gear geometry optimization and bearing life calculations
+              adhering strictly to AGMA standards and ISO 6336.
+            </p>
+
+            <div class="project-footer-action">
+
+              <span
+                class="mono"
+                style="font-size: 0.8rem; color: var(--text-muted);"
+              >
+                AGMA 2001-D04
+              </span>
+
+              <a
+                href="single-gear-box.html"
+                class="service-link"
+              >
+                Read Case Study →
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Project 7 -->
+        <div class="glass-panel project-card" data-category="machines">
+
+          <div class="project-media-wrap">
+
+            <img
+              src="CAD.jpg"
+              alt="Hydraulic Jack"
+              class="project-img"
+            >
+
+            <span class="project-badge-overlay mono">
+              High Pressure
+            </span>
+
+          </div>
+
+          <div class="project-info-body">
+
+            <div class="project-discipline">
+              Hydraulics & Pressure Vessels
+            </div>
+
+            <h3 class="project-heading">
+              Heavy-Duty Hydraulic Bottle Jack
+            </h3>
+
+            <p class="project-summary">
+              High-tonnage hydraulic cylinder design with pressure seal
+              analysis and rigorous safety factors (SF ≥ 3.0).
+            </p>
+
+            <div class="project-footer-action">
+
+              <span
+                class="mono"
+                style="font-size: 0.8rem; color: var(--text-muted);"
+              >
+                20-Ton Capacity
+              </span>
+
+              <a
+                href="hydraulic-jack.html"
+                class="service-link"
+              >
+                Read Case Study →
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Project 8 -->
+        <div class="glass-panel project-card" data-category="fluid">
+
+          <div class="project-media-wrap">
+
+            <img
+              src="123.jpg"
+              alt="Centrifugal Fan"
+              class="project-img"
+            >
+
+            <span class="project-badge-overlay mono">
+              Ventilation
+            </span>
+
+          </div>
+
+          <div class="project-info-body">
+
+            <div class="project-discipline">
+              Industrial Aerodynamics
+            </div>
+
+            <h3 class="project-heading">
+              Industrial Centrifugal Blower Fan
+            </h3>
+
+            <p class="project-summary">
+              Airflow CFM aerodynamic analysis with backward-curved blade
+              geometry to reduce static pressure losses and noise.
+            </p>
+
+            <div class="project-footer-action">
+
+              <span
+                class="mono"
+                style="font-size: 0.8rem; color: var(--text-muted);"
+              >
+                8,500 CFM
+              </span>
+
+              <a
+                href="centrifugal-fan.html"
+                class="service-link"
+              >
+                Read Case Study →
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Project 9 -->
+        <div class="glass-panel project-card" data-category="cad">
+
+          <div class="project-media-wrap">
+
+            <img
+              src="CAD.jpg"
+              alt="Precision Mechanism"
+              class="project-img"
+            >
+
+            <span class="project-badge-overlay mono">
+              Product CAD
+            </span>
+
+          </div>
+
+          <div class="project-info-body">
+
+            <div class="project-discipline">
+              Precision Mechanism Design
+            </div>
+
+            <h3 class="project-heading">
+              Precision Mechanism & Multi-Part Assembly
+            </h3>
+
+            <p class="project-summary">
+              Multi-component mechanical assembly design with injection molding
+              tolerances, spring kinematics, and sheet metal fabrication.
+            </p>
+
+            <div class="project-footer-action">
+
+              <span
+                class="mono"
+                style="font-size: 0.8rem; color: var(--text-muted);"
+              >
+                DFM & GD&T
+              </span>
+
+              <a
+                href="stapler.html"
+                class="service-link"
+              >
+                Read Case Study →
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
