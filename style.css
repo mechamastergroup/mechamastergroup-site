@@ -1985,3 +1985,27 @@ html {
     display: flex;
     align-items: center;
 }
+.services-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    display: flex;
+    align-items: center;
+}
+.projects-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    display: flex;
+    align-items: center;
+}
+.contact-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    display: flex;
+    align-items: center;
+}
