@@ -2009,3 +2009,25 @@ html {
     display: flex;
     align-items: center;
 }
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.hero-section,
+.standards-bar,
+.services-section,
+.projects-section,
+.contact-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.standards-bar,
+.services-section,
+.projects-section,
+.contact-section {
+    display: flex;
+    align-items: center;
+}
