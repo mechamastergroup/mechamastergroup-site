@@ -92,9 +92,11 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-  -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+}
+
+html.home-page {
+    scroll-snap-type: y proximity;
 }
 
 body {
@@ -2014,11 +2016,10 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-.hero-section,
-.standards-bar,
-.services-section,
-.projects-section,
-.contact-section {
+.home-page .hero-section,
+.home-page .standards-bar,
+.home-page .services-section,
+.home-page .contact-section {
     min-height: 100vh;
     scroll-snap-align: start;
     scroll-snap-stop: always;
@@ -2031,7 +2032,7 @@ html {
     display: flex;
     align-items: center;
 }
-.footer {
+.home-page .footer {
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
