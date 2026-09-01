@@ -1964,3 +1964,24 @@ textarea.field-input {
   }
 
 }
+/* =========================================
+   FULL SCREEN SECTION SCROLL
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+.hero-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+.standards-bar {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    display: flex;
+    align-items: center;
+}
