@@ -2113,8 +2113,8 @@ html {
 
     0% {
         opacity: 0;
-        transform: scale(0.75) rotateY(-180deg);
-        filter: blur(6px);
+        transform: scale(0.85) rotateY(0deg);
+        filter: blur(5px);
     }
 
     10% {
@@ -2122,29 +2122,9 @@ html {
         filter: blur(0);
     }
 
-    25% {
-        transform: scale(0.9) rotateY(-135deg);
-    }
-
-    50% {
-        transform: scale(0.95) rotateY(-90deg);
-    }
-
-    75% {
-        transform: scale(1) rotateY(-45deg);
-    }
-
-    90% {
-        transform: scale(1) rotateY(0deg);
-    }
-
-    95% {
-        transform: scale(1.06) rotateY(0deg);
-    }
-
     100% {
         opacity: 1;
-        transform: scale(1) rotateY(0deg);
+        transform: scale(1) rotateY(360deg);
         filter: blur(0);
     }
 }
@@ -2162,7 +2142,7 @@ html {
     transform-style: preserve-3d;
     backface-visibility: visible;
 
-    animation: mmgIntroLogo 5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: mmgIntroLogo 4s linear forwards;
 
     will-change: transform, opacity, filter;
 }
