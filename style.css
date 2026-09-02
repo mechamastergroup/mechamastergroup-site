@@ -2132,7 +2132,7 @@ html {
 /* Intro Exit */
 
 .site-intro-logo {
-    width: clamp(180px, 25vw, 360px);
+    width: clamp(135px, 18.75vw, 270px);
     height: auto;
 
     opacity: 0;
