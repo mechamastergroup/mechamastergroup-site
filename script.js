@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (siteIntro) {
     document.body.classList.add('intro-active');
 
-    setTimeout(() => {
+    window.setTimeout(() => {
       siteIntro.classList.add('intro-hidden');
       document.body.classList.remove('intro-active');
     }, 3950);
