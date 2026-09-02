@@ -156,5 +156,27 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.remove('intro-active');
     }, 3950);
   }
+// 9. 3D CAD Gallery Generator
+const cadGallery = document.getElementById('cadGallery');
 
+if (cadGallery) {
+
+  const totalCadImages = 73;
+
+  for (let i = 1; i <= totalCadImages; i++) {
+
+    const galleryItem = document.createElement('div');
+    galleryItem.classList.add('cad-gallery-item');
+
+    const image = document.createElement('img');
+
+    image.src = `3D-modeling-gallery/${i}ab.jpg`;
+    image.alt = `MechaMaster Group 3D CAD Model ${i}`;
+    image.loading = 'lazy';
+
+    galleryItem.appendChild(image);
+    cadGallery.appendChild(galleryItem);
+  }
+
+}
 });
