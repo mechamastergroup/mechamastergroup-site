@@ -2113,53 +2113,41 @@ html {
 
     0% {
         opacity: 0;
-
-        transform:
-            scale(0.70)
-            rotateY(-90deg);
-
-        filter: blur(8px);
+        transform: scale(0.75) rotateY(-180deg);
+        filter: blur(6px);
     }
 
-    20% {
+    10% {
         opacity: 1;
-
-        transform:
-            scale(1)
-            rotateY(0deg);
-
         filter: blur(0);
     }
 
-    40% {
-        transform:
-            scale(1.06)
-            rotateY(180deg);
+    25% {
+        transform: scale(0.9) rotateY(-135deg);
     }
 
-    60% {
-        transform:
-            scale(1)
-            rotateY(360deg);
+    50% {
+        transform: scale(0.95) rotateY(-90deg);
     }
 
-    78% {
-        transform:
-            scale(1.06)
-            rotateY(360deg);
+    75% {
+        transform: scale(1) rotateY(-45deg);
+    }
+
+    90% {
+        transform: scale(1) rotateY(0deg);
+    }
+
+    95% {
+        transform: scale(1.06) rotateY(0deg);
     }
 
     100% {
         opacity: 1;
-
-        transform:
-            scale(1)
-            rotateY(360deg);
-
+        transform: scale(1) rotateY(0deg);
         filter: blur(0);
     }
 }
-
 
 /* Intro Exit */
 
@@ -2174,7 +2162,7 @@ html {
     transform-style: preserve-3d;
     backface-visibility: visible;
 
-    animation: mmgIntroLogo 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: mmgIntroLogo 5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
     will-change: transform, opacity, filter;
 }
