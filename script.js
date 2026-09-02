@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Full Screen Section Reveal Animation
+   // 7. Full Screen Section Reveal Animation
   const screens = document.querySelectorAll(
     '.hero-section, .standards-bar, .services-section, .projects-section, .contact-section, .footer'
   );
@@ -143,23 +143,18 @@ document.addEventListener('DOMContentLoaded', () => {
   screens.forEach(screen => {
     screenObserver.observe(screen);
   });
-screens.forEach(screen => {
-  screenObserver.observe(screen);
-});
 
 
-// 8. MMG Intro Splash Screen
-const siteIntro = document.getElementById('siteIntro');
+  // 8. MMG Intro Splash Screen
+  const siteIntro = document.getElementById('siteIntro');
 
-if (siteIntro) {
-  document.body.classList.add('intro-active');
+  if (siteIntro) {
+    document.body.classList.add('intro-active');
 
-  setTimeout(() => {
-    siteIntro.classList.add('intro-hidden');
-    document.body.classList.remove('intro-active');
-  }, 3950);
-}
+    setTimeout(() => {
+      siteIntro.classList.add('intro-hidden');
+      document.body.classList.remove('intro-active');
+    }, 3950);
+  }
 
-
-});
 });
