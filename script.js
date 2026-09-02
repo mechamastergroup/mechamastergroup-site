@@ -160,11 +160,9 @@ document.addEventListener('DOMContentLoaded', () => {
 const cadGallery = document.getElementById('cadGallery');
 
 if (cadGallery) {
-
   const totalCadImages = 73;
 
   for (let i = 1; i <= totalCadImages; i++) {
-
     const galleryItem = document.createElement('div');
     galleryItem.classList.add('cad-gallery-item');
 
@@ -177,6 +175,5 @@ if (cadGallery) {
     galleryItem.appendChild(image);
     cadGallery.appendChild(galleryItem);
   }
-
 }
 });
