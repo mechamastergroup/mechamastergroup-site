@@ -1,395 +1,617 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="dark">
+
 <head>
-    <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-    <title>
-        Bahrain World Trade Center (MEP & Aerodynamics) | MechaMaster Group
-    </title>
-    <meta
-        name="description"
-        content="Engineering case study on MEP building services, aerodynamic wind turbine airflow, and central HVAC optimization for Bahrain World Trade Center by MechaMaster Group."
-    >
-    <link
-        rel="icon"
-        href="looogo.png"
-    >
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Bahrain World Trade Center 3D CAD Model | MechaMaster Group
+  </title>
+
+  <meta
+    name="description"
+    content="3D CAD modeling showcase of the Bahrain World Trade Center developed in SolidWorks by MechaMaster Group."
+  >
+
+  <link rel="icon" href="looogo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="bg-glow glow-1"></div>
-    <div class="bg-glow glow-2"></div>
-    <!-- Header -->
-    <header class="header">
-        <div class="container navbar">
-            <a
-                href="index.html"
-                class="brand-logo"
-            >
-                <img
-                    src="looogo.png"
-                    alt="MechaMaster Logo"
-                >
-                <div class="brand-logo-text">
-                    <span class="brand-name">
-                        MechaMaster
-                    </span>
-                    <span class="brand-tag">
-                        Group
-                    </span>
-                </div>
-            </a>
-            <nav
-                class="nav-menu"
-                id="navMenu"
-            >
-                <a
-                    href="index.html"
-                    class="nav-link"
-                >
-                    Home
-                </a>
-                <a
-                    href="about.html"
-                    class="nav-link"
-                >
-                    About Us
-                </a>
-                <a
-                    href="services.html"
-                    class="nav-link"
-                >
-                    Services
-                </a>
-                <a
-                    href="index.html#projects"
-                    class="nav-link active"
-                >
-                    Engineering Showcase
-                </a>
-                <a
-                    href="3D-modeling.html"
-                    class="nav-link"
-                >
-                    3D CAD Gallery
-                </a>
-                <a
-                    href="contact.html"
-                    class="nav-link"
-                >
-                    Contact Us
-                </a>
-            </nav>
-            <div class="header-controls">
-                <button
-                    class="control-btn"
-                    id="themeToggle"
-                    aria-label="Toggle Theme"
-                >
-                    <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2.2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <circle
-                            cx="12"
-                            cy="12"
-                            r="5"
-                        ></circle>
-                        <line
-                            x1="12"
-                            y1="1"
-                            x2="12"
-                            y2="3"
-                        ></line>
-                        <line
-                            x1="12"
-                            y1="21"
-                            x2="12"
-                            y2="23"
-                        ></line>
-                        <line
-                            x1="4.22"
-                            y1="4.22"
-                            x2="5.64"
-                            y2="5.64"
-                        ></line>
-                        <line
-                            x1="18.36"
-                            y1="18.36"
-                            x2="19.78"
-                            y2="19.78"
-                        ></line>
-                        <line
-                            x1="1"
-                            y1="12"
-                            x2="3"
-                            y2="12"
-                        ></line>
-                        <line
-                            x1="21"
-                            y1="12"
-                            x2="23"
-                            y2="12"
-                        ></line>
-                        <line
-                            x1="4.22"
-                            y1="19.78"
-                            x2="5.64"
-                            y2="18.36"
-                        ></line>
-                        <line
-                            x1="18.36"
-                            y1="5.64"
-                            x2="19.78"
-                            y2="4.22"
-                        ></line>
-                    </svg>
-                </button>
-                <a
-                    href="contact.html"
-                    class="btn btn-primary btn-sm"
-                >
-                    Get in Touch
-                </a>
-            </div>
+
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
+  <header class="header">
+
+    <div class="container navbar">
+
+      <a href="index.html" class="brand-logo">
+
+        <img
+          src="looogo.png"
+          alt="MechaMaster Logo"
+        >
+
+        <div class="brand-logo-text">
+
+          <span class="brand-name">
+            MechaMaster
+          </span>
+
+          <span class="brand-tag">
+            Group
+          </span>
+
         </div>
-    </header>
-    <!-- Project Details -->
-    <section
-        class="hero-section"
-        style="padding-bottom: 5rem;"
-    >
-        <div class="container">
-            <div style="margin-bottom: 2rem;">
-                <a
-                    href="index.html#projects"
-                    class="service-link"
-                    style="margin-bottom: 1rem; display: inline-flex;"
-                >
-                    ← Back to Engineering Showcase
-                </a>
-                <div class="tech-badge">
-  Engineering Showcase • Mechanical Drawings
-</div>
-                <h1 class="section-title">
-  Bahrain World Trade Center
-  <span class="gradient-text">(Mechanical Engineering Drawings)</span>
-</h1>
-                <p class="section-subtitle">
-  Mechanical engineering drawing showcase demonstrating structured technical documentation,
-  system representation, engineering annotations, and professional drawing development
-  for the Bahrain World Trade Center project.
-</p>
-            </div>
-            <div
-                style="
-                    display: grid;
-                    grid-template-columns: 1.2fr 0.8fr;
-                    gap: 3rem;
-                    align-items: start;
-                "
-            >
-                <div>
-                    <div
-                        class="glass-panel"
-                        style="
-                            overflow: hidden;
-                            border-radius: var(--radius-xl);
-                            margin-bottom: 2rem;
-                        "
-                    >
-                        <img
-                            src="MEP.jpg"
-                            alt="Bahrain Trading Center MEP"
-                            style="
-                                width: 100%;
-                                height: 420px;
-                                object-fit: cover;
-                            "
-                        >
-                    </div>
-                   <div class="glass-panel" style="padding: 2.25rem; border-radius: var(--radius-xl); line-height: 1.8;">
 
-  <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem;">
-    Engineering Drawing Scope & Technical Deliverables:
-  </h3>
+      </a>
 
-  <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">
-    This engineering showcase presents the development of detailed mechanical drawings
-    based on the Bahrain World Trade Center project. The work focuses on translating
-    engineering design information into clear, structured, and technically organized
-    drawings suitable for engineering documentation and project communication.
-  </p>
 
-  <h4 style="font-weight: 800; margin-bottom: 0.75rem;">
-    Key Engineering Highlights:
-  </h4>
+      <nav class="nav-menu" id="navMenu">
 
-  <ul style="color: var(--text-secondary); padding-left: 1.5rem; list-style: disc; margin-bottom: 1.5rem;">
-    <li>Development of detailed mechanical engineering drawings.</li>
-    <li>Clear representation of mechanical systems, layouts, and engineering information.</li>
-    <li>Structured drawing organization for improved technical readability and documentation.</li>
-    <li>Application of engineering drafting principles, dimensions, annotations, and drawing conventions.</li>
-    <li>Preparation of professional technical documentation for engineering presentation and reference.</li>
-  </ul>
+        <a href="index.html" class="nav-link">
+          Home
+        </a>
 
-</div>
-                <!-- Project Specs Sidebar -->
-                <div
-                    class="glass-panel"
-                    style="
-                        padding: 2.25rem;
-                        border-radius: var(--radius-xl);
-                    "
-                >
-                    <h3
-                        style="
-                            font-size: 1.25rem;
-                            font-weight: 800;
-                            margin-bottom: 1.5rem;
-                            border-bottom: 1px solid var(--border-subtle);
-                            padding-bottom: 0.75rem;
-                        "
-                    >
-                        Technical Specifications
-                    </h3>
-                    <div
-                        style="
-                            display: flex;
-                            flex-direction: column;
-                            gap: 1rem;
-                            font-size: 0.925rem;
-                        "
-                    >
-                        <div
-                            style="
-                                display: flex;
-                                justify-content: space-between;
-                            "
-                        >
-                            <span style="color: var(--text-muted);">
-                                Structure Type:
-                            </span>
-                            <span style="font-weight: 700;">
-                                Commercial High-Rise Twin Towers
-                            </span>
-                        </div>
-                        <div
-                            style="
-                                display: flex;
-                                justify-content: space-between;
-                            "
-                        >
-                            <span style="color: var(--text-muted);">
-                                Discipline:
-                            </span>
-                            <span style="font-weight: 700;">
-                                MEP Systems & Aerodynamics
-                            </span>
-                        </div>
-                        <div
-                            style="
-                                display: flex;
-                                justify-content: space-between;
-                            "
-                        >
-                            <span style="color: var(--text-muted);">
-                                Applicable Codes:
-                            </span>
-                            <span style="font-weight: 700;">
-                                ASHRAE 90.1, NFPA 101, CIBSE
-                            </span>
-                        </div>
-                        <div
-                            style="
-                                display: flex;
-                                justify-content: space-between;
-                            "
-                        >
-                            <span style="color: var(--text-muted);">
-                                Software Used:
-                            </span>
-                            <span style="font-weight: 700;">
-                                Revit MEP, ANSYS CFD, HAP
-                            </span>
-                        </div>
-                        <div
-                            style="
-                                display: flex;
-                                justify-content: space-between;
-                            "
-                        >
-                            <span style="color: var(--text-muted);">
-                                Total Height:
-                            </span>
-                            <span style="font-weight: 700;">
-                                240 meters (50 Floors)
-                            </span>
-                        </div>
-                    </div>
-                    <div
-                        style="
-                            margin-top: 2rem;
-                            border-top: 1px solid var(--border-subtle);
-                            padding-top: 1.5rem;
-                        "
-                    >
-                        <a
-                            href="contact.html"
-                            class="btn btn-primary"
-                            style="width: 100%;"
-                        >
-                            Discuss a Similar Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Master Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom-row">
-                <div>
-                    © 2026 MechaMaster Group. All rights reserved.
-                </div>
-                <div
-                    style="
-                        display: flex;
-                        gap: 1.5rem;
-                    "
-                >
-                    <a href="index.html">
-                        Home
-                    </a>
-                    <a href="services.html">
-                        Services
-                    </a>
-                    <a href="contact.html">
-                        Contact Us
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div
-        class="scroll-top-btn"
-        id="scrollTopBtn"
-    >
-        ▲
+        <a href="about.html" class="nav-link">
+          About Us
+        </a>
+
+        <a href="services.html" class="nav-link">
+          Services
+        </a>
+
+        <a href="engineering-showcase.html" class="nav-link active">
+          Engineering Showcase
+        </a>
+
+        <a href="3D-modeling.html" class="nav-link">
+          3D CAD Gallery
+        </a>
+
+        <a href="technical-drawings.html" class="nav-link">
+          Technical Drawings
+        </a>
+
+        <a href="contact.html" class="nav-link">
+          Contact Us
+        </a>
+
+      </nav>
+
+
+      <div class="header-controls">
+
+        <button
+          class="control-btn"
+          id="themeToggle"
+          aria-label="Toggle Theme"
+        >
+
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+
+            <circle cx="12" cy="12" r="5"></circle>
+
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+
+          </svg>
+
+        </button>
+
+
+        <a
+          href="contact.html"
+          class="btn btn-primary btn-sm"
+        >
+          Get in Touch
+        </a>
+
+      </div>
+
     </div>
-    <script src="script.js"></script>
+
+  </header>
+
+
+
+  <!-- =========================================
+       PROJECT DETAILS
+  ========================================== -->
+
+  <section
+    class="hero-section"
+    style="padding-bottom: 5rem;"
+  >
+
+    <div class="container">
+
+
+      <!-- Project Header -->
+
+      <div style="margin-bottom: 2rem;">
+
+        <a
+          href="engineering-showcase.html"
+          class="service-link"
+          style="margin-bottom: 1rem; display: inline-flex;"
+        >
+          ← Back to Engineering Showcase
+        </a>
+
+
+        <div class="tech-badge">
+          Engineering Showcase • 3D CAD Modeling
+        </div>
+
+
+        <h1 class="section-title">
+
+          Bahrain World Trade Center
+
+          <span class="gradient-text">
+            (3D CAD Modeling)
+          </span>
+
+        </h1>
+
+
+        <p class="section-subtitle">
+
+          A 3D CAD modeling showcase of the Bahrain World Trade Center,
+          developed in SolidWorks with focus on geometric construction,
+          dimensional definition, model organization, and structured
+          parametric modeling.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- =========================================
+           PROJECT CONTENT GRID
+      ========================================== -->
+
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1.2fr 0.8fr;
+          gap: 3rem;
+          align-items: start;
+        "
+      >
+
+
+        <!-- =========================================
+             LEFT COLUMN
+        ========================================== -->
+
+        <div>
+
+
+          <!-- Project Image -->
+
+          <div
+            class="glass-panel"
+            style="
+              overflow: hidden;
+              border-radius: var(--radius-xl);
+              margin-bottom: 2rem;
+            "
+          >
+
+            <img
+              src="MEP.jpg"
+              alt="Bahrain World Trade Center 3D CAD Model"
+              style="
+                width: 100%;
+                height: 420px;
+                object-fit: cover;
+              "
+            >
+
+          </div>
+
+
+
+          <!-- =========================================
+               ENGINEERING SCOPE
+          ========================================== -->
+
+          <div
+            class="glass-panel"
+            style="
+              padding: 2.25rem;
+              border-radius: var(--radius-xl);
+              line-height: 1.8;
+            "
+          >
+
+
+            <h3
+              style="
+                font-size: 1.4rem;
+                font-weight: 800;
+                margin-bottom: 1rem;
+              "
+            >
+              3D CAD Modeling Scope & Technical Deliverables
+            </h3>
+
+
+            <p
+              style="
+                color: var(--text-secondary);
+                margin-bottom: 1.25rem;
+              "
+            >
+
+              This engineering showcase presents the development of a
+              <strong>3D CAD model of the Bahrain World Trade Center</strong>
+              using SolidWorks. The work focuses on translating the building's
+              distinctive twin-tower geometry into a structured three-dimensional
+              CAD model while maintaining geometric consistency, dimensional
+              relationships, and an organized modeling workflow.
+
+            </p>
+
+
+            <p
+              style="
+                color: var(--text-secondary);
+                margin-bottom: 1.5rem;
+              "
+            >
+
+              The model demonstrates the application of mechanical CAD modeling
+              techniques to a complex architectural structure, including feature
+              development, geometric referencing, repeated elements, and overall
+              model integration.
+
+            </p>
+
+
+
+            <h4
+              style="
+                font-weight: 800;
+                margin-bottom: 0.75rem;
+              "
+            >
+              Key Engineering Highlights
+            </h4>
+
+
+            <ul
+              style="
+                color: var(--text-secondary);
+                padding-left: 1.5rem;
+                list-style: disc;
+                margin-bottom: 1.5rem;
+              "
+            >
+
+              <li>
+                Development of the Bahrain World Trade Center as a complete
+                three-dimensional CAD model.
+              </li>
+
+              <li>
+                Reconstruction of the distinctive twin-tower geometry using
+                SolidWorks modeling tools.
+              </li>
+
+              <li>
+                Application of parametric modeling principles to maintain
+                controlled geometric and dimensional relationships.
+              </li>
+
+              <li>
+                Structured feature development and model organization for
+                efficient modification and design management.
+              </li>
+
+              <li>
+                Integration of major geometric features into a coherent
+                final 3D representation.
+              </li>
+
+            </ul>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =========================================
+             TECHNICAL SPECIFICATIONS SIDEBAR
+        ========================================== -->
+
+        <div
+          class="glass-panel"
+          style="
+            padding: 2.25rem;
+            border-radius: var(--radius-xl);
+          "
+        >
+
+
+          <h3
+            style="
+              font-size: 1.25rem;
+              font-weight: 800;
+              margin-bottom: 1.5rem;
+              border-bottom: 1px solid var(--border-subtle);
+              padding-bottom: 0.75rem;
+            "
+          >
+            Technical Specifications
+          </h3>
+
+
+
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              font-size: 0.925rem;
+            "
+          >
+
+
+            <!-- Project Type -->
+
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+              "
+            >
+
+              <span style="color: var(--text-muted);">
+                Project Type:
+              </span>
+
+              <span
+                style="
+                  font-weight: 700;
+                  text-align: right;
+                "
+              >
+                3D CAD Modeling Showcase
+              </span>
+
+            </div>
+
+
+
+            <!-- Discipline -->
+
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+              "
+            >
+
+              <span style="color: var(--text-muted);">
+                Discipline:
+              </span>
+
+              <span
+                style="
+                  font-weight: 700;
+                  text-align: right;
+                "
+              >
+                Mechanical Design
+              </span>
+
+            </div>
+
+
+
+            <!-- Model Type -->
+
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+              "
+            >
+
+              <span style="color: var(--text-muted);">
+                Model Type:
+              </span>
+
+              <span
+                style="
+                  font-weight: 700;
+                  text-align: right;
+                "
+              >
+                3D CAD Model
+              </span>
+
+            </div>
+
+
+
+            <!-- Modeling Method -->
+
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+              "
+            >
+
+              <span style="color: var(--text-muted);">
+                Modeling Method:
+              </span>
+
+              <span
+                style="
+                  font-weight: 700;
+                  text-align: right;
+                "
+              >
+                Parametric 3D Modeling
+              </span>
+
+            </div>
+
+
+
+            <!-- Software -->
+
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+              "
+            >
+
+              <span style="color: var(--text-muted);">
+                Software Used:
+              </span>
+
+              <span
+                style="
+                  font-weight: 700;
+                  text-align: right;
+                "
+              >
+                SolidWorks
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+
+          <!-- CTA -->
+
+          <div
+            style="
+              margin-top: 2rem;
+              border-top: 1px solid var(--border-subtle);
+              padding-top: 1.5rem;
+            "
+          >
+
+            <a
+              href="contact.html"
+              class="btn btn-primary"
+              style="width: 100%;"
+            >
+              Discuss a Similar Project
+            </a>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================
+       MASTER FOOTER
+  ========================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-bottom-row">
+
+        <div>
+          © 2026 MechaMaster Group. All rights reserved.
+        </div>
+
+
+        <div
+          style="
+            display: flex;
+            gap: 1.5rem;
+          "
+        >
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="services.html">
+            Services
+          </a>
+
+          <a href="contact.html">
+            Contact Us
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- Scroll To Top -->
+
+  <div
+    class="scroll-top-btn"
+    id="scrollTopBtn"
+  >
+    ▲
+  </div>
+
+
+  <script src="script.js"></script>
+
 </body>
 </html>
