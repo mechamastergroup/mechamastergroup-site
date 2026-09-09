@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // 7. Full Screen Section Reveal Animation
+    // 7. Full Screen Section Reveal Animation
 
   const screens = document.querySelectorAll(
     '.hero-section, .standards-bar, .services-section, .projects-section, .contact-section, .footer'
@@ -207,27 +207,20 @@ document.addEventListener('DOMContentLoaded', () => {
     screen.classList.add('reveal-screen');
   });
 
-
   const screenObserver = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
       if (entry.isIntersecting) {
-
         entry.target.classList.add('screen-visible');
-
-      } else {
-
-        entry.target.classList.remove('screen-visible');
-
+        screenObserver.unobserve(entry.target);
       }
 
     });
 
   }, {
-    threshold: 0.2
+    threshold: 0.1
   });
-
 
   screens.forEach(screen => {
     screenObserver.observe(screen);
