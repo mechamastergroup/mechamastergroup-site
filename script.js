@@ -35,28 +35,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   applyTheme(currentTheme);
 
-    // 2. Mobile Menu Drawer
+  // 2. Mobile Menu Drawer
   if (mobileToggleBtn && navMenu) {
     mobileToggleBtn.addEventListener('click', () => {
       navMenu.classList.toggle('open');
     });
 
-    navMenu.querySelectorAll('.nav-link').forEach(link => {
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', (e) => {
         const href = link.getAttribute('href');
         if (href && href.startsWith('#')) {
-          const targetEl = document.querySelector(href);
-          if (targetEl) {
-            e.preventDefault();
-            navMenu.classList.remove('open');
-            setTimeout(() => {
-              targetEl.scrollIntoView({ behavior: 'smooth' });
-            }, 150);
-          }
+          navMenu.classList.remove('open');
         }
       });
     });
-  }
 
   // 3. Scroll Header & Back To Top Button
   window.addEventListener('scroll', () => {
@@ -130,62 +122,4 @@ document.addEventListener('DOMContentLoaded', () => {
       newsForm.reset();
     });
   }
-
-   // 7. Full Screen Section Reveal Animation
-  const screens = document.querySelectorAll(
-    '.hero-section, .standards-bar, .services-section, .projects-section, .contact-section, .footer'
-  );
-
-  screens.forEach(screen => {
-    screen.classList.add('reveal-screen');
-  });
-
-  const screenObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('screen-visible');
-      } else {
-        entry.target.classList.remove('screen-visible');
-      }
-    });
-  }, {
-    threshold: 0.2
-  });
-
-  screens.forEach(screen => {
-    screenObserver.observe(screen);
-  });
-
-
-  // 8. MMG Intro Splash Screen
-  const siteIntro = document.getElementById('siteIntro');
-
-  if (siteIntro) {
-    document.body.classList.add('intro-active');
-
-    window.setTimeout(() => {
-      siteIntro.classList.add('intro-hidden');
-      document.body.classList.remove('intro-active');
-    }, 3950);
-  }
-// 9. 3D CAD Gallery Generator
-const cadGallery = document.getElementById('cadGallery');
-
-if (cadGallery) {
-  const totalCadImages = 73;
-
-  for (let i = 1; i <= totalCadImages; i++) {
-    const galleryItem = document.createElement('div');
-    galleryItem.classList.add('cad-gallery-item');
-
-    const image = document.createElement('img');
-
-    image.src = `3D-modeling-gallery/${i}ab.jpg`;
-    image.alt = `MechaMaster Group 3D CAD Model ${i}`;
-    image.loading = 'lazy';
-
-    galleryItem.appendChild(image);
-    cadGallery.appendChild(galleryItem);
-  }
-}
 });
