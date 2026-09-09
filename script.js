@@ -35,17 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   applyTheme(currentTheme);
 
-  // 2. Mobile Menu Drawer
+    // 2. Mobile Menu Drawer
   if (mobileToggleBtn && navMenu) {
     mobileToggleBtn.addEventListener('click', () => {
       navMenu.classList.toggle('open');
     });
 
-        navMenu.querySelectorAll('.nav-link').forEach(link => {
+    navMenu.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', (e) => {
         const href = link.getAttribute('href');
         if (href && href.startsWith('#')) {
-          navMenu.classList.remove('open');
+          const targetEl = document.querySelector(href);
+          if (targetEl) {
+            e.preventDefault();
+            navMenu.classList.remove('open');
+            setTimeout(() => {
+              targetEl.scrollIntoView({ behavior: 'smooth' });
+            }, 150);
+          }
         }
       });
     });
